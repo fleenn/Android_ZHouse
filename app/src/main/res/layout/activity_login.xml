@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <ImageView style="@style/login_top_img" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/identity_height">
+
+        <LinearLayout
+            android:id="@+id/llayout_tab_left"
+            style="@style/login_choose_linear_layout"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_normal"
+                style="@style/login_choose_identity"
+                android:text="@string/label_login_ordinary" />
+
+            <View
+                android:id="@+id/img_underline_normal"
+                style="@style/underline" />
+        </LinearLayout>
+
+        <View style="@style/split" />
+
+        <LinearLayout
+            android:id="@+id/llayout_tab_right"
+            style="@style/login_choose_linear_layout"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_sms"
+                style="@style/login_choose_identity"
+                android:text="@string/label_login_sms_verification" />
+
+            <View
+                android:id="@+id/img_underline_sms"
+                style="@style/underline" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/llayout_login_left"
+            layout="@layout/activity_login_left" />
+
+        <include
+            android:id="@+id/llayout_login_right"
+            layout="@layout/activity_login_right" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rlayout_remember_height">
+
+        <TextView
+            android:id="@+id/tv_find_pwd"
+            style="@style/login_hint_text"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="13.3dp"
+            android:text="@string/hint_forget_password" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        style="@style/login_btn_style"
+        android:layout_marginTop="4.6dp"
+        android:background="@drawable/shape_btn_shallow"
+        android:text="@string/btn_login" />
+
+    <Button
+        android:id="@+id/btn_register"
+        style="@style/login_btn_style"
+        android:background="@drawable/shape_btn_deep"
+        android:text="@string/title_register" />
+
+    <Button
+        android:id="@+id/btn_back"
+        style="@style/login_btn_style"
+        android:background="@drawable/shape_btn_normal"
+        android:text="@string/back"
+        android:textColor="@color/my_gray_one" />
+
+    <LinearLayout
+        android:id="@+id/llayout_error_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/warm_width"
+        android:visibility="gone">
+
+        <ImageView style="@style/login_warm_icon" />
+
+        <TextView
+            android:id="@+id/tv_tips"
+            style="@style/login_pop_message" />
+    </LinearLayout>
+
+</LinearLayout>

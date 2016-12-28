@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title"/>
+
+    <ImageView style="@style/divider_thin" />
+
+    <EditText
+        android:id="@+id/et_edit_content"
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:layout_margin="@dimen/my_margin"
+        android:hint="@string/hint_friends_public"
+        android:textSize="12.6dp"
+        android:lineSpacingExtra="@dimen/friends_publish_space"
+        android:scrollbars="vertical"
+        android:maxLength="300"
+        android:textColorHint="@color/hint_color"
+        android:background="@null"
+        android:gravity="top"/>
+
+    <com.zfb.house.component.PickPhotoLayout
+        android:id="@+id/pickPhotoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/friends_left_margin"
+        android:layout_marginBottom="@dimen/friends_left_margin"
+        android:gravity="center_vertical"
+        android:orientation="vertical"/>
+
+    <ImageView style="@style/divider_thin" />
+
+    <RelativeLayout
+        android:id="@+id/rlayout_location"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_height">
+
+        <RelativeLayout
+            style="@style/rlayout_title_right"
+            android:layout_width="300dp"
+            android:clickable="false"
+            android:layout_alignParentRight="false"
+            android:paddingLeft="@dimen/my_margin">
+
+
+            <ImageView
+                android:id="@+id/img_publish_position"
+                style="@style/near_position_img" />
+
+            <TextView
+                android:id="@+id/tv_position"
+                style="@style/friends_txt_position"
+                android:layout_width="match_parent"
+                android:layout_toRightOf="@id/img_publish_position"
+                android:singleLine="true"
+                android:text="@string/label_position" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlayout_publish_position"
+            android:clickable="false"
+            style="@style/back_rlayout"
+            android:layout_alignParentRight="true">
+
+            <ImageView style="@style/to_img" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27.5dp"
+        android:orientation="vertical">
+        <TextView
+            style="@style/friends_txt_hint"
+            android:text="@string/label_tip" />
+
+        <TextView
+            style="@style/friends_txt_hint"
+            android:text="@string/label_location_sugest" />
+    </LinearLayout>
+
+    <!-- 自动定位 -->
+    <com.zfb.house.component.ChosePicSchemaLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/chosePicSchemaLayout"
+        android:visibility="gone">
+    </com.zfb.house.component.ChosePicSchemaLayout>
+
+</LinearLayout>

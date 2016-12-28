@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View style="@style/divider_thick" />
+
+                <com.zfb.house.component.ReleaseHousingSelectView
+                    android:id="@+id/rhs_house_name"
+                    style="@style/release_housing_item"
+                    app:text="小区名称" />
+
+                <com.zfb.house.component.ReleaseHousingSelectView
+                    android:id="@+id/rhs_room_select"
+                    style="@style/release_housing_item"
+                    app:text="户型" />
+
+                <com.zfb.house.component.ReleaseHousingEditView
+                    android:id="@+id/rhe_area"
+                    style="@style/release_housing_item"
+                    app:title_text="面积"
+                    app:unit_text="平米" />
+
+                <com.zfb.house.component.ReleaseHousingEditView
+                    android:id="@+id/rhe_money"
+                    style="@style/release_housing_item"
+                    app:title_text="售价"
+                    app:unit_text="万元" />
+
+                <View style="@style/divider_thick" />
+
+                <com.zfb.house.component.PickPhotoLayout
+                    android:id="@+id/pickPhotoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/friends_left_margin"
+                    android:layout_marginLeft="@dimen/friends_left_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" />
+
+                <Button
+                    android:id="@+id/btn_register"
+                    style="@style/login_btn_style"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/shape_btn_deep"
+                    android:text="@string/title_publish" />
+            </LinearLayout>
+        </ScrollView>
+
+        <com.zfb.house.component.ChosePicSchemaLayout
+            android:id="@+id/chosePicSchemaLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

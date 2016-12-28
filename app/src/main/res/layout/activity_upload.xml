@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="146.7dp"
+                android:background="@drawable/upload_banner" />
+
+            <ImageView style="@style/divider_thick" />
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    style="@style/mine_personal_txt_left"
+                    android:text="成交地址" />
+
+                <EditText
+                    android:id="@+id/edt_upload_address"
+                    style="@style/user_mine_edt_left"
+                    android:hint="请输入成交房源地址" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+
+            <ImageView style="@style/divider_thick" />
+
+            <RadioGroup
+                android:id="@+id/group_tenant"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbt_one_left"
+                    style="@style/upload_radio_button"
+                    android:paddingRight="@dimen/my_margin"
+                    android:text="购房者" />
+
+                <RadioButton
+                    android:id="@+id/rbt_one_right"
+                    style="@style/upload_radio_button"
+                    android:paddingLeft="@dimen/my_margin"
+                    android:text="承租者" />
+            </RadioGroup>
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    style="@style/mine_personal_txt_left"
+                    android:text="联系人" />
+
+                <EditText
+                    android:id="@+id/edt_name_one"
+                    style="@style/user_mine_edt_left"
+                    android:hint="请填写联系人姓名" />
+
+                <ImageView
+                    style="@style/divider_thin_bottom"
+                    android:layout_marginLeft="@dimen/edt_margin_left" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    style="@style/mine_personal_txt_left"
+                    android:text="联系电话" />
+
+                <EditText
+                    android:id="@+id/edt_phone_one"
+                    style="@style/user_mine_edt_left"
+                    android:hint="请填写联系人电话"
+                    android:inputType="phone"
+                    android:maxLength="11" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+
+            <ImageView style="@style/divider_thick" />
+
+            <RadioGroup
+                android:id="@+id/group_proxy"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbt_two_left"
+                    style="@style/upload_radio_button"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="@dimen/my_margin"
+                    android:text="代理人" />
+
+                <RadioButton
+                    android:id="@+id/rbt_two_right"
+                    style="@style/upload_radio_button"
+                    android:paddingLeft="@dimen/my_margin"
+                    android:text="业主" />
+            </RadioGroup>
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    style="@style/mine_personal_txt_left"
+                    android:text="联系人" />
+
+                <EditText
+                    android:id="@+id/edt_name_two"
+                    style="@style/user_mine_edt_left"
+                    android:hint="请填写联系人姓名" />
+
+                <ImageView
+                    style="@style/divider_thin_bottom"
+                    android:layout_marginLeft="@dimen/edt_margin_left" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    style="@style/mine_personal_txt_left"
+                    android:text="联系电话" />
+
+                <EditText
+                    android:id="@+id/edt_phone_two"
+                    style="@style/user_mine_edt_left"
+                    android:hint="请填写联系人电话"
+                    android:inputType="phone"
+                    android:maxLength="11" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/divider_color">
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    style="@style/login_btn_style"
+                    android:layout_gravity="top"
+                    android:layout_marginBottom="50dp"
+                    android:background="@drawable/shape_btn_deep"
+                    android:layout_marginTop="26.7dp"
+                    android:text="提交审核" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

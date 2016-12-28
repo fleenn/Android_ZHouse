@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/underline_color_low">
+
+    <include layout="@layout/title_orange"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+        <TableRow
+            style="@style/tag_row_margin">
+            <TextView
+                android:id="@+id/tv_money_one"
+                style="@style/tag_style"
+                android:text="100万以下"/>
+            <TextView
+                android:id="@+id/tv_money_two"
+                style="@style/tag_style"
+                android:text="100-150万"/>
+            <TextView
+                android:id="@+id/tv_money_three"
+                style="@style/tag_style"
+                android:text="150-200万"/>
+        </TableRow>
+        <TableRow
+            style="@style/tag_row_margin">
+            <TextView
+                android:id="@+id/tv_money_four"
+                style="@style/tag_style"
+                android:text="200-250万"/>
+            <TextView
+                android:id="@+id/tv_money_five"
+                style="@style/tag_style"
+                android:text="250-300万"/>
+            <TextView
+                android:id="@+id/tv_money_six"
+                style="@style/tag_style"
+                android:text="300-350万"/>
+        </TableRow>
+        <TableRow
+            style="@style/tag_row_margin">
+            <TextView
+                android:id="@+id/tv_money_seven"
+                style="@style/tag_style"
+                android:text="350-400万"/>
+            <TextView
+                android:id="@+id/tv_money_eight"
+                style="@style/tag_style"
+                android:text="400-450万"/>
+            <TextView
+                android:id="@+id/tv_money_nine"
+                style="@style/tag_style"
+                android:text="450-500万"/>
+        </TableRow>
+        <TableRow
+            style="@style/tag_row_margin">
+            <TextView
+                android:id="@+id/tv_money_ten"
+                style="@style/tag_style"
+                android:text="500-600万"/>
+            <TextView
+                android:id="@+id/tv_money_eleven"
+                style="@style/tag_style"
+                android:text="600-700万"/>
+            <TextView
+                android:id="@+id/tv_money_twelve"
+                style="@style/tag_style"
+                android:text="700-800万"/>
+        </TableRow>
+        <TableRow
+            style="@style/tag_row_margin">
+            <TextView
+                android:id="@+id/tv_money_thirteen"
+                style="@style/tag_style"
+                android:text="800-1000万"/>
+            <TextView
+                android:id="@+id/tv_money_fourteen"
+                style="@style/tag_style"
+                android:text="1000万以上"/>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

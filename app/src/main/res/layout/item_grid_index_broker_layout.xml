@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_index_broker"
+        android:layout_width="@dimen/home_excellent_width"
+        android:layout_height="@dimen/home_excellent_height"
+        android:layout_marginTop="@dimen/my_margin"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_avatar" />
+
+    <TextView
+        android:id="@+id/tv_index_broker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sort_lastline_top"
+        android:text="111"
+        android:textColor="@color/my_gray_one"
+        android:textSize="@dimen/home_label_txt_size" />
+
+    <com.zfb.house.component.RatingBar
+        android:id="@+id/star_near_broker"
+        style="@style/rating_star_style"
+        android:layout_marginTop="5.3dp"
+        app:starEmpty="@drawable/start_all"
+        app:starFill="@drawable/start_all"
+        app:starHalf="@drawable/start_half"
+        app:starImageSize="@dimen/rating_bar_size"
+        app:startClickable="false" />
+
+</LinearLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_head_height"
+        android:layout_margin="@dimen/my_margin">
+
+        <ImageView
+            android:id="@+id/img_collect_avatar"
+            style="@style/item_head_img"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:id="@+id/test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/img_collect_avatar">
+
+            <TextView
+                android:id="@+id/txt_collect_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/item_name_txt_size" />
+
+            <ImageView
+                android:id="@+id/img_collect_identity"
+                android:layout_width="@dimen/item_identity_width"
+                android:layout_height="@dimen/item_identity_height"
+                android:layout_marginLeft="@dimen/my_margin"
+                android:layout_toRightOf="@id/txt_collect_name"
+                android:src="@drawable/identity_broker" />
+        </RelativeLayout>
+
+        <com.zfb.house.component.RatingBar
+            android:id="@+id/rating_bar_collect"
+            style="@style/rating_star_style"
+            android:layout_toRightOf="@id/img_collect_avatar"
+            app:starEmpty="@drawable/start_all"
+            app:starFill="@drawable/start_all"
+            app:starHalf="@drawable/start_half"
+            app:starImageSize="@dimen/rating_bar_size" />
+
+        <TextView
+            android:id="@+id/tv_user_type"
+            style="@style/tv_user_type_style"
+            android:visibility="visible"
+            android:layout_below="@id/test"
+            android:layout_toRightOf="@+id/img_collect_avatar"
+            android:layout_toEndOf="@+id/img_collect_avatar" />
+
+        <TextView
+            android:id="@+id/txt_collect_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="time"
+            android:textColor="@color/my_gray_one"
+            android:textSize="@dimen/txt_five_size" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_collect_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/my_margin"
+        android:layout_marginRight="@dimen/my_margin"
+        android:lineSpacingExtra="@dimen/item_txt_line_space"
+        android:text="content"
+        android:textColor="@color/show_color"
+        android:textSize="@dimen/px_sp_14" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/item_houses_left"
+        android:layout_marginRight="@dimen/item_txt_line_space"
+        android:layout_marginTop="@dimen/item_house_top">
+
+        <com.zfb.house.component.HomeGalleryImagesLayout
+            android:id="@+id/collectMomentsGalleryImagesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llayout_collect_location"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="@dimen/my_margin"
+        android:layout_marginRight="@dimen/my_margin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/near_position" />
+
+        <TextView
+            android:id="@+id/txt_collect_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:text="1111"
+            android:textColor="@color/my_orange_two"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_all_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/my_margin"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:text="查看全部评论"
+            android:textColor="@color/my_orange_two"
+            android:textSize="@dimen/txt_five_size" />
+
+        <LinearLayout
+            android:id="@+id/llayout_collect_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="@dimen/my_margin"
+            android:paddingLeft="@dimen/my_margin"
+            android:paddingRight="@dimen/my_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="删除"
+                android:textColor="@color/my_orange_two"
+                android:textSize="@dimen/txt_seven_size" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        style="@style/divider_thin"
+        android:layout_marginLeft="@dimen/my_margin" />
+
+</LinearLayout>

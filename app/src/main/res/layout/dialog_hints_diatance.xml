@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="293dp"
+        android:layout_height="133.3dp"
+        android:background="@drawable/shape_dialog_bg">
+
+        <TextView
+            android:id="@+id/txt_dialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="33.3dp"
+            android:paddingStart="13dp"
+            android:paddingEnd="13dp"
+            android:textColor="@color/my_gray_one"
+            android:textSize="@dimen/txt_five_size" />
+
+        <Button
+            android:id="@+id/btn_dialog_cancel"
+            style="@style/dialog_hint_btn"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="13.3dp"
+            android:layout_marginLeft="33.3dp"
+            android:background="@drawable/bg_dialog_negative_btn" />
+
+        <Button
+            android:id="@+id/btn_dialog_sure"
+            style="@style/dialog_hint_btn"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="13.3dp"
+            android:layout_marginRight="33.3dp"
+            android:background="@drawable/bg_dialog_positive_btn" />
+
+    </RelativeLayout>
+
+</LinearLayout>

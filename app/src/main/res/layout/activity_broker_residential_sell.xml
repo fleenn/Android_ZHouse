@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View style="@style/divider_thick" />
+
+                <com.zfb.house.component.ReleaseHousingSelectView
+                    android:id="@+id/rhs_house_name"
+                    style="@style/release_housing_item"
+                    app:text="小区名称" />
+
+                <com.zfb.house.component.ReleaseHousingSelectView
+                    android:id="@+id/rhs_room_select"
+                    style="@style/release_housing_item"
+                    app:text="户型" />
+
+                <com.zfb.house.component.ReleaseHousingSelectView
+                    android:id="@+id/rhs_rank_select"
+                    style="@style/release_housing_item"
+                    android:visibility="gone"
+                    app:text="级别" />
+
+                <com.zfb.house.component.ReleaseHousingEditView
+                    android:id="@+id/rhs_area"
+                    style="@style/release_housing_item"
+                    app:title_text="面积"
+                    app:unit_text="平米" />
+
+                <com.zfb.house.component.ReleaseHousingEditView
+                    android:id="@+id/rhe_money"
+                    style="@style/release_housing_item"
+                    app:title_text="售价"
+                    app:unit_text="万元" />
+
+                <!--<com.zfb.house.component.ReleaseHousingEditView-->
+                <!--android:id="@+id/rhe_floor"-->
+                <!--style="@style/release_housing_item"-->
+                <!--app:title_text="楼层"-->
+                <!--app:unit_text="层" />-->
+                <RelativeLayout style="@style/release_choose_rlayout_one">
+
+                    <TextView
+                        android:id="@+id/txt_release_title"
+                        style="@style/release_choose_txt"
+                        android:text="楼层" />
+                    <LinearLayout
+                        android:layout_marginRight="13.3dp"
+                        android:gravity="center_vertical|right"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="330dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tv_floor_count_title"
+                            style="@style/release_floor_hint"
+                            android:text="第" />
+
+                        <EditText
+                            android:id="@+id/et_floor_count"
+                            style="@style/release_floor_edt"
+                            android:layout_toRightOf="@+id/txt_release_title" />
+
+                        <TextView
+                            android:id="@+id/tv_floor_count_unit"
+                            style="@style/release_floor_hint"
+                            android:text="层" />
+
+                        <TextView
+                            style="@style/release_floor_hint"
+                            android:text="共" />
+
+                        <EditText
+                            android:id="@+id/et_total_floor"
+                            style="@style/release_floor_edt"
+                            android:layout_toRightOf="@+id/txt_release_title" />
+
+                        <TextView
+                            style="@style/release_floor_hint"
+                            android:text="层" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/divider_thin_bottom"
+                        android:layout_marginLeft="@dimen/my_margin" />
+                </RelativeLayout>
+
+                <com.zfb.house.component.ReleaseHousingSelectView
+                    android:id="@+id/rhs_toward_select"
+                    style="@style/release_housing_item"
+                    app:text="朝向" />
+
+                <com.zfb.house.component.ReleaseHousingSelectView
+                    android:id="@+id/rhs_decorate"
+                    style="@style/release_housing_item"
+                    app:text="装修程度" />
+
+                <com.zfb.house.component.ReleaseHousingEditView
+                    android:id="@+id/rhe_title"
+                    style="@style/release_housing_item"
+                    app:title_text="房源标题" />
+
+                <View style="@style/divider_thick" />
+
+                <com.zfb.house.component.PickPhotoLayout
+                    android:id="@+id/pickPhotoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/friends_left_margin"
+                    android:layout_marginLeft="@dimen/friends_left_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </ScrollView>
+
+        <com.zfb.house.component.ChosePicSchemaLayout
+            android:id="@+id/chosePicSchemaLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

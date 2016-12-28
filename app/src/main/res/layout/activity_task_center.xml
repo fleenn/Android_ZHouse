@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <LinearLayout style="@style/line_style">
+
+        <TextView
+            android:id="@+id/txt_task_day"
+            style="@style/pager_function_txt"
+            android:text="@string/label_task_day"
+            android:textColor="@color/my_orange_two"
+            android:textSize="@dimen/txt_four_size" />
+
+        <TextView
+            android:id="@+id/txt_task_month"
+            style="@style/pager_function_txt"
+            android:text="@string/label_task_month" />
+
+        <TextView
+            android:id="@+id/txt_task_novice"
+            style="@style/pager_function_txt"
+            android:text="@string/label_task_novice" />
+
+        <TextView
+            android:id="@+id/txt_task_activity"
+            style="@style/pager_function_txt"
+            android:text="@string/label_task_activity" />
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <ImageView
+        android:id="@+id/img_task_cursor"
+        style="@style/indicated_long_style"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_task_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

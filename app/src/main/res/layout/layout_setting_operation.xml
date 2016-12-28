@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/ll_opeation"
+        android:layout_width="wrap_content"
+        android:layout_height="26.7dp"
+        android:background="@drawable/bg_shop_setting_one"
+        android:orientation="horizontal"
+        android:visibility="visible">
+        <TextView
+            android:id="@+id/tv_operation_top"
+            style="@style/setting_operation_txt"
+            android:text="置顶"
+            android:visibility="gone"/>
+
+        <View
+            android:id="@+id/v_operation_top"
+            style="@style/setting_operation_line" />
+
+        <TextView
+            android:id="@+id/tv_operation_edit"
+            style="@style/setting_operation_txt"
+            android:text="编辑" />
+
+        <View style="@style/setting_operation_line" />
+
+        <TextView
+            android:id="@+id/tv_operation_share"
+            style="@style/setting_operation_txt"
+            android:text="分享" />
+
+        <View style="@style/setting_operation_line" />
+
+        <TextView
+            android:id="@+id/tv_operation_delete"
+            style="@style/setting_operation_txt"
+            android:text="删除" />
+
+        <View style="@style/setting_operation_line" />
+
+        <TextView
+            android:id="@+id/tv_operation_up"
+            style="@style/setting_operation_txt"
+            android:text="上架" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_setting"
+        android:layout_width="60dp"
+        android:layout_height="26.7dp"
+        android:background="@drawable/shop_button_setting"
+        android:gravity="center"
+        android:text="@string/title_to_setting"
+        android:textColor="@color/my_orange_two"
+        android:textSize="@dimen/txt_two_size" />
+
+</LinearLayout>

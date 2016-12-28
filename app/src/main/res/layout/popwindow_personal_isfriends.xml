@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="121.3dp"
+        android:layout_height="128dp"
+        android:background="@drawable/personal_more_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/rlayout_remark"
+            style="@style/search_sort_llayout"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                style="@style/search_sort_icon"
+                android:src="@drawable/personal_remark" />
+
+            <TextView
+                style="@style/search_sort_txt"
+                android:text="修改备注" />
+        </LinearLayout>
+
+        <ImageView style="@style/divider_thin" />
+
+        <LinearLayout
+            android:id="@+id/rlayout_complaint"
+            style="@style/search_sort_llayout">
+
+            <ImageView
+                style="@style/search_sort_icon"
+                android:src="@drawable/personal_complaint" />
+
+            <TextView
+                style="@style/search_sort_txt"
+                android:text="@string/complaint" />
+        </LinearLayout>
+
+        <ImageView style="@style/divider_thin" />
+
+        <LinearLayout
+            android:id="@+id/rlayout_delete"
+            style="@style/search_sort_llayout">
+
+            <ImageView
+                style="@style/search_sort_icon"
+                android:src="@drawable/personal_delete" />
+
+            <TextView
+                style="@style/search_sort_txt"
+                android:text="@string/delete" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

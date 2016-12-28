@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_delete_friend">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlayout_friend_name"
+            style="@style/line_style">
+
+            <TextView
+                android:id="@+id/txt_friend_name"
+                style="@style/friend_manage_hint_txt" />
+        </RelativeLayout>
+
+        <ImageView style="@style/divider_thin" />
+
+        <ImageView style="@style/divider_thick" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_friend_delete"
+            style="@style/line_style">
+
+            <TextView
+                style="@style/friend_manage_hint_txt"
+                android:layout_centerHorizontal="true"
+                android:text="@string/delete"
+                android:textColor="@color/my_orange_two" />
+        </RelativeLayout>
+
+        <ImageView style="@style/divider_thin" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_friend_cancel"
+            style="@style/line_style">
+
+            <TextView
+                style="@style/friend_manage_hint_txt"
+                android:layout_centerHorizontal="true"
+                android:text="@string/cancel" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

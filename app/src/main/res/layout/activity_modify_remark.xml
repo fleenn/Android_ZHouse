@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <RelativeLayout
+        style="@style/space_fill_style"
+        android:layout_height="@dimen/my_height">
+
+        <TextView
+            style="@style/friend_manage_hint_txt"
+            android:text="备注名" />
+    </RelativeLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <LinearLayout
+        android:id="@+id/llayout_modify_remark"
+        style="@style/line_style">
+
+        <EditText
+            android:id="@+id/edt_modify_remark"
+            style="@style/mine_personal_edt" />
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <View style="@style/space_fill_style" />
+
+</LinearLayout>

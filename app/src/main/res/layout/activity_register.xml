@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <ImageView style="@style/login_top_img" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49.3dp">
+
+        <ImageView
+            style="@style/login_icon_style"
+            android:src="@drawable/login_phone_number" />
+
+        <EditText
+            android:id="@+id/edt_phone_number"
+            style="@style/login_input_box"
+            android:layout_weight="1"
+            android:hint="@string/hint_input_phone_number"
+            android:inputType="number"
+            android:maxLength="11" />
+
+        <Button
+            android:id="@+id/btn_register_verification"
+            style="@style/login_get_verification"
+            android:text="@string/btn_get_verification" />
+    </LinearLayout>
+
+    <View style="@style/divider_thin" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49.3dp">
+
+        <ImageView
+            style="@style/login_icon_style"
+            android:src="@drawable/login_msm_verification" />
+
+        <EditText
+            android:id="@+id/edt_register_verification"
+            style="@style/login_input_box"
+            android:hint="@string/hint_input_msm_verification"
+            android:inputType="number"
+            android:maxLength="6" />
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49.3dp">
+
+        <ImageView
+            style="@style/login_icon_style"
+            android:src="@drawable/login_password" />
+
+        <EditText
+            android:id="@+id/edt_register_password"
+            style="@style/login_input_box"
+            android:hint="@string/hint_input_new_password"
+            android:inputType="textPassword"
+            android:maxLength="16" />
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49.3dp">
+
+        <ImageView
+            style="@style/login_icon_style"
+            android:src="@drawable/login_invite_code" />
+
+        <EditText
+            android:id="@+id/edt_register_invite"
+            style="@style/login_input_box"
+            android:hint="@string/hint_input_invite_code"
+            android:maxLength="10" />
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <Button
+        android:id="@+id/btn_register"
+        style="@style/login_btn_style"
+        android:background="@drawable/shape_btn_shallow"
+        android:text="@string/btn_register" />
+
+    <Button
+        android:id="@+id/btn_back"
+        style="@style/login_btn_style"
+        android:background="@drawable/shape_btn_normal"
+        android:text="@string/back"
+        android:textColor="@color/my_gray_one" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_register_text"
+            android:textSize="@dimen/txt_three_size" />
+
+        <TextView
+            android:id="@+id/txt_register_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/hint_register_agreement"
+            android:textColor="@color/my_orange_one"
+            android:textSize="@dimen/txt_three_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llayout_error_register"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/warm_width"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <ImageView style="@style/login_warm_icon" />
+
+        <TextView
+            android:id="@+id/tv_tips"
+            style="@style/login_pop_message"
+            android:text="@string/hint_new_password_format" />
+    </LinearLayout>
+
+</LinearLayout>

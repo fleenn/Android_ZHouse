@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/grab_icon_height"
+        android:layout_marginLeft="@dimen/my_margin"
+        android:layout_marginTop="@dimen/my_margin">
+
+        <ImageView
+            android:id="@+id/img_grab_avatar"
+            style="@style/grab_avatar_style" />
+
+        <LinearLayout
+            android:id="@+id/llayout_left"
+            style="@style/grab_customer_llayout"
+            android:layout_toRightOf="@+id/img_grab_avatar">
+
+            <TextView
+                android:id="@+id/tv_customer_name"
+                style="@style/entrust_call_txt_key" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/mine_areas_tick_height"
+                android:layout_marginTop="9dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/entrust_call_txt_key"
+                    android:text="语音：" />
+
+                <ImageView
+                    android:id="@+id/img_customer_voice"
+                    style="@style/entrust_call_img"
+                    android:layout_marginLeft="@dimen/my_margin"
+                    android:layout_marginRight="32dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/grab_customer_llayout"
+            android:layout_toRightOf="@+id/llayout_left">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/entrust_call_txt_key"
+                    android:text="需求类型：" />
+
+                <TextView
+                    android:id="@+id/tv_need_type"
+                    style="@style/entrust_call_txt_value" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/mine_areas_tick_height"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    style="@style/entrust_call_txt_key"
+                    android:text="支付佣金：" />
+
+                <TextView
+                    android:id="@+id/tv_days"
+                    style="@style/entrust_call_txt_value" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/my_margin">
+
+            <ImageView
+                android:id="@+id/iv_call_message"
+                android:layout_width="@dimen/grab_chat_width"
+                android:layout_height="@dimen/grab_chat_height"
+                android:layout_gravity="right"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/icon_message"
+                android:visibility="visible" />
+
+            <CheckBox
+                android:id="@+id/cb_edit_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:button="@drawable/bg_check"
+                android:visibility="gone" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/my_margin">
+
+        <TextView
+            android:id="@+id/tv_distance"
+            style="@style/grab_bottom_txt"
+            android:text="距0.001m" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/grab_bottom_txt"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="8.3dp"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <ImageView
+        style="@style/divider_thin"
+        android:layout_marginLeft="@dimen/my_margin" />
+
+</LinearLayout>

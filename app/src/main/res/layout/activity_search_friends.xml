@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_search_height">
+
+        <EditText
+            android:id="@+id/edt_search_content"
+            style="@style/search_edt_style"
+            android:layout_width="290dp"
+            android:hint="搜索"/>
+
+        <TextView
+            android:id="@+id/txt_search_cancel"
+            style="@style/search_txt_cancel" />
+    </RelativeLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <RelativeLayout
+        android:id="@+id/rlayout_hint"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="找不到该好友…" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list_search_friends"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/underline_color_low"
+        android:dividerHeight="1px" />
+
+</LinearLayout>

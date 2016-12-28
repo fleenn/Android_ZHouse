@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        style="@style/entrust_grid_img"
+        android:layout_marginBottom="@dimen/my_bottom" />
+
+    <TextView
+        style="@style/entrust_grid_up_txt"
+        android:layout_marginBottom="@dimen/my_bottom"
+        android:text="name" />
+
+    <TextView style="@style/entrust_grid_down_txt" />
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_list"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/goods_detail_value_txt"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="敬请期待"
+        android:textSize="@dimen/title_txt_size" />
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+    <!--android:id="@+id/refresh_privilege_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<com.zfb.house.component.LoadMoreRecyclerView-->
+    <!--android:id="@+id/recycler_cashing_privilege"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/bg_list"-->
+    <!--android:scrollbars="none"-->
+    <!--app:layoutManager="GridLayoutManager"-->
+    <!--tools:listitem="@layout/item_grid_goods" />-->
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+</LinearLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="93.3dp">
+
+        <ImageView
+            android:id="@+id/img_order_picture"
+            style="@style/confirm_order_img" />
+
+        <TextView
+            android:id="@+id/txt_goods_name"
+            style="@style/confirm_order_title_txt"
+            android:layout_marginRight="@dimen/my_margin"
+            android:layout_marginTop="@dimen/my_margin"
+            android:layout_toRightOf="@+id/img_order_picture"
+            android:maxLines="2" />
+
+        <TextView
+            android:id="@+id/txt_goods_coin"
+            style="@style/gold_coin_number"
+            android:layout_marginBottom="@dimen/my_margin"
+            android:layout_toRightOf="@+id/img_order_picture" />
+
+        <TextView
+            style="@style/confirm_goods_number_txt"
+            android:layout_toLeftOf="@+id/txt_goods_number"
+            android:text="×" />
+
+        <TextView
+            android:id="@+id/txt_goods_number"
+            style="@style/confirm_goods_number_txt"
+            android:layout_alignParentRight="true"
+            android:text="1" />
+
+        <ImageView
+            style="@style/divider_thin_bottom"
+            android:layout_marginLeft="@dimen/my_margin" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/rlayout_right_style">
+
+        <TextView
+            style="@style/confirm_order_left_txt"
+            android:text="收货人：" />
+
+        <TextView
+            android:id="@+id/txt_order_receiver"
+            style="@style/user_mine_txt_four" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/confirm_order_rlayout">
+
+        <TextView
+            android:id="@+id/txt_order_address_left"
+            style="@style/confirm_order_txt_left"
+            android:text="收货地址：" />
+
+        <TextView
+            android:id="@+id/txt_order_address"
+            style="@style/confirm_order_txt_right"
+            android:layout_toRightOf="@+id/txt_order_address_left" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/rlayout_right_style">
+
+        <TextView
+            style="@style/confirm_order_left_txt"
+            android:text="联系电话：" />
+
+        <TextView
+            android:id="@+id/txt_order_phone"
+            style="@style/user_mine_txt_four" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlayout_order_remarks"
+        style="@style/confirm_order_rlayout"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txt_order_remarks_left"
+            style="@style/confirm_order_txt_left"
+            android:text="备注：" />
+
+        <TextView
+            android:id="@+id/txt_order_remarks"
+            style="@style/confirm_order_txt_right"
+            android:layout_toRightOf="@+id/txt_order_remarks_left" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="69.7dp">
+
+        <TextView
+            style="@style/confirm_order_left_txt"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:text="物流状态：" />
+
+        <LinearLayout
+            android:id="@+id/llayout_ready"
+            style="@style/my_order_logistics_ll"
+            android:layout_width="75dp"
+            android:layout_toLeftOf="@+id/img_divider_one">
+
+            <ImageView
+                android:id="@+id/img_ready"
+                style="@style/my_order_logistics_img"
+                android:background="@drawable/selector_order_ready" />
+
+            <TextView
+                style="@style/goods_detail_value_txt"
+                android:text="准备发货" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_divider_one"
+            style="@style/my_order_divider_img"
+            android:layout_toLeftOf="@+id/llayout_distribution" />
+
+        <LinearLayout
+            android:id="@+id/llayout_distribution"
+            style="@style/my_order_logistics_ll"
+            android:layout_toLeftOf="@+id/img_divider_two">
+
+            <ImageView
+                android:id="@+id/img_distribution"
+                style="@style/my_order_logistics_img"
+                android:background="@drawable/selector_order_distribution" />
+
+            <TextView
+                style="@style/goods_detail_value_txt"
+                android:text="配送中" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_divider_two"
+            style="@style/my_order_divider_img"
+            android:layout_toLeftOf="@+id/llayout_receipt" />
+
+        <LinearLayout
+            android:id="@+id/llayout_receipt"
+            style="@style/my_order_logistics_ll"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/img_receipt"
+                style="@style/my_order_logistics_img"
+                android:background="@drawable/selector_order_receipt" />
+
+            <TextView
+                style="@style/goods_detail_value_txt"
+                android:text="已签收" />
+        </LinearLayout>
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+
+</LinearLayout>

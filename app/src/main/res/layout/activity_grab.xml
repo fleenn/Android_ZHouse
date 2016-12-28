@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <LinearLayout style="@style/line_style">
+
+        <TextView
+            android:id="@+id/tv_grab_customer"
+            style="@style/pager_function_txt"
+            android:text="@string/label_grab_customer"
+            android:textColor="@color/my_orange_two"
+            android:textSize="@dimen/txt_four_size" />
+
+        <TextView
+            android:id="@+id/tv_grabbed_customer"
+            style="@style/pager_function_txt"
+            android:text="@string/label_grab_already_customer" />
+
+        <TextView
+            android:id="@+id/tv_grab_house"
+            style="@style/pager_function_txt"
+            android:text="@string/label_grab_resources" />
+
+        <TextView
+            android:id="@+id/tv_grabbed_house"
+            style="@style/pager_function_txt"
+            android:text="@string/label_grab_already_resources" />
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <ImageView
+        android:id="@+id/img_grab_cursor"
+        style="@style/indicated_grab_style" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager_grab_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

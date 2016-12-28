@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <RelativeLayout style="@style/rlayout_right_style">
+
+        <TextView
+            style="@style/mine_personal_txt_left"
+            android:text="申请人" />
+
+        <EditText
+            android:id="@+id/edt_application_name"
+            style="@style/user_mine_edt_right"
+            android:hint="请输入姓名"
+            android:maxLength="10" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/rlayout_right_style">
+
+        <TextView
+            style="@style/mine_personal_txt_left"
+            android:text="手机号" />
+
+        <EditText
+            android:id="@+id/edt_application_phone"
+            style="@style/user_mine_edt_right"
+            android:hint="请输入手机号"
+            android:inputType="phone"
+            android:maxLength="11" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/rlayout_right_style">
+
+        <TextView
+            style="@style/mine_personal_txt_left"
+            android:text="购买小区/意向小区" />
+
+        <EditText
+            android:id="@+id/edt_intention_village"
+            style="@style/user_mine_edt_right"
+            android:layout_marginLeft="130dp"
+            android:hint="选填" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/divider_color" />
+
+    <ImageView style="@style/divider_thin" />
+
+    <Button
+        android:id="@+id/btn_sure"
+        style="@style/finance_btn"
+        android:text="确定" />
+
+</LinearLayout>

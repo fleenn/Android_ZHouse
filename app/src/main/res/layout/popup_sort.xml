@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="121.3dp"
+        android:layout_height="128dp"
+        android:background="@drawable/personal_more_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/rlayout_star"
+            style="@style/search_sort_llayout"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                style="@style/search_sort_icon"
+                android:src="@drawable/icon_star" />
+
+            <TextView
+                style="@style/search_sort_txt"
+                android:text="@string/label_sort_one" />
+
+            <ImageView
+                android:id="@+id/img_star_tick"
+                style="@style/search_sort_tick"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <ImageView style="@style/divider_thin" />
+
+        <LinearLayout
+            android:id="@+id/rlayout_deal_count"
+            style="@style/search_sort_llayout">
+
+            <ImageView
+                style="@style/search_sort_icon"
+                android:src="@drawable/icon_deal_count" />
+
+            <TextView
+                style="@style/search_sort_txt"
+                android:text="@string/label_sort_two" />
+
+            <ImageView
+                android:id="@+id/img_deal_tick"
+                style="@style/search_sort_tick"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <ImageView style="@style/divider_thin" />
+
+        <LinearLayout
+            android:id="@+id/rlayout_praise_count"
+            style="@style/search_sort_llayout">
+
+            <ImageView
+                style="@style/search_sort_icon"
+                android:src="@drawable/icon_praise_count" />
+
+            <TextView
+                style="@style/search_sort_txt"
+                android:text="@string/label_sort_three" />
+
+            <ImageView
+                android:id="@+id/img_count_tick"
+                style="@style/search_sort_tick"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

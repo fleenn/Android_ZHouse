@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/select_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="非常满意"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_release_orange"
+        />
+    <Button
+        android:id="@+id/select_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="满意"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:layout_marginLeft="19dp"
+        android:layout_weight="1"
+
+        android:background="@drawable/shape_release_write"
+        />
+    <Button
+        android:id="@+id/select_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="一般"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:layout_weight="1"
+        android:layout_marginLeft="19dp"
+        android:background="@drawable/shape_release_write"
+        />
+</LinearLayout>

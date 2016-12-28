@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <ImageView style="@style/divider_thick" />
+
+    <RelativeLayout style="@style/rlayout_right_style">
+
+        <TextView
+            style="@style/mine_personal_txt_left"
+            android:text="证件号码" />
+
+        <EditText
+            android:id="@+id/edt_broker_certificate"
+            style="@style/user_mine_edt_right"
+            android:hint="请填写您的证件号码" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlayout_year"
+        style="@style/rlayout_right_style">
+
+        <TextView
+            style="@style/mine_personal_txt_left"
+            android:text="从业年限" />
+
+        <TextView
+            android:id="@+id/edt_broker_year"
+            style="@style/user_mine_txt_three"
+            android:text="请选择从业年限" />
+
+        <ImageView style="@style/img_more_style" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <ImageView style="@style/divider_thick" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/mine_personal_txt_left"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:layout_marginTop="@dimen/my_margin"
+            android:text="相关证件" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/my_margin">
+
+            <ImageView
+                android:id="@+id/img_qualification"
+                style="@style/id_img_style"
+                android:src="@drawable/id_img" />
+
+            <ImageView
+                style="@style/id_img_style"
+                android:layout_marginLeft="48dp"
+                android:src="@drawable/qualification_sample" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        style="@style/divider_thin"
+        android:layout_marginLeft="@dimen/my_margin" />
+
+    <RadioGroup
+        android:id="@+id/rbt_group_type"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_height"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbt_left"
+            style="@style/upload_radio_button"
+            android:layout_marginRight="33dp"
+            android:text="当地证" />
+
+        <RadioButton
+            android:id="@+id/rbt_center"
+            style="@style/upload_radio_button"
+            android:text="省级协理证" />
+
+        <RadioButton
+            android:id="@+id/rbt_right"
+            style="@style/upload_radio_button"
+            android:layout_marginLeft="33dp"
+            android:text="全国证" />
+    </RadioGroup>
+
+    <ImageView style="@style/divider_thin" />
+
+    <ImageView style="@style/divider_thick" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/mine_personal_txt_left"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:layout_marginTop="@dimen/my_margin"
+            android:text="个人名片" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/my_margin">
+
+            <ImageView
+                android:id="@+id/img_business_card"
+                style="@style/id_img_style"
+                android:src="@drawable/id_img" />
+
+            <ImageView
+                style="@style/id_img_style"
+                android:layout_marginLeft="48dp"
+                android:src="@drawable/card_sample" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <View style="@style/space_fill_style" />
+</LinearLayout>

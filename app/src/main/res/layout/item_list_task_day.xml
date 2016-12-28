@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/txt_task_name"
+        style="@style/goods_detail_value_txt"
+        android:layout_marginTop="6.7dp"
+        android:textColor="@color/my_black_one" />
+
+    <TextView
+        android:id="@+id/txt_task_detail"
+        style="@style/goods_detail_value_txt"
+        android:layout_below="@+id/txt_task_name"
+        android:layout_marginTop="6.7dp" />
+
+    <TextView
+        android:id="@+id/txt_task_coin"
+        style="@style/gold_coin_number"
+        android:layout_marginBottom="@dimen/my_margin"
+        android:layout_toLeftOf="@+id/txt_task_state" />
+
+    <TextView
+        android:id="@+id/txt_task_state"
+        style="@style/home_txt_header"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="6.7dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="@dimen/my_margin"
+        android:textColor="@drawable/selector_task_state_color" />
+
+    <ImageView
+        style="@style/divider_thin_bottom"
+        android:layout_marginLeft="@dimen/my_margin" />
+</RelativeLayout>

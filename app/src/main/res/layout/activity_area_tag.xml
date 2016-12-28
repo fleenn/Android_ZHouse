@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/underline_color_low">
+
+    <include layout="@layout/title_orange"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+        <TableRow
+            style="@style/tag_row_margin">
+            <TextView
+                android:id="@+id/tv_area_one"
+                style="@style/tag_style"
+                android:text="一室"/>
+            <TextView
+                android:id="@+id/tv_area_two"
+                style="@style/tag_style"
+                android:text="50-70m²"/>
+            <TextView
+                android:id="@+id/tv_area_three"
+                style="@style/tag_style"
+                android:text="70-90m²"/>
+        </TableRow>
+        <TableRow
+            style="@style/tag_row_margin">
+            <TextView
+                android:id="@+id/tv_area_four"
+                style="@style/tag_style"
+                android:text="90-110m²"/>
+            <TextView
+                android:id="@+id/tv_area_five"
+                style="@style/tag_style"
+                android:text="110-130m²"/>
+            <TextView
+                android:id="@+id/tv_area_six"
+                style="@style/tag_style"
+                android:text="130-150m²"/>
+        </TableRow>
+        <TableRow
+            style="@style/tag_row_margin">
+            <TextView
+                android:id="@+id/tv_area_seven"
+                style="@style/tag_style"
+                android:text="150-200m²"/>
+            <TextView
+                android:id="@+id/tv_area_eight"
+                style="@style/tag_style"
+                android:text="200-300m²"/>
+            <TextView
+                android:id="@+id/tv_area_unlimited"
+                style="@style/tag_style"
+                android:text="不限"/>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

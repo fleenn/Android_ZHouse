@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="city">
+        <item>厦门</item>
+    </string-array>
+
+    <string-array name="home_search">
+        <item>售房</item>
+        <item>租房</item>
+        <item>不限</item>
+    </string-array>
+
+    <string-array name="call_choose">//选择专家类型
+        <item>选择专家类型</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="administrativeSelect">
+        <item>行政区</item>
+        <item>思明</item>
+        <item>湖里</item>
+        <item>集美</item>
+        <item>海沧</item>
+        <item>翔安</item>
+        <item>同安</item>
+    </string-array>
+
+    <string-array name="distrustSelect">
+        <item>片区</item>
+    </string-array>
+
+    <string-array name="villageSelect">
+        <item>小区</item>
+    </string-array>
+
+</resources>

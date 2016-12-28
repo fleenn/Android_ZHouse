@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/divider_color"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlayout_broker_name"
+                style="@style/rlayout_right_style"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/confirm_order_left_txt"
+                    android:text="昵        称：" />
+
+                <TextView
+                    android:id="@+id/txt_broker_name"
+                    style="@style/user_mine_txt_four" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    style="@style/confirm_order_left_txt"
+                    android:text="联系电话：" />
+
+                <TextView
+                    android:id="@+id/txt_broker_phone"
+                    style="@style/user_mine_txt_four" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    style="@style/confirm_order_left_txt"
+                    android:text="所属公司：" />
+
+                <TextView
+                    android:id="@+id/txt_broker_company"
+                    style="@style/user_mine_txt_four" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    style="@style/confirm_order_left_txt"
+                    android:text="所属门店：" />
+
+                <TextView
+                    android:id="@+id/txt_broker_shop"
+                    style="@style/user_mine_txt_four" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    style="@style/confirm_order_left_txt"
+                    android:text="实名认证：" />
+
+                <TextView
+                    android:id="@+id/txt_broker_realname"
+                    style="@style/user_mine_txt_four" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    style="@style/confirm_order_left_txt"
+                    android:text="资质认证：" />
+
+                <TextView
+                    android:id="@+id/txt_broker_qualification"
+                    style="@style/user_mine_txt_four" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    style="@style/confirm_order_left_txt"
+                    android:text="名片认证：" />
+
+                <TextView
+                    android:id="@+id/txt_broker_card"
+                    style="@style/user_mine_txt_four" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

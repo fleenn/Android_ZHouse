@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View style="@style/divider_thick" />
+
+    <TextView
+        android:id="@+id/txt_housing_title"
+        style="@style/release_housing_title_txt"
+        android:text="出租" />
+
+    <View style="@style/divider_thin" />
+
+    <LinearLayout style="@style/release_llayout">
+
+        <TextView
+            android:id="@+id/txt_housing_rent_residential"
+            style="@style/release_housing_txt"
+            android:drawableTop="@drawable/icon_release_rent_room"
+            android:text="住宅" />
+
+        <TextView
+            android:id="@+id/txt_housing_rent_office"
+            style="@style/release_housing_txt"
+            android:drawableTop="@drawable/icon_release_rent_office"
+            android:text="写字楼" />
+
+        <TextView
+            android:id="@+id/txt_housing_rent_shop"
+            style="@style/release_housing_txt"
+            android:drawableTop="@drawable/icon_release_rent_shop"
+            android:text="商铺" />
+
+        <TextView
+            android:id="@+id/txt_housing_rent_villa"
+            style="@style/release_housing_txt"
+            android:drawableTop="@drawable/icon_release_rent_voil"
+            android:text="别墅" />
+    </LinearLayout>
+
+    <View style="@style/divider_thin" />
+
+</LinearLayout>

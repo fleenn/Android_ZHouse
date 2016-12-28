@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/com.zfb.house"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.zfb.house.component.CirclePageIndicator
+        android:id="@+id/indicatorCircle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"
+        app:centered="true"
+        app:fillColor="#FFFFFF"
+        app:pageColor="#22222222"
+        app:radius="4dp"
+        app:strokeColor="#55222222"
+        app:strokeWidth="1dp" />
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/add_contact_list__layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/add_contact_list_icon"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentLeft="true"
+                />
+
+            <LinearLayout
+                android:id="@+id/akey_rob_list_content_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_toRightOf="@id/add_contact_list_icon"
+                >
+
+
+                <TextView
+                    android:id="@+id/add_contact_list_cusname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="名字"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/px_sp_24" />
+
+                <TextView
+                    android:id="@+id/add_contact_list_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@android:color/darker_gray" />
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+

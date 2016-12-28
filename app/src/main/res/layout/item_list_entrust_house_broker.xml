@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlayout_entrust_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/my_margin">
+
+        <ImageView
+            android:id="@+id/img_entrust_header"
+            style="@style/entrust_house_img"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/iv_sign"
+            style="@style/entrust_house_icon" />
+
+        <RelativeLayout
+            style="@style/entrust_house_rlayout"
+            android:layout_toRightOf="@+id/img_entrust_header">
+
+            <TextView
+                android:id="@+id/tv_house_name"
+                style="@style/entrust_house_txt_title" />
+
+            <TextView
+                android:id="@+id/tv_model"
+                style="@style/entrust_house_txt_one"
+                android:layout_centerVertical="true" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:id="@+id/tv_area"
+                    style="@style/entrust_house_txt_one"
+                    android:layout_marginRight="@dimen/my_margin" />
+
+                <TextView
+                    android:id="@+id/tv_money"
+                    style="@style/entrust_house_txt_one" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_message"
+                android:layout_width="@dimen/grab_chat_width"
+                android:layout_height="@dimen/grab_chat_height"
+                android:background="@drawable/icon_message" />
+
+            <CheckBox
+                android:id="@+id/cb_edit_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/bg_check"
+                android:visibility="gone" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/my_margin">
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            style="@style/entrust_house_txt_two"
+            android:layout_width="@dimen/house_entrust_img_width"
+            android:layout_marginLeft="@dimen/my_margin" />
+
+        <TextView
+            style="@style/entrust_house_txt_two"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:text="联系电话：" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            style="@style/entrust_house_txt_two" />
+    </LinearLayout>
+
+    <ImageView
+        style="@style/divider_thin_bottom"
+        android:layout_marginLeft="@dimen/my_margin" />
+</LinearLayout>

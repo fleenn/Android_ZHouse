@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/underline_color_low">
+
+    <include layout="@layout/title_orange"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+        <TableRow
+            style="@style/tag_row_margin">
+            <TextView
+                android:id="@+id/tv_layout_one"
+                style="@style/tag_style"
+                android:text="一室"/>
+            <TextView
+                android:id="@+id/tv_layout_two"
+                style="@style/tag_style"
+                android:text="两室"/>
+            <TextView
+                android:id="@+id/tv_layout_three"
+                style="@style/tag_style"
+                android:text="三室"/>
+        </TableRow>
+        <TableRow
+            style="@style/tag_row_margin">
+            <TextView
+                android:id="@+id/tv_layout_four"
+                style="@style/tag_style"
+                android:text="四室"/>
+            <TextView
+                android:id="@+id/tv_layout_five"
+                style="@style/tag_style"
+                android:text="五室"/>
+            <TextView
+                android:id="@+id/tv_layout_six"
+                style="@style/tag_style"
+                android:text="六室"/>
+        </TableRow>
+        <TableRow
+            style="@style/tag_row_margin">
+            <TextView
+                android:id="@+id/tv_layout_other"
+                style="@style/tag_style"
+                android:text="六室以上"/>
+            <TextView
+                android:id="@+id/tv_layout_unlimited"
+                style="@style/tag_style"
+                android:text="不限"/>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

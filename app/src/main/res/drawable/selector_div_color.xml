@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape>
+            <solid android:color="@color/my_orange_one"/>
+            <size android:height="2dp"/>
+        </shape>
+    </item>
+    <item android:state_selected="false">
+        <shape>
+            <solid android:color="@color/underline_color_low"/>
+            <size android:height="1dp"/>
+        </shape>
+    </item>
+
+</selector>

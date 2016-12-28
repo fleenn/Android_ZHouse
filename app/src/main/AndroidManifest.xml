@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zfb.house">
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <permission
+        android:name="com.zfb.house.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="com.zfb.house.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+
+    <application
+        android:name="com.lemon.LemonApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.DefaultIntro"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.LoginActivity" />
+        <activity android:name=".ui.RegisterActivity" />
+        <activity android:name=".ui.SelectUserTypeActivity" />
+        <activity android:name=".ui.FindPwdActivity" />
+        <activity android:name=".ui.CallActivity" />
+        <activity android:name=".ui.GrabActivity" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".ui.ConcernExpertActivity" />
+        <activity
+            android:name=".ui.SendMomentsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".ui.PhotoActivity" />
+        <activity android:name=".ui.PhotoAlbumActivity" />
+        <activity android:name=".ui.MapActivity" />
+        <activity android:name=".ui.AreasActivity" />
+        <activity android:name=".ui.AreasDistrictActivity" />
+        <activity android:name=".ui.LayoutTagActivity" />
+        <activity android:name=".ui.DistrictSelectActivity" />
+        <activity android:name=".ui.CommunitySelectActivity" />
+        <activity android:name=".ui.AreaTagActivity" />
+        <activity android:name=".ui.MoneyTagActivity" />
+        <activity android:name=".ui.SearchHouseActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name=".ui.AreasVillageActivity" />
+        <activity android:name=".ui.UserPersonalActivity" />
+        <activity android:name=".ui.BrokerPersonalActivity" />
+        <activity android:name=".ui.MyFriendsActivity" />
+        <activity android:name=".ui.SearchFriendsActivity" />
+        <activity android:name=".ui.AddFriendsActivity" />
+        <activity android:name=".ui.SettingActivity" />
+        <activity android:name=".ui.FeedBackActivity" />
+        <activity android:name=".ui.AboutUsActivity" />
+        <activity android:name=".ui.BrokerEntrustActivity" />
+        <activity android:name=".ui.UserDataActivity" />
+        <activity android:name=".ui.BrokerDataActivity" />
+        <activity android:name=".ui.MyMomentsActivity" />
+        <activity android:name=".ui.GoldCoinActivity" />
+        <activity android:name=".ui.CashingCenterActivity" />
+        <activity android:name=".ui.TaskCenterActivity" />
+        <activity android:name=".ui.GameCenterActivity" />
+        <activity android:name=".ui.GoodsDetailActivity" />
+        <activity android:name=".ui.ConfirmOrderActivity" />
+        <activity android:name=".ui.MyOrderActivity" />
+        <activity android:name=".ui.BannerActivity" />
+        <activity
+            android:name=".ui.MomentsDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".ui.CollectHousesActivity" />
+        <activity
+            android:name=".ui.CollectMomentsActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".ui.ModifyAliasActivity" />
+        <activity android:name=".ui.BrokerShopActivity" />
+        <activity android:name=".ui.ReleaseHousingActivity" />
+        <activity android:name=".ui.ModifyRemarkActivity" />
+        <activity android:name=".ui.BrokerListActivity" />
+        <activity android:name=".ui.NearBrokerListActivity" />
+        <activity android:name=".ui.ComplaintFriendActivity" />
+        <activity android:name=".ui.PlotSearchActivity" />
+        <activity android:name=".ui.BrokerShopRentDetailActivity" />
+        <activity android:name=".ui.BrokerShopSellDetailActivity" />
+        <activity android:name=".ui.RealNameActivity" />
+        <activity android:name=".ui.QualificationActivity" />
+        <activity android:name=".ui.SearchActivity" />
+        <activity android:name=".ui.UploadActivity" />
+        <activity android:name=".ui.UserEntrustActivity" />
+        <activity android:name=".ui.AgreementActivity" />
+        <activity android:name=".ui.ComplaintOtherActivity" />
+        <activity android:name=".ui.AfterSalesFinanceActivity" />
+        <activity android:name=".ui.FinanceInformationActivity" />
+        <activity android:name=".ui.FinanceFunctionActivity" />
+        <activity android:name=".ui.SearchResultActivity" />
+        <activity android:name=".ui.CoinRuleActivity" />
+        <activity android:name=".ui.BrokerShopPhotoActivity" />
+        <activity
+            android:name=".ui.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Intro">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.zfb.house.emchat.ShowBigImage" />
+        <activity android:name="com.zfb.house.emchat.AlertDialog" />
+        <activity
+            android:name=".ui.BrokerResidentialSellActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".ui.UserResidentialSellActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".ui.BrokerResidentialSellNextActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".ui.JudgeBrokerActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <!--环信消息-->
+        <activity android:name=".emchat.ChatActivity" />
+        <activity android:name=".emchat.NewFriendsMsgActivityNew" />
+        <!--<activity android:name=".emchat.AlertDialog" />-->
+        <activity
+            android:name=".emchat.ContextMenu"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle" />
+        <activity android:name="com.zfb.house.jpush.JpushActivity" />
+
+        <!-- Rich push 核心功能 since 2.0.6-->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle"></activity>
+
+        <!-- Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.zfb.house" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能-->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false"></service>
+
+
+        <!-- Required SDK 核心功能-->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="com.zfb.house" />
+            </intent-filter>
+
+        </service>
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <!--Required  显示通知栏 -->
+                <category android:name="com.zfb.house" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+
+        </receiver>
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+
+        <!-- User defined.  For test only  用户自定义的广播接收器-->
+        <receiver
+            android:name="com.zfb.house.jpush.JpushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+                <!--Optional 用户接受Rich Push Javascript 回调函数的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.zfb.house" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="6f5ea089b234ae52a0052bf9" />
+        <!--  </>值来自开发者平台取得的AppKey-->
+
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <!-- zfb keystore -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="ZHfWYUg7javeNvQyGs5YujNF2Dy6dwih" />
+        <!--<meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="8B7shxXENVGz6Oa3LLm18wyo5G8EMPI0" />-->
+
+        <!-- 设置环信应用的AppKey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="voan24#skuzfb001" />
+        <!--  声明sdk所需的service SDK核心功能 -->
+        <service android:name="com.easemob.chat.EMChatService" />
+
+    </application>
+
+</manifest>

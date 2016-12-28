@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <ImageView style="@style/divider_thick" />
+
+    <RelativeLayout style="@style/release_choose_rlayout_one">
+
+        <TextView
+            style="@style/release_choose_txt"
+            android:text="建筑年代" />
+
+        <TextView
+            style="@style/release_choose_txt_one"
+            android:text="2002" />
+
+        <ImageView style="@style/img_more_style" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/release_choose_rlayout_one">
+
+        <TextView
+            style="@style/release_choose_txt"
+            android:text="产权性质" />
+
+        <TextView
+            style="@style/release_choose_txt_one"
+            android:text="个人产权" />
+
+        <ImageView style="@style/img_more_style" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/release_choose_rlayout_one">
+
+        <TextView
+            style="@style/release_choose_txt"
+            android:text="有无电梯" />
+
+        <TextView
+            style="@style/release_choose_txt_one"
+            android:text="有" />
+
+        <ImageView style="@style/img_more_style" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/release_choose_rlayout_one">
+
+        <TextView
+            style="@style/release_choose_txt"
+            android:text="几梯几户" />
+
+        <TextView
+            style="@style/release_choose_txt_one"
+            android:text="2梯4户" />
+
+        <ImageView style="@style/img_more_style" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/release_choose_llayout"
+        android:layout_marginTop="@dimen/release_choose_margin">
+
+        <TextView
+            style="@style/release_choose_txt"
+            android:text="售房标签" />
+
+        <Button
+            style="@style/release_choose_btn"
+            android:layout_marginRight="213.3dp"
+            android:text="满二为一" />
+
+        <Button
+            style="@style/release_choose_btn"
+            android:layout_marginRight="146.7dp"
+            android:text="满两年免" />
+
+        <Button
+            style="@style/release_choose_btn"
+            android:layout_marginRight="80dp"
+            android:text="业主急售" />
+
+        <Button
+            style="@style/release_choose_btn"
+            android:layout_marginRight="@dimen/my_margin"
+            android:text="学区房" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/release_choose_llayout">
+
+        <TextView
+            style="@style/release_choose_hint_three"
+            android:text="（最多3个）" />
+
+        <Button
+            style="@style/release_choose_btn"
+            android:layout_marginRight="213.3dp"
+            android:text="地铁房" />
+
+        <Button
+            style="@style/release_choose_btn"
+            android:layout_marginRight="146.7dp"
+            android:text="景观房" />
+
+        <Button
+            style="@style/release_choose_btn"
+            android:layout_marginRight="80dp"
+            android:text="繁华地段" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/release_choose_llayout"
+        android:layout_height="@dimen/release_choose_margin">
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/release_choose_llayout"
+        android:layout_marginTop="@dimen/release_choose_margin">
+
+        <TextView
+            style="@style/release_choose_txt"
+            android:text="配套设施" />
+
+        <Button
+            style="@style/release_choose_btn"
+            android:layout_marginRight="213.3dp"
+            android:text="床" />
+
+        <Button
+            style="@style/release_choose_btn"
+            android:layout_marginRight="146.7dp"
+            android:text="宽带" />
+
+        <Button
+            style="@style/release_choose_btn"
+            android:layout_marginRight="80dp"
+            android:text="电视" />
+
+        <Button
+            style="@style/release_choose_btn"
+            android:layout_marginRight="@dimen/my_margin"
+            android:text="洗衣机" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/release_choose_llayout">
+
+        <TextView
+            style="@style/release_choose_hint_three"
+            android:text="（多选）" />
+
+        <Button
+            style="@style/release_choose_btn"
+            android:layout_marginRight="213.3dp"
+            android:text="沙发" />
+
+        <Button
+            style="@style/release_choose_btn"
+            android:layout_marginRight="146.7dp"
+            android:text="空调" />
+
+        <Button
+            style="@style/release_choose_btn"
+            android:layout_marginRight="80dp"
+            android:text="热水器" />
+
+        <Button
+            style="@style/release_choose_btn"
+            android:layout_marginRight="@dimen/my_margin"
+            android:text="冰箱" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/release_choose_llayout"
+        android:layout_height="@dimen/release_choose_margin">
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/release_choose_rlayout_one">
+
+        <TextView
+            style="@style/release_choose_txt"
+            android:text="地址" />
+
+        <TextView
+            style="@style/release_choose_txt_one"
+            android:layout_marginRight="@dimen/my_margin"
+            android:ellipsize="end"
+            android:maxEms="13"
+            android:singleLine="true"
+            android:text="厦门市思明区莲前西路212号怡富大厦" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/release_choose_rlayout_one">
+
+        <TextView
+            style="@style/release_choose_txt"
+            android:text="房源标题" />
+
+        <EditText style="@style/release_choose_edt_two2" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/divider_color">
+
+        <TextView style="@style/release_choose_hint_four" />
+
+        <Button style="@style/release_btn" />
+    </RelativeLayout>
+
+</LinearLayout>

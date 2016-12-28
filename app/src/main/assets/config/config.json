@@ -1,0 +1,17 @@
+{
+  "debug":"false",
+  "param_convert":"com.lemon.carmonitor.convert.param",
+  "result_convert":"com.lemon.carmonitor.convert.result",
+  "convert_ext":"Convert",
+  "dismiss_loading_time":"10",
+  "zfb_server":"http://www.zhufangbang.com/app",
+  "zfb_test_server":"http://192.168.23.121:8080/zfb/app",
+  "zfb_old_server":"http://www.zhufangbang.com/",
+  "list_size":"10",
+  "broker_range":"5000",
+  "mobile":"18150088010",
+  "pwd":"123456",
+  "userFriends":"0",
+  "brokerFriends":"1",
+  "isupdate":"true"
+}

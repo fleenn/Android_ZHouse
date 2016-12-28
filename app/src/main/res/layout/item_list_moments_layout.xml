@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_head_height"
+        android:layout_margin="@dimen/my_margin">
+
+        <ImageView
+            android:id="@+id/img_avatar"
+            style="@style/item_head_img"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_toEndOf="@id/img_avatar"
+            android:layout_toRightOf="@id/img_avatar"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_four_size" />
+
+            <ImageView
+                android:id="@+id/img_identity"
+                android:layout_width="@dimen/item_identity_width"
+                android:layout_height="@dimen/item_identity_height"
+                android:layout_marginStart="@dimen/my_margin"
+                android:layout_marginLeft="@dimen/my_margin"
+                android:layout_toEndOf="@id/tv_name"
+                android:layout_toRightOf="@id/tv_name" />
+        </LinearLayout>
+
+        <com.zfb.house.component.RatingBar
+        android:id="@+id/rating_bar"
+        style="@style/rating_star_style"
+        android:layout_toRightOf="@id/img_avatar"
+        app:starEmpty="@drawable/start_all"
+        app:starFill="@drawable/start_all"
+        app:starHalf="@drawable/start_half"
+        app:starImageSize="@dimen/rating_bar_size"
+        app:startClickable="false" />
+
+        <TextView
+            android:id="@+id/tv_user_type"
+            style="@style/tv_user_type_style"
+            android:layout_toRightOf="@id/img_avatar"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/my_gray_one"
+            android:textSize="@dimen/txt_five_size" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/my_margin"
+        android:layout_marginRight="@dimen/my_margin"
+        android:lineSpacingExtra="@dimen/item_txt_line_space"
+        android:textColor="@color/show_color"
+        android:textSize="@dimen/px_sp_14" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/item_txt_line_space"
+        android:layout_marginStart="@dimen/item_houses_left"
+        android:layout_marginTop="@dimen/item_house_top">
+
+        <com.zfb.house.component.HomeGalleryImagesLayout
+            android:id="@+id/homeGalleryImagesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llayout_location"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginEnd="@dimen/my_margin"
+        android:layout_marginStart="@dimen/my_margin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_moments_location"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/near_position" />
+
+        <TextView
+            android:id="@+id/tv_moments_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/my_orange_two"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_more_reply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_more_comment"
+        android:textSize="13sp"
+        android:textColor="@color/my_orange_two"
+        android:paddingStart="@dimen/my_margin"
+        android:paddingTop="3dp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/my_margin">
+
+        <LinearLayout
+            android:id="@+id/llayout_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <LinearLayout style="@style/line_style">
+
+        <RelativeLayout
+            android:id="@+id/rlayout_praise"
+            style="@style/item_rlayout_function">
+
+            <ImageView
+                android:id="@+id/img_praise"
+                style="@style/item_img_function"
+                android:src="@drawable/selector_good_img" />
+
+            <TextView
+                android:id="@+id/tv_praise_count"
+                style="@style/item_txt_function"
+                android:layout_toEndOf="@+id/img_praise"
+                android:text="78" />
+        </RelativeLayout>
+
+        <ImageView style="@style/divider_vertical" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_share"
+            style="@style/item_rlayout_function">
+
+            <ImageView
+                android:id="@+id/img_share"
+                style="@style/item_img_function"
+                android:src="@drawable/selector_share_img" />
+
+            <TextView
+                android:id="@+id/tv_share_count"
+                style="@style/item_txt_function"
+                android:layout_toEndOf="@+id/img_share"
+                android:text="56" />
+        </RelativeLayout>
+
+        <ImageView style="@style/divider_vertical" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_collect"
+            style="@style/item_rlayout_function">
+
+            <ImageView
+                android:id="@+id/img_collect"
+                style="@style/item_img_function"
+                android:src="@drawable/selector_collect_img" />
+
+            <TextView
+                android:id="@+id/tv_collection_count"
+                style="@style/item_txt_function"
+                android:layout_toEndOf="@+id/img_collect"
+                android:text="34" />
+        </RelativeLayout>
+
+        <ImageView style="@style/divider_vertical" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_chat"
+            style="@style/item_rlayout_function">
+
+            <ImageView
+                android:id="@+id/img_chat"
+                style="@style/item_img_function"
+                android:src="@drawable/selector_item_chat" />
+
+            <TextView
+                android:id="@+id/tv_reply_count"
+                style="@style/item_txt_function"
+                android:layout_toEndOf="@+id/img_chat"
+                android:text="12" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

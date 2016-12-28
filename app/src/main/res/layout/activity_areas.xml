@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <ImageView style="@style/divider_thick" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_height">
+
+        <RelativeLayout style="@style/line_left_style">
+
+            <TextView
+                style="@style/line_txt_style"
+                android:layout_marginLeft="@dimen/mine_margin_left"
+                android:text="城市" />
+        </RelativeLayout>
+
+        <ImageView style="@style/divider_vertical_full" />
+
+        <RelativeLayout
+            android:id="@+id/areas_city"
+            style="@style/rlayout_right_style">
+
+            <TextView
+                style="@style/user_mine_txt_two"
+                android:text="厦门" />
+
+            <ImageView style="@style/img_more_style" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <ImageView style="@style/divider_thick" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mine_area_height">
+
+        <RelativeLayout style="@style/line_left_style">
+
+            <TextView
+                android:id="@+id/txt_district"
+                style="@style/line_txt_style"
+                android:layout_marginLeft="@dimen/mine_margin_left"/>
+
+        </RelativeLayout>
+
+        <ImageView style="@style/divider_vertical_full" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlayout_district"
+                style="@style/rlayout_right_style">
+
+                <TextView
+                    style="@style/user_mine_txt_two"
+                    android:text="请选择片区" />
+
+                <ImageView style="@style/img_more_style" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    android:id="@+id/txt_district_one"
+                    style="@style/line_txt_style" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    android:id="@+id/txt_district_two"
+                    style="@style/line_txt_style" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    android:id="@+id/txt_district_three"
+                    style="@style/line_txt_style" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <ImageView style="@style/divider_thick" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mine_area_height">
+
+        <RelativeLayout style="@style/line_left_style">
+
+            <TextView
+                android:id="@+id/txt_village"
+                style="@style/line_txt_style"
+                android:layout_marginLeft="@dimen/mine_margin_left" />
+
+        </RelativeLayout>
+
+        <ImageView style="@style/divider_vertical_full" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlayout_village"
+                style="@style/rlayout_right_style">
+
+                <TextView
+                    style="@style/user_mine_txt_two"
+                    android:text="请选择小区" />
+
+                <ImageView style="@style/img_more_style" />
+
+                <ImageView
+                    style="@style/divider_thin"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    android:id="@+id/txt_village_one"
+                    style="@style/line_txt_style" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    android:id="@+id/txt_village_two"
+                    style="@style/line_txt_style" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    android:id="@+id/txt_village_three"
+                    style="@style/line_txt_style" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <View style="@style/space_fill_style" />
+</LinearLayout>

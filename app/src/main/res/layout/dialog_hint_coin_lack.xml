@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="133.3dp"
+        android:background="@drawable/bg_dialog_coin">
+
+        <TextView
+            android:id="@+id/dialog_title"
+            style="@style/dialog_coin_title"
+            android:text="提示:" />
+
+        <TextView
+            style="@style/dialog_coin_title"
+            android:layout_below="@+id/dialog_title"
+            android:text="你的金币不够哦"
+            android:textSize="@dimen/txt_five_size" />
+
+        <ImageView
+            style="@style/divider_thin_bottom"
+            android:layout_marginBottom="40dp" />
+
+        <TextView
+            android:id="@+id/txt_cancel"
+            style="@style/dialog_coin_operator"
+            android:text="取消" />
+
+        <ImageView
+            android:layout_width="1px"
+            android:layout_height="@dimen/dialog_operator_height"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/txt_cancel"
+            android:background="@color/underline_color" />
+
+        <TextView
+            android:id="@+id/txt_more_coin"
+            style="@style/dialog_coin_operator"
+            android:layout_alignParentRight="true"
+            android:text="去赚金币"
+            android:textColor="@color/my_orange_two" />
+    </RelativeLayout>
+
+</LinearLayout>

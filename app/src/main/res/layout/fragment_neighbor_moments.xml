@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp">
+
+        <com.zfb.house.component.LoadMoreRecyclerView
+            android:id="@+id/recycler_moments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_list"
+            android:scrollbars="none"
+            app:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/item_list_moments_layout" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <com.zfb.house.emchat.ChatInputLayout
+        android:id="@+id/chat_moments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/llayout_location"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/moments_neighbor_location_height"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/moments_neighbor_location_img"
+            android:layout_height="@dimen/moments_neighbor_location_img"
+            android:layout_marginEnd="@dimen/moments_neighbor_location_margin"
+            android:layout_marginStart="@dimen/moments_neighbor_location_margin"
+            android:src="@drawable/near_position" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_position"
+            android:textSize="@dimen/moments_neighbor_location_font"
+            android:textColor="@color/gray"
+            android:layout_marginEnd="@dimen/moments_neighbor_font_margin"
+            android:layout_marginRight="@dimen/moments_neighbor_font_margin"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击设置，查看其它周边信息"
+            android:textColor="@color/underline_color"
+            />
+    </LinearLayout>
+
+    <include layout="@layout/include_no_data_hint"/>
+</RelativeLayout>

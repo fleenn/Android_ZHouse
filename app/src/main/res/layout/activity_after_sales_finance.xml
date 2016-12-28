@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.zfb.house.adapter.InfiniteViewPager
+                android:id="@+id/infiniteViewPagerFinance"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/finance_infinite_viewpager" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/my_margin"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="交易服务"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_four_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="@dimen/my_margin"
+                    android:text="服务费:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_six_size" />
+
+                <TextView
+                    android:id="@+id/txt_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1999元/单"
+                    android:textColor="@color/my_orange_two"
+                    android:textSize="@dimen/txt_four_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/finance_llayout_txt">
+
+                <TextView
+                    style="@style/finance_txt_key"
+                    android:text="团队优势：" />
+
+                <TextView
+                    style="@style/finance_txt_value"
+                    android:text="5年以上过户办证经验，快速应对办证中的疑难杂症！" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/finance_llayout_txt">
+
+                <TextView
+                    style="@style/finance_txt_key"
+                    android:text="银行资源：" />
+
+                <TextView
+                    style="@style/finance_txt_value"
+                    android:text="提供跨行转按揭担保，支持本地多家银行！" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/finance_llayout_txt"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    style="@style/finance_txt_key"
+                    android:text="服务内容：" />
+
+                <TextView
+                    style="@style/finance_txt_value"
+                    android:lineSpacingExtra="6.7dp"
+                    android:text="谈价磋商、产权调查、签订金协议、签买卖合同、\n按揭代办、协助还贷、交易过户、物业交割" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/my_margin"
+                android:paddingTop="@dimen/my_margin">
+
+                <Button
+                    android:id="@+id/btn_appointment"
+                    android:layout_width="100dp"
+                    android:layout_height="26.7dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/btn_finance"
+                    android:text="立即预约"
+                    android:textColor="@color/my_orange_two"
+                    android:textSize="@dimen/txt_six_size" />
+            </RelativeLayout>
+
+            <ImageView style="@style/divider_thin" />
+
+            <ImageView style="@style/divider_thick" />
+
+            <RelativeLayout style="@style/line_style">
+
+                <ImageView style="@style/home_img_header" />
+
+                <TextView
+                    style="@style/home_txt_header"
+                    android:text="房产金融" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/finance_llayout_width">
+
+                <RelativeLayout
+                    android:id="@+id/rlayout_mortgage_guarantee"
+                    style="@style/select_rlayout_function">
+
+                    <TextView
+                        style="@style/finance_function_txt"
+                        android:drawableTop="@drawable/finance_mortgage_guarantee"
+                        android:text="   二手房\n转按揭担保" />
+                </RelativeLayout>
+
+                <ImageView style="@style/mine_function_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/rlayout_same_name"
+                    style="@style/select_rlayout_function">
+
+                    <TextView
+                        style="@style/finance_function_txt"
+                        android:drawableTop="@drawable/finance_same_name"
+                        android:text="   二手房\n 同名转按" />
+                </RelativeLayout>
+
+                <ImageView style="@style/mine_function_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/rlayout_underwritten_transaction"
+                    style="@style/select_rlayout_function">
+
+                    <TextView
+                        style="@style/finance_function_txt"
+                        android:drawableTop="@drawable/finance_underwritten_transaction"
+                        android:text="   二手房\n 交易垫资" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ImageView style="@style/divider_thin" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/finance_llayout_width">
+
+                <RelativeLayout
+                    android:id="@+id/rlayout_mortgage_loan"
+                    style="@style/select_rlayout_function">
+
+                    <TextView
+                        style="@style/finance_function_txt"
+                        android:drawableTop="@drawable/finance_mortgage_loan"
+                        android:text="抵押贷款" />
+                </RelativeLayout>
+
+                <ImageView style="@style/mine_function_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/rlayout_capital_bridge"
+                    style="@style/select_rlayout_function">
+
+                    <TextView
+                        style="@style/finance_function_txt"
+                        android:drawableTop="@drawable/finance_capital_bridge"
+                        android:text="资金过桥" />
+                </RelativeLayout>
+
+                <ImageView style="@style/mine_function_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/rlayout_recovery_assets"
+                    style="@style/select_rlayout_function">
+
+                    <TextView
+                        style="@style/finance_function_txt"
+                        android:drawableTop="@drawable/finance_recovery_assets"
+                        android:text="不良资产回收" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

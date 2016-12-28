@@ -1,0 +1,1860 @@
+<resources>
+
+
+    <!--去掉ActionBar-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.Intro" parent="android:Theme">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!--共用部分-->
+    <style name="divider_thin">//细的分割线
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/underline_color_low</item>
+    </style>
+
+    <style name="divider_thin_center" parent="@style/divider_thin">//细的分割线，在中间
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+    </style>
+
+    <style name="divider_thin_bottom" parent="@style/divider_thin">//细的分割线，在RelativeLayout的底部
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <style name="divider_thick">//粗的分割线
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/my_margin_two</item>
+        <item name="android:background">@color/divider_color</item>
+    </style>
+
+    <style name="divider_vertical">//垂直分割线
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">@dimen/friends_divider_height</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@color/underline_color</item>
+    </style>
+
+    <style name="divider_vertical_full" parent="@style/divider_vertical">//垂直分割线（高度占满其上一层控件）
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="indicated_short_style">//端下划线的样式，200px 4px
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">matrix</item>
+        <item name="android:src">@drawable/shape_indicated_short</item>
+        <item name="android:paddingLeft">62dp</item>
+        <item name="android:paddingRight">62dp</item>
+    </style>
+
+    <style name="indicated_long_style" parent="@style/indicated_short_style">//长下划线的样式，240px 4px
+        <item name="android:src">@drawable/shape_indicated_long</item>
+        <item name="android:paddingLeft">55dp</item>
+        <item name="android:paddingRight">55dp</item>
+    </style>
+
+    <style name="indicated_entrust_style" parent="@style/indicated_short_style">//我的委托、房友圈、消息首页界面下划线
+        <item name="android:src">@drawable/shape_indicated_long</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">15dp</item>
+    </style>
+
+    <style name="indicated_grab_style" parent="@style/indicated_short_style">//一键抢单下划线
+        <item name="android:src">@drawable/shape_indicated_short</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+    </style>
+
+    <style name="select_rlayout_function">//功能选择中RelativeLayout布局的样式
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="item_rlayout_function" parent="@style/select_rlayout_function">//列表底部四个功能小布局的样式
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="txt_style">
+        <item name="android:layout_width">@dimen/both_sides_width</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/txt_one_size</item>
+        <item name="android:textColor">@color/my_orange_two</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="pager_function_txt">//功能切换文字的样式
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/my_gray_one</item>
+        <item name="android:textSize">@dimen/txt_one_size</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="toast_llayout_style">//自定义toast中LinearLayout的样式
+        <item name="android:layout_width">@dimen/toast_llayout_width</item>
+        <item name="android:layout_height">@dimen/toast_llayout_height</item>
+        <item name="android:background">@drawable/bg_custom_toast</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="toast_tick_style">//自定义toast中打钩图标的样式
+        <item name="android:layout_width">@dimen/tick_icon_width</item>
+        <item name="android:layout_height">@dimen/tick_icon_height</item>
+        <item name="android:src">@drawable/tick_icon</item>
+    </style>
+
+    <style name="toast_txt_style">//自定义toast中文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/title_txt_size</item>
+        <item name="android:layout_marginTop">30dp</item>
+    </style>
+
+    <style name="search_txt_cancel" parent="@style/txt_style">//取消搜索文字的样式
+        <item name="android:text">@string/cancel</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="search_edt_style">//搜索中EditView或TextView的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/my_height</item>
+        <item name="android:background">@drawable/search_view</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:layout_marginTop">@dimen/default_space</item>
+        <item name="android:layout_marginBottom">@dimen/default_space</item>
+        <item name="android:drawableLeft">@drawable/home_search_icon</item>
+        <item name="android:drawablePadding">@dimen/my_margin</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/my_margin</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/txt_three_size</item>
+        <item name="android:textColor">@color/my_black_two</item>
+        <item name="android:textColorHint">@color/underline_color</item>
+    </style>
+
+    <style name="underline">//登录、注册选择身份的下划线
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@drawable/selector_div_color</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <style name="underline_msg" parent="@style/underline">//消息下划线
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:layout_marginRight">25dp</item>
+        <item name="android:background">@color/my_orange_one</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="underline_my_friends" parent="@style/underline_msg">//我的好友下划线
+        <item name="android:layout_marginLeft">57dp</item>
+        <item name="android:layout_marginRight">57dp</item>
+    </style>
+
+    <style name="top_title_txt">//顶部菜单标题文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/title_txt_size</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="near_position_img">//附近位置图像的样式，主要用于房友圈和一键发布两个页面
+        <item name="android:layout_width">@dimen/near_position_width</item>
+        <item name="android:layout_height">@dimen/near_position_height</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:src">@drawable/near_position</item>
+    </style>
+
+    <style name="back_rlayout">//返回图像小布局的样式，主要用于一键发布和一键抢单两个页面
+        <item name="android:layout_width">@dimen/call_ralyout_width</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="back_img">//向左图像的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+        <item name="android:src">@drawable/back</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="to_img">//向右图像的样式
+        <item name="android:layout_width">@dimen/friends_to_width</item>
+        <item name="android:layout_height">@dimen/friends_to_height</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:src">@drawable/to</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="rlayout_title_right">//有涉及到标题右边RelativeLayout的样式
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="txt_title_right">//有涉及到标题右边TextView的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/top_right</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/txt_one_size</item>
+    </style>
+
+    <style name="rating_star_style">//自定义星级评定条的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/rating_bar_height</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <style name="tv_user_type_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:text">@string/label_user</item>
+    </style>
+
+    <style name="img_more_style">//更多（->）图标的样式
+        <item name="android:layout_width">@dimen/arrow_width</item>
+        <item name="android:layout_height">@dimen/arrow_height</item>
+        <item name="android:src">@drawable/mine_more</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="img_header_style_one">//个人资料头像的样式一
+        <item name="android:layout_width">@dimen/mine_head_width</item>
+        <item name="android:layout_height">@dimen/mine_head_height</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@drawable/default_avatar</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="img_header_style_two">//个人资料头像的样式二
+        <item name="android:layout_width">@dimen/sort_header_width</item>
+        <item name="android:layout_height">@dimen/sort_header_height</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@drawable/default_avatar</item>
+    </style>
+
+    <style name="portrait_img_style">//肖像图像的样式
+        <item name="android:layout_width">@dimen/portrait_img_width</item>
+        <item name="android:layout_height">@dimen/portrait_img_height</item>
+    </style>
+
+    <style name="id_img_style">//身份证图像的样式
+        <item name="android:layout_width">@dimen/id_img_width</item>
+        <item name="android:layout_height">@dimen/id_img_height</item>
+    </style>
+
+    <style name="upload_radio_button">//成交上传中单选按钮的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">@dimen/my_margin</item>
+        <item name="android:drawableLeft">@drawable/selector_qualification_certificate</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="list_view_area">//关注的区域里面ListView的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:divider">@color/transparent</item>
+    </style>
+
+    <style name="line_top_style">//标题行的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/top_height</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="line_style">//一行的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/my_height</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="line_left_style" parent="line_style">//一行中左边的样式
+        <item name="android:layout_width">@dimen/mine_state_width</item>
+    </style>
+
+    <style name="line_txt_style">//一行中左边文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:textColor">@color/my_black_two</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="line_right_style" parent="line_style">//一行中右边的样式
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="rightup_rlayout_style">//右上角RelativeLayout的样式
+        <item name="android:layout_width">@dimen/rightup_item_width</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="rightup_img_style">//右上角图标的样式
+        <item name="android:layout_width">@dimen/friends_right_img_width</item>
+        <item name="android:layout_height">@dimen/friends_right_img_height</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/friends_right_margin</item>
+    </style>
+
+    <style name="function_txt_style">//功能文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">@color/my_gray_one</item>
+        <item name="android:textSize">@dimen/txt_one_size</item>
+    </style>
+
+    <!--activity_main-->
+    <style name="main_item_flayout">//主页底部小布局的样式
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="main_item_img">//主页底部图像视图的样式
+        <item name="android:layout_width">@dimen/main_icon_width</item>
+        <item name="android:layout_height">@dimen/main_icon_height</item>
+        <item name="android:layout_marginTop">@dimen/icon_margin_top</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="main_item_txt">//主页底部文字视图的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/main_txt_size</item>
+        <item name="android:textColor">@drawable/selector_main_txt_color</item>
+        <item name="android:layout_marginTop">@dimen/txt_margin_top</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="space_fill_style">//空白填充背景色的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/divider_color</item>
+    </style>
+
+    <!--首页-->
+    <style name="home_search_llayout">//首页中搜索按钮外面LinearLayout的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/home_search_llayout_width</item>
+        <item name="android:background">@drawable/shape_search_llayout</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+    <style name="home_search_spinner">//首页中搜索前面的下拉选择框的样式
+        <item name="android:layout_width">@dimen/home_search_spinner_width</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:entries">@array/city</item>
+        <item name="android:spinnerMode">dropdown</item>
+        <item name="android:background">@drawable/bg_spinner</item>
+    </style>
+
+    <style name="home_search_layout">//首页中搜索的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:text">@string/hint_home_search</item>
+        <item name="android:textColor">@color/hint_color</item>
+        <item name="android:drawableLeft">@drawable/home_search_icon</item>
+        <item name="android:drawablePadding">@dimen/my_margin</item>
+        <item name="android:paddingLeft">@dimen/my_margin</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="home_llayout_btn">//首页中四个按钮外面的布局LinearLayout的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">86dp</item>
+        <item name="android:paddingLeft">@dimen/home_img_margin</item>
+        <item name="android:paddingRight">@dimen/home_img_margin</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="home_img_txt">//首页中间四个图像视图下面文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/home_label_txt_size</item>
+        <item name="android:textColor">@color/my_gray_one</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="home_img_header">//首页中列表头图像视图的样式
+        <item name="android:layout_width">@dimen/my_margin</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@color/my_orange_two</item>
+    </style>
+
+    <style name="home_txt_header">//首页中列表头标题文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:textColor">@color/my_black_one</item>
+        <item name="android:layout_marginLeft">26.6dp</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="home_txt_more">//首页中列表头文字（更多）的样式
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">@dimen/txt_five_size</item>
+        <item name="android:textColor">@color/my_gray_two</item>
+        <item name="android:text">@string/label_home_more</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:paddingRight">@dimen/my_margin</item>
+    </style>
+
+    <style name="home_search_subtitle">//首页->搜索页面中小标题的样式
+        <item name="android:layout_width">@dimen/home_subtitle_width</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/hint_color</item>
+        <item name="android:textSize">@dimen/txt_one_size</item>
+    </style>
+
+    <style name="home_search_txt">//首页->搜索页面中搜索出来的每个item中文字的样式
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/my_gray_one</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/my_margin</item>
+        <item name="android:paddingRight">@dimen/my_margin</item>
+    </style>
+
+    <style name="search_sort_llayout">//首页->搜索结果->排序弹出框中LinearLayout的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/my_height</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="search_sort_icon">//首页->搜索结果->排序弹出框中icon的样式
+        <item name="android:layout_width">@dimen/sort_icon_width</item>
+        <item name="android:layout_height">@dimen/sort_icon_height</item>
+        <item name="android:layout_marginLeft">@dimen/sort_icon_margin</item>
+        <item name="android:layout_marginRight">@dimen/sort_icon_right</item>
+    </style>
+
+    <style name="search_sort_txt">//首页->搜索结果->排序弹出框中文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/sort_txt_color</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+    </style>
+
+    <style name="search_sort_tick">//首页->搜索结果->排序弹出框中打钩图标的样式
+        <item name="android:layout_width">@dimen/sort_icon_width</item>
+        <item name="android:layout_height">@dimen/sort_icon_height</item>
+        <item name="android:layout_marginRight">@dimen/sort_icon_margin</item>
+        <item name="android:src">@drawable/tick</item>
+    </style>
+
+    <style name="search_little_txt">//首页->搜索结果每个列表中所有小字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/show_color</item>
+        <item name="android:textSize">@dimen/sort_little_txt_size</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="search_result_icon">//首页->搜索结果每个列表中所有icon的样式
+        <item name="android:layout_width">@dimen/sort_icon_width</item>
+        <item name="android:layout_height">@dimen/sort_icon_height</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+    </style>
+
+    <style name="search_llayout_style">//首页->搜索结果每个列表中头像右边、名字下面三个LinearLayout的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/sort_llayout_top</item>
+    </style>
+
+    <!--房友圈-->
+    <style name="friends_head_img">//房友圈标题左边头像的样式
+        <item name="android:layout_width">@dimen/friends_left_img_width</item>
+        <item name="android:layout_height">@dimen/friends_left_img_height</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+    </style>
+
+    <style name="friends_txt_position">//发布房友圈中显示位置字体的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/my_gray_one</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:layout_marginLeft">@dimen/top_right</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+    </style>
+
+    <style name="friends_txt_hint">//发布房友圈中最后两行提示文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/hint_color</item>
+        <item name="android:textSize">@dimen/txt_five_size</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+        <item name="android:layout_marginBottom">@dimen/friends_publish_space</item>
+    </style>
+
+    <!--消息-->
+    <style name="message_add_img">//房友圈标题右边照相机图片的样式
+        <item name="android:layout_width">@dimen/message_right_img_width</item>
+        <item name="android:layout_height">@dimen/message_right_img_height</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+    </style>
+
+    <!--房友圈列表-->
+    <style name="item_head_img">//列表中头像图像的样式
+        <item name="android:layout_width">@dimen/item_head_width</item>
+        <item name="android:layout_height">@dimen/item_head_height</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+    </style>
+
+    <!--选择照片来源-->
+    <style name="gallery_dialog">
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
+    <style name="item_img_function">//列表底部四个功能图像的样式
+        <item name="android:layout_width">@dimen/item_function_width</item>
+        <item name="android:layout_height">@dimen/item_function_height</item>
+    </style>
+
+    <style name="item_txt_function" parent="@style/item_img_function">//列表底部四个功能文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textSize">@dimen/txt_seven_size</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--我的-->
+    <style name="mine_unlogin_txt">//我的（未登陆）中间两行文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:layout_marginTop">@dimen/mine_margin</item>
+    </style>
+
+    <style name="mine_unlogin_btn">//我的（未登陆）按钮的样式
+        <item name="android:layout_width">@dimen/mine_btn_width</item>
+        <item name="android:layout_height">@dimen/mine_btn_height</item>
+        <item name="android:background">@null</item>
+        <item name="android:textSize">@dimen/txt_four_size</item>
+        <item name="android:layout_marginTop">@dimen/mine_margin</item>
+    </style>
+
+    <style name="mine_name_txt">//我的首页昵称的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+    </style>
+
+    <style name="mine_line_txt">//我的近期状态、金币商城两行文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:textColor">@color/my_gray_one</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="mine_state_icon">//我的“近期状态”图标的样式
+        <item name="android:layout_width">@dimen/mine_state_icon_width</item>
+        <item name="android:layout_height">@dimen/mine_state_icon_height</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:src">@drawable/mine_function_state</item>
+    </style>
+
+    <style name="mine_coin_txt" parent="@style/mine_line_txt">//我的金币数量的文字的样式
+        <item name="android:text">0金币</item>
+        <item name="android:layout_marginRight">67dp</item>
+        <item name="android:layout_marginEnd">67dp</item>
+        <item name="android:textColor">@color/my_orange_two</item>
+    </style>
+
+    <style name="mine_sign_txt">//我的中签到按钮的样式
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginTop">3.3dp</item>
+        <item name="android:layout_marginBottom">3.3dp</item>
+        <item name="android:text">@string/img_mine_sign</item>
+        <item name="android:textColor">@color/my_orange_two</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="mine_function_txt">//我的（登陆后）功能选择中文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/txt_five_size</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:drawablePadding">@dimen/my_margin</item>
+    </style>
+
+    <style name="mine_function_divider">//我的（登陆后）功能垂直分割线
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/underline_color_low</item>
+    </style>
+
+    <style name="mine_popup_title">//我的近期状态弹出框中第一行文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_one_size</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+    </style>
+
+    <!--个人信息-->
+    <style name="mine_personal_txt_left">//个人信息中左边文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:textColor">@color/my_black_two</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="mine_personal_edt">//个人信息中编辑框的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:paddingLeft">@dimen/my_margin</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/my_black_two</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+    </style>
+
+    <!--关注的区域-->
+    <style name="user_mine_txt_two" parent="@style/line_txt_style">//关注的区域里面文字的样式，灰色文字
+        <item name="android:textColor">@color/my_gray_three</item>
+    </style>
+
+    <style name="user_mine_txt_three" parent="@style/user_mine_txt_two">//关注的区域里面文字的样式，灰色文字，靠右
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">@dimen/mine_txt_right</item>
+    </style>
+
+    <style name="user_mine_txt_four" parent="@style/user_mine_txt_two">//查询个人资料页面的文字
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+    </style>
+
+    <style name="user_mine_txt_five" parent="@style/user_mine_txt_two">
+        //个人中心中关注片区（服务片区）、关注小区（服务小区）中文字的样式
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <!--<style name="user_mine_txt_six" parent="@style/user_mine_txt_four">-->
+    <!--<item name="android:singleLine">false</item>-->
+    <!--<item name="android:layout_centerVertical">false</item>-->
+    <!---->
+    <!--</style>-->
+
+    <style name="user_mine_edt_right">//编辑框的样式一
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:textColor">@color/my_gray_three</item>
+        <item name="android:textColorHint">@color/my_gray_three</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_marginLeft">80dp</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="user_mine_edt_left" parent="@style/user_mine_edt_right">//编辑框的样式二
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_alignParentRight">false</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:layout_marginLeft">@dimen/edt_margin_left</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="rlayout_right_style" parent="line_style">
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+    </style>
+
+    <style name="user_area_tick" parent="@style/search_sort_tick">//关注的区域中打钩图标的样式
+        <item name="android:layout_width">@dimen/mine_areas_tick_width</item>
+        <item name="android:layout_height">@dimen/mine_areas_tick_height</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <!--个人中心-->
+    <style name="user_llayout_area">//个人中心中关注片区（服务片区）、关注小区（服务小区）中LinearLayout的样式
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/mine_multi_line_height</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="user_rlayout_area">//个人中心中关注片区（服务片区）、关注小区（服务小区）中item的RelativeLayout的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/item_height</item>
+    </style>
+
+    <style name="mine_llayout_one">//一行一个按钮中的LinearLayout的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/mine_btn_one_height</item>
+    </style>
+
+    <style name="mine_btn_one">//一行一个按钮中的按钮的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:layout_marginTop">@dimen/my_margin</item>
+        <item name="android:background">@drawable/shape_btn_deep</item>
+    </style>
+
+    <style name="mine_btn_two">//一行两个按钮中的按钮的样式
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:layout_marginTop">@dimen/my_margin</item>
+        <item name="android:background">@drawable/personal_btn_short</item>
+    </style>
+
+    <style name="mine_personal_line">//个人资料中头像右边一行的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+        <item name="android:paddingTop">@dimen/mine_space</item>
+        <item name="android:paddingBottom">@dimen/mine_space</item>
+    </style>
+
+    <style name="broker_personal_txt" parent="@style/line_txt_style">//经纪人个人资料中头像右边文字的样式
+        <item name="android:textSize">@dimen/txt_three_size</item>
+    </style>
+
+    <!--个人资料-->
+    <style name="personal_top_img">//个人资料中顶部几个图标的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="personal_top_more" parent="@style/personal_top_img">//个人资料中顶部更多图标的样式
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:padding">15dp</item>
+    </style>
+
+    <style name="personal_img_avatar">//个人资料中圆形头像的样式
+        <item name="android:layout_width">140dp</item>
+        <item name="android:layout_height">140dp</item>
+        <item name="android:layout_marginLeft">33.3dp</item>
+        <item name="android:layout_marginTop">87dp</item>
+        <item name="android:src">@drawable/default_avatar</item>
+    </style>
+
+    <style name="personal_txt_name">//个人资料中名字文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/my_black_one</item>
+        <item name="android:textSize">@dimen/txt_four_size</item>
+        <item name="android:layout_margin">@dimen/my_margin_two</item>
+    </style>
+
+    <style name="personal_llayout_function">//个人资料中功能那一行LinearLayout的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">67dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/my_margin_two</item>
+    </style>
+
+    <style name="personal_txt_function">//个人资料中功能文字的样式
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:drawablePadding">@dimen/my_margin_two</item>
+    </style>
+
+    <style name="personal_rlayout_area">//个人资料中片区小区RelativeLayout的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/my_height</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+    </style>
+
+    <style name="personal_txt_area_left">//个人资料中片区小区左边文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/my_black_one</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:layout_marginTop">@dimen/my_margin</item>
+    </style>
+
+    <style name="personal_txt_area_right">//个人资料中片区小区右边文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/my_gray_three</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:lineSpacingExtra">8dp</item>
+        <item name="android:layout_marginBottom">@dimen/my_margin</item>
+        <item name="android:gravity">right</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <!--好友管理-->
+    <style name="friend_manage_hint_txt">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/my_gray_three</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+    </style>
+
+    <style name="friend_rlayout_style">//好友列表项中RelativeLayout的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/mine_friends_child_height</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+    </style>
+
+    <style name="friend_img_avatar">//好友头像的样式
+        <item name="android:layout_width">@dimen/mine_friends_head_width</item>
+        <item name="android:layout_height">@dimen/mine_friends_head_height</item>
+        <item name="android:layout_marginTop">@dimen/mine_friends_head_top</item>
+        <item name="android:layout_marginBottom">@dimen/mine_friends_head_bottom</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@drawable/default_avatar</item>
+    </style>
+
+    <style name="friend_txt_name">//好友名字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/mine_friends_txt_left</item>
+        <item name="android:text">123</item>
+        <item name="android:textColor">@color/my_black_two</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="complaint_rlayout_style" parent="style/setting_line_rlayout">//投诉好友中单选按钮的样式
+        <item name="android:layout_marginLeft">@dimen/mine_margin_left</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="complaint_select_icon">//投诉好友中右边选择图标的样式
+        <item name="android:layout_width">@dimen/complaint_icon_width</item>
+        <item name="android:layout_height">@dimen/complaint_icon_height</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/selector_complaint_friend</item>
+    </style>
+
+    <style name="complaint_radio_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/my_height</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:textColor">@color/my_black_two</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:paddingRight">@dimen/my_margin</item>
+        <item name="android:drawableRight">@drawable/selector_complaint_friend</item>
+        <item name="android:drawableBottom">@drawable/shape_complaint_friend</item>
+    </style>
+
+    <!--设置-->
+    <style name="setting_line_rlayout">//设置中每一行的RelativeLayout的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/my_height</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+    </style>
+
+    <style name="setting_line_txt_left">//设置中每一行左边文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:textColor">@color/my_black_two</item>
+    </style>
+
+    <style name="setting_line_txt_right">//设置中每一行右边文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+    </style>
+
+    <style name="setting_switch_style">//设置中开关图标的样式
+        <item name="android:layout_width">@dimen/setting_switch_width</item>
+        <item name="android:layout_height">@dimen/setting_switch_height</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:background">@drawable/selector_setting_switch</item>
+    </style>
+
+    <style name="setting_about_txt">//设置中关于我们文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:textColor">@color/my_black_two</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <!--我的委托-->
+    <style name="entrust_house_img">//房源委托中房子照片的样式
+        <item name="android:layout_width">@dimen/house_entrust_img_width</item>
+        <item name="android:layout_height">@dimen/house_entrust_img_height</item>
+        <item name="android:background">@drawable/default_banner</item>
+    </style>
+
+    <style name="entrust_house_icon">//房源委托中房子照片左上角图标的样式
+        <item name="android:layout_width">@dimen/house_entrust_icon_width</item>
+        <item name="android:layout_height">@dimen/house_entrust_icon_height</item>
+        <item name="android:background">@drawable/icon_sign_rent</item>
+    </style>
+
+    <style name="entrust_house_txt_title">//房源委托中房源介绍标题文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_four_size</item>
+        <item name="android:textColor">@color/my_black_two</item>
+    </style>
+
+    <style name="entrust_house_txt_one">//房源委托中房源介绍的文字的样式一
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_five_size</item>
+        <item name="android:textColor">@color/my_gray_one</item>
+    </style>
+
+    <style name="entrust_house_txt_two" parent="@style/entrust_house_txt_one">//房源委托中房源介绍的文字的样式二
+        <item name="android:textColor">@color/my_black_two</item>
+    </style>
+
+    <style name="entrust_house_rlayout">//房源委托中RelativeLayout的样式
+        <item name="android:layout_width">@dimen/house_entrust_rlayout_width</item>
+        <item name="android:layout_height">@dimen/house_entrust_img_height</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="entrust_delete_rlayout">//我的委托中删除RelativeLayout的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:paddingLeft">@dimen/my_margin</item>
+        <item name="android:paddingRight">@dimen/my_margin</item>
+        <item name="android:paddingTop">@dimen/house_entrust_delete_margin</item>
+        <item name="android:paddingBottom">@dimen/house_entrust_delete_margin</item>
+    </style>
+
+    <style name="entrust_delete_txt">//我的委托中删除文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_one_size</item>
+        <item name="android:textColor">@color/my_orange_two</item>
+        <item name="android:text">删除</item>
+    </style>
+
+    <style name="entrust_grid_img">//我的委托中用到GridView中头像的样式、聊天委托中头像的样式
+        <item name="android:layout_width">@dimen/user_entrust_grid_width</item>
+        <item name="android:layout_height">@dimen/user_entrust_grid_height</item>
+        <item name="android:src">@drawable/default_avatar</item>
+    </style>
+
+    <style name="entrust_grid_up_txt">//我的委托中用到GridView中上面文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:textColor">@color/my_black_two</item>
+    </style>
+
+    <style name="entrust_grid_down_txt">//我的委托中用到GridView中下面文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_three_size</item>
+        <item name="android:textColor">@color/my_orange_two</item>
+        <item name="android:text">@string/title_broker_evaluate</item>
+    </style>
+
+    <style name="entrust_call_llayout">//呼叫委托中LinearLayout的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/my_margin</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+    </style>
+
+    <style name="entrust_call_txt_key">//呼叫委托中关键字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_three_size</item>
+        <item name="android:textColor">@color/my_black_two</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="entrust_call_txt_value" parent="@style/entrust_call_txt_key">//呼叫委托中具体值的样式
+        <item name="android:textColor">@color/underline_color</item>
+    </style>
+
+    <style name="entrust_call_txt" parent="@style/entrust_call_txt_key">//呼叫委托中介绍房源信息文字的样式
+        <item name="android:textColor">@color/show_color</item>
+    </style>
+
+    <style name="entrust_call_img">//呼叫委托中语音图标的样式
+        <item name="android:layout_width">@dimen/mine_areas_tick_width</item>
+        <item name="android:layout_height">@dimen/mine_areas_tick_height</item>
+        <item name="android:src">@drawable/voice_no</item>
+    </style>
+
+    <style name="entrust_house_picture">//房子图片的样式
+        <item name="android:layout_width">@dimen/entrust_house_width</item>
+        <item name="android:layout_height">@dimen/entrust_house_height</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+    <!--评价-->
+    <style name="broker_evaluate_btn">//评价中按钮的样式
+        <item name="android:layout_width">@dimen/broker_evaluate_btn_width</item>
+        <item name="android:layout_height">@dimen/broker_evaluate_btn_height</item>
+        <item name="android:background">@drawable/selector_broker_evaluate</item>
+    </style>
+
+    <style name="entrust_rating_bar">//评价中星级评定条的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/big_rating_bar_size</item>
+    </style>
+
+    <!--一键发布-->
+    <style name="call_choose_llayout">//一键发布中两个选择LinearLayout的样式
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="call_choose_txt">//一键发布中两个选择文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/my_gray_one</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawablePadding">@dimen/choose_icon_right</item>
+    </style>
+
+    <style name="call_function_img">//一键发布中功能图像视图的样式
+        <item name="android:layout_width">@dimen/call_function_width</item>
+        <item name="android:layout_height">@dimen/call_function_height</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <!--一键抢单-->
+    <style name="grab_select_txt">//一键抢单中功能选择文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="grab_house_picture">
+        <item name="android:layout_width">@dimen/grab_house_width</item>
+        <item name="android:layout_height">@dimen/grab_house_height</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@drawable/home_top_pic</item>
+    </style>
+
+    <style name="grab_icon_style">//抢图标的样式
+        <item name="android:layout_width">@dimen/grab_icon_width</item>
+        <item name="android:layout_height">@dimen/grab_icon_height</item>
+        <item name="android:src">@drawable/selector_grab_icon</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+    </style>
+
+    <style name="grab_house_txt">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_five_size</item>
+        <item name="android:textColor">@color/my_black_two</item>
+    </style>
+
+    <style name="grab_avatar_style">
+        <item name="android:layout_width">@dimen/grab_icon_width</item>
+        <item name="android:layout_height">@dimen/grab_icon_height</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:src">@drawable/default_avatar</item>
+    </style>
+
+    <style name="grab_customer_llayout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/grab_icon_height</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="grab_chat_icon">//一键抢单（抢客户）中聊天图标的样式
+        <item name="android:layout_width">@dimen/grab_chat_width</item>
+        <item name="android:layout_height">@dimen/grab_chat_height</item>
+        <item name="android:src">@drawable/grab_chat</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="grab_bottom_txt">//一键抢单（抢客户）中底部文字的样式
+        <item name="android:layout_width">53dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_seven_size</item>
+        <item name="android:textColor">@color/show_color</item>
+    </style>
+
+    <style name="grab_house_mask">
+        <item name="android:layout_width">@dimen/grab_mask_icon</item>
+        <item name="android:layout_height">@dimen/grab_mask_icon</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+
+    <!--收藏的房源-->
+    <style name="collect_house_gray_txt">//收藏的房源item中灰色文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_seven_size</item>
+        <item name="android:textColor">@color/my_gray_one</item>
+        <item name="android:layout_marginTop">6.7dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="collect_house_orange_txt">//收藏的房源item中橘色文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_three_size</item>
+        <item name="android:textColor">@color/my_orange_two</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <!--店铺管理-->
+    <style name="broker_shop_gray_txt">//店铺管理中灰色文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_six_size</item>
+        <item name="android:textColor">@color/my_gray_one</item>
+        <item name="android:layout_marginTop">3.3dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="broker_shop_orange_txt">//店铺管理中橘色文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_three_size</item>
+        <item name="android:textColor">@color/my_orange_two</item>
+    </style>
+
+    <style name="broker_shop_bottom_setting">//店铺管理中设置按钮的样式
+        <item name="android:layout_width">@dimen/shop_broker_btn_width</item>
+        <item name="android:layout_height">@dimen/shop_broker_btn_height</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:textColor">@color/my_orange_two</item>
+        <item name="android:background">@drawable/shop_button_setting</item>
+        <item name="android:text">@string/title_to_setting</item>
+    </style>
+
+    <!--店铺管理详情页面布局-->
+    <style name="shop_detail_title_txt">//店铺管理详情页面中标题文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_four_size</item>
+        <item name="android:textColor">@color/my_black_two</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:layout_marginTop">6.7dp</item>
+        <item name="android:layout_marginBottom">@dimen/my_margin</item>
+    </style>
+
+    <style name="shop_detail_time_txt">//店铺管理详情页面中时间文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_seven_size</item>
+        <item name="android:textColor">@color/my_gray_one</item>
+    </style>
+
+    <style name="shop_detail_rlayout_one">//店铺管理详情页面中RelativeLayout的样式一
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">66.7dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="shop_detail_key_one">//店铺管理详情页面中大的关键字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/title_txt_size</item>
+        <item name="android:textColor">@color/my_black_two</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="shop_detail_value_one">//店铺管理详情页面中大的值的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/title_txt_size</item>
+        <item name="android:textColor">@color/my_orange_two</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="shop_detail_llayout_one">//店铺管理详情页面中LinearLayout的样式一
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="shop_detail_llayout_two">//店铺管理详情页面中LinearLayout的样式二
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">6.7dp</item>
+        <item name="android:paddingBottom">6.7dp</item>
+        <item name="android:paddingLeft">@dimen/my_margin</item>
+    </style>
+
+    <style name="shop_detail_key_two">//店铺管理详情页面中小的关键字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:textColor">@color/my_gray_one</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="shop_detail_value_two" parent="@style/shop_detail_key_two">//店铺管理详情页面中小的值的样式
+        <item name="android:textColor">@color/my_black_two</item>
+    </style>
+
+    <style name="shop_detail_llayout_three">//店铺管理详情页面中LinearLayout的样式三
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">6.7dp</item>
+        <item name="android:paddingBottom">6.7dp</item>
+        <item name="android:paddingLeft">@dimen/my_margin</item>
+    </style>
+
+    <!--店铺管理底部布局-->
+    <style name="shop_name_txt">//店铺管理昵称文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/sort_txt_color</item>
+        <item name="android:textSize">@dimen/sort_header_txt_size</item>
+    </style>
+
+    <style name="shop_detail_bottom_llayout">//店铺详情页面底部联系人LinearLayout的样式
+        <item name="android:layout_width">@dimen/shop_bottom_llayout_width</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="shop_bottom_txt">//店铺管理底部联系人TextView的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_three_size</item>
+        <item name="android:textColor">@color/my_gray_one</item>
+        <item name="android:drawablePadding">@dimen/shop_bottom_img_right</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="shop_bottom_btn" parent="@style/shop_detail_bottom_llayout">//店铺管理底部联系人Button的样式
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/txt_three_size</item>
+    </style>
+
+    <!--发布房源-->
+    <style name="release_housing_title_txt">//发布房源功能模块标题字体的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/my_height</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/txt_four_size</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="release_llayout">发布房源功能最外面LinearLayout的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/release_function_height</item>
+        <item name="android:layout_marginLeft">@dimen/release_function_margin</item>
+        <item name="android:layout_marginRight">@dimen/release_function_margin</item>
+    </style>
+
+    <style name="release_housing_txt">//发布房源功能模块选择字体的样式
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/my_gray_one</item>
+        <item name="android:textSize">@dimen/txt_five_size</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:drawablePadding">6.7dp</item>
+    </style>
+
+    <style name="release_choose_rlayout_one">//发布房源中选择项目中RelativeLayout的样式一
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/release_choose_height</item>
+    </style>
+
+    <style name="release_choose_rlayout_two">//发布房源中选择项目中RelativeLayout的样式二
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/release_select_margin</item>
+        <item name="android:paddingBottom">@dimen/release_select_margin</item>
+    </style>
+
+    <style name="release_choose_txt">//发布房源中选择项目文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:textColor">@color/my_black_two</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+    </style>
+
+    <style name="release_choose_hint_txt">//发布房源中选择项目提示文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_five_size</item>
+        <item name="android:textColor">@color/hint_color</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+    </style>
+
+    <style name="release_housing_vertical_view">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/underline_color</item>
+    </style>
+
+    <style name="release_housing_horizontal_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/underline_color</item>
+    </style>
+
+    <style name="release_housing_item">//发布房源中选择项目中RelativeLayout的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/release_choose_height</item>
+    </style>
+
+    <style name="release_choose_hint_one" parent="@style/release_choose_txt">//发布房源中选择项目单位文字的样式一
+        <item name="android:textSize">@dimen/txt_five_size</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="release_floor_hint" parent="@style/release_choose_txt">//发布房源中选择楼层单位文字的样式一
+        <item name="android:textSize">@dimen/txt_five_size</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="release_choose_edt" parent="@style/release_choose_hint_one">//发布房源中选择项目输入框文字的样式
+        <item name="android:background">@null</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textColorHint">@color/underline_color</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingRight">30dp</item>
+    </style>
+
+    <style name="release_floor_edt">//发布房源中选择楼层输入框文字的样式
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">right</item>
+        <item name="android:inputType">number</item>
+        <item name="android:maxLength">2</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+        <item name="android:textColorHint">@color/underline_color</item>
+    </style>
+
+    <style name="release_choose_txt_one" parent="@style/release_choose_txt">//发布房源中选择项目选择后文字的样式一
+        <item name="android:textSize">@dimen/txt_five_size</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:layout_marginRight">@dimen/space_height</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+
+    <style name="release_choose_txt_two">//发布房源中选择项目按钮的样式
+        <item name="android:layout_width">@dimen/release_choose_btn_width</item>
+        <item name="android:layout_height">@dimen/release_choose_btn_height</item>
+        <item name="android:background">@drawable/selector_release_inventory</item>
+        <item name="android:textSize">@dimen/txt_five_size</item>
+        <item name="android:textColor">@drawable/selector_release_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3.3dp</item>
+    </style>
+
+    <!--发布房源-->///////
+
+    <style name="release_type_txt">//出租/出售文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_four_size</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="release_function_llayout">//发布房源功能选择图片外面的LinearLayout的样式
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="release_function_img">//发布房源功能选择图片的样式
+        <item name="android:layout_width">@dimen/release_function_img_width</item>
+        <item name="android:layout_height">@dimen/release_function_img_height</item>
+    </style>
+
+    <style name="release_function_txt">发布房源功能文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_five_size</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:layout_marginTop">6.7dp</item>
+    </style>
+
+    <style name="grab_key_txt">//发布房源中选择项目文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:textColor">@color/my_black_two</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="release_choose_hint_three" parent="@style/release_choose_txt">//发布房源中选择项目提示文字的样式三
+        <item name="android:textSize">@dimen/txt_five_size</item>
+        <item name="android:textColor">@color/underline_color</item>
+    </style>
+
+    <style name="release_choose_hint_four" parent="@style/release_choose_txt">//发布房源中选择项目提示文字的样式四
+        <item name="android:textSize">@dimen/txt_six_size</item>
+        <item name="android:textColor">@color/underline_color</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">false</item>
+        <item name="android:layout_marginTop">3.3dp</item>
+        <item name="android:text">以上为选填项</item>
+    </style>
+
+    <style name="release_choose_edt_def">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:background">@null</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="release_choose_edt_one1" parent="@style/release_choose_edt_def">//发布房源中输入框的样式一
+        <item name="android:textSize">@dimen/txt_five_size</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxEms">13</item>
+    </style>
+
+    <style name="release_choose_edt_two2" parent="@style/release_choose_edt_def">//发布房源中输入框的样式二
+        <item name="android:textSize">@dimen/txt_six_size</item>
+        <item name="android:textColor">@color/underline_color</item>
+        <item name="android:maxLength">150</item>
+        <item name="android:hint">补充说明描述房源其他相关信息，最多150字。</item>
+    </style>
+
+    <style name="release_choose_btn">//发布房源中选择项目按钮的样式
+        <item name="android:layout_width">@dimen/release_choose_btn_width</item>
+        <item name="android:layout_height">@dimen/release_choose_btn_height</item>
+        <item name="android:background">@drawable/selector_release_inventory</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">@dimen/txt_five_size</item>
+        <item name="android:textColor">@drawable/selector_release_color</item>
+    </style>
+
+    <style name="release_choose_llayout">发布房源功能最外面LinearLayout的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">36.7dp</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+    </style>
+
+    <style name="release_btn">//发布房源中发布按钮的样式
+        <item name="android:layout_width">@dimen/release_btn_width</item>
+        <item name="android:layout_height">@dimen/release_btn_height</item>
+        <item name="android:text">发布</item>
+        <item name="android:textSize">@dimen/title_txt_size</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/release_inventory_btn</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">@dimen/release_choose_btn_height</item>
+        <item name="android:layout_marginBottom">@dimen/my_height</item>
+    </style>
+
+    <style name="setting_operation_txt">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:textSize">@dimen/txt_seven_size</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="setting_operation_line">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <!--售后金融-->
+    <style name="finance_llayout_txt">//售后金融中说明文字LinearLayout的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+        <item name="android:layout_marginBottom">6.7dp</item>
+    </style>
+
+    <style name="finance_txt_key">//售后金融中左边说明文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_six_size</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="finance_txt_value" parent="@style/finance_txt_key">//售后金融中右边说明文字的样式
+        <item name="android:textColor">@color/my_gray_one</item>
+    </style>
+
+    <style name="finance_function_txt">//售后金融功能选择中文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_five_size</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/my_black_one</item>
+        <item name="android:drawablePadding">4dp</item>
+    </style>
+
+    <style name="finance_btn">//售后金融按钮的样式——确定、立即预约申请
+        <item name="android:layout_width">@dimen/finance_btn_width</item>
+        <item name="android:layout_height">@dimen/finance_btn_height</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/finance_btn_marge</item>
+        <item name="android:layout_marginBottom">@dimen/finance_btn_marge</item>
+        <item name="android:background">@drawable/btn_finance_sure</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+    </style>
+
+    <!--弹出框-->
+
+    <style name="dialog_hint_btn">
+        <item name="android:layout_width">@dimen/dialog_btn_width</item>
+        <item name="android:layout_height">@dimen/dialog_btn_height</item>
+        <item name="android:textSize">@dimen/txt_five_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="dialog_coin_title">//提示金币不够的弹出框标题文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/title_txt_size</item>
+        <item name="android:textColor">@color/my_black_two</item>
+        <item name="android:layout_marginTop">@dimen/my_margin</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="dialog_coin_operator">//提示金币不够的弹出框操作文字（取消、去赚金币）的样式
+        <item name="android:layout_width">@dimen/dialog_operator_width</item>
+        <item name="android:layout_height">@dimen/dialog_operator_height</item>
+        <item name="android:textSize">@dimen/title_txt_size</item>
+        <item name="android:textColor">@color/underline_color</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--金币商城-->
+    <style name="gold_coin_number">//金币数量文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_five_size</item>
+        <item name="android:textColor">@color/my_orange_two</item>
+        <item name="android:drawablePadding">@dimen/my_margin</item>
+        <item name="android:drawableLeft">@drawable/gold_coin</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <style name="gold_coin_function">//功能文字的样式
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/txt_eight_size</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:drawablePadding">@dimen/my_margin</item>
+        <item name="android:paddingTop">@dimen/my_margin</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="gold_coin_goods_name">//特别推荐中商品item中商品名文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_seven_size</item>
+        <item name="android:textColor">@color/my_black_one</item>
+        <item name="android:layout_marginTop">@dimen/my_margin</item>
+    </style>
+
+    <style name="gold_coin_goods_img">//特别推荐中商品item中商品图片的样式
+        <item name="android:layout_width">@dimen/goods_img_width</item>
+        <item name="android:layout_height">@dimen/goods_img_height</item>
+        <item name="android:src">@drawable/default_avatar</item>
+        <item name="android:layout_marginTop">6.7dp</item>
+        <item name="android:layout_marginRight">6.7dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="gold_coin_goods_item">//商品列表item中GridView的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">159dp</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+
+    <style name="goods_detail_name_txt">//商品详情页面中标题文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_eight_size</item>
+        <item name="android:textColor">@color/my_black_one</item>
+        <item name="android:layout_margin">@dimen/my_margin</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="goods_detail_key_txt">//商品详情页面中“商品详情”、“活动规则”等文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_one_size</item>
+        <item name="android:textColor">@color/my_gray_three</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+        <item name="android:layout_marginTop">@dimen/my_margin</item>
+        <item name="android:layout_marginBottom">6.7dp</item>
+    </style>
+
+    <style name="goods_detail_value_txt">//商品详情页面中“商品详情”、“活动规则”等对应内容文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_seven_size</item>
+        <item name="android:textColor">@color/my_gray_three</item>
+        <item name="android:layout_marginLeft">@dimen/my_margin</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+    </style>
+
+    <style name="confirm_order_left_txt" parent="@style/mine_personal_txt_left">//确认订单页面中左边文字的样式
+        <item name="android:textColor">@color/my_black_one</item>
+    </style>
+
+    <style name="confirm_order_txt_left" parent="@style/confirm_order_left_txt">//订单中有类似“备注”左边文字的样式
+        <item name="android:layout_centerVertical">false</item>
+        <item name="android:layout_margin">@dimen/my_margin</item>
+    </style>
+
+    <style name="confirm_order_txt_right">//订单中有类似“备注”右边文字的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@color/my_gray_three</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_margin">@dimen/my_margin</item>
+        <item name="android:gravity">left|top</item>
+    </style>
+
+    <style name="confirm_order_rlayout">//订单中有类似“备注”中RelativeLayout的样式
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">90dp</item>
+    </style>
+
+    <style name="confirm_order_img">//确认订单页面中图片的样式
+        <item name="android:layout_width">@dimen/goods_img_width</item>
+        <item name="android:layout_height">@dimen/goods_img_height</item>
+        <item name="android:layout_margin">@dimen/my_margin</item>
+    </style>
+
+    <style name="confirm_order_title_txt">//确认订单页面中标题文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_two_size</item>
+        <item name="android:textColor">@color/my_black_one</item>
+    </style>
+
+    <style name="confirm_order_number_txt">//确认订单页面中数量文字的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_five_size</item>
+        <item name="android:textColor">@color/my_black_one</item>
+        <item name="android:background">@null</item>
+        <item name="android:inputType">number</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLength">3</item>
+    </style>
+
+    <style name="confirm_goods_number_txt" parent="@style/confirm_order_number_txt">//确认订单页面中数量文字的样式
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginBottom">@dimen/my_margin</item>
+        <item name="android:layout_marginRight">@dimen/my_margin</item>
+    </style>
+
+    <style name="confirm_add_and_sub">//加减按钮图片的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="my_order_logistics_ll">//我的订单中物流状态LinearLayout的样式
+        <item name="android:layout_width">63dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="my_order_logistics_img">//我的订单中物流状态图片的样式
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/my_order_margin</item>
+    </style>
+
+    <style name="my_order_divider_img">//我的订单中物流状态分割线的样式
+        <item name="android:layout_width">45dp</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/underline_color_low</item>
+        <item name="android:layout_marginTop">24.7dp</item>
+    </style>
+
+    <!--售房专家、租房专家-->
+    <style name="broker_list_txt">//售房专家、租房专家小标题文字的样式
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/my_height</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/bg_spinner</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/selector_identity_color</item>
+    </style>
+
+    <!--呼叫经纪人-->
+    <style name="house_condition_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="house_condition_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">18dp</item>
+        <item name="android:textColor">@color/my_orange_one</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="house_condition_txt">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="house_condition_more">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">16dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:src">@drawable/mine_more</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+    <style name="tag_style">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">43dp</item>
+        <item name="android:layout_marginStart">13dp</item>
+        <item name="android:layout_marginEnd">13dp</item>
+        <item name="android:background">@drawable/shape_tag</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="tag_row_margin">
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+    <style name="puchase_house_llayou_margin">
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+</resources>

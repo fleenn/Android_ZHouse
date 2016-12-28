@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/white" />//设置填充色
+    <corners android:radius="13.3dp" />//设置圆角
+    <stroke
+        android:width="1px"
+        android:color="@color/underline_color" />//设置内描边
+</shape>

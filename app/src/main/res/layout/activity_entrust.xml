@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <LinearLayout style="@style/line_style">
+
+        <TextView
+            android:id="@+id/txt_entrust_call"
+            style="@style/pager_function_txt"
+            android:text="@string/label_entrust_call"
+            android:textColor="@color/my_orange_two"
+            android:textSize="@dimen/txt_four_size" />
+
+        <TextView
+            android:id="@+id/txt_entrust_house"
+            style="@style/pager_function_txt"
+            android:text="@string/label_entrust_house" />
+
+        <TextView
+            android:id="@+id/txt_entrust_chat"
+            style="@style/pager_function_txt"
+            android:text="购房委托" />
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <ImageView
+        android:id="@+id/img_user_entrust"
+        style="@style/indicated_entrust_style" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager_user_entrust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_list" />
+
+</LinearLayout>

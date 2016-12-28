@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_call_entrust"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zfb.house.component.LoadMoreRecyclerView
+            android:id="@+id/recycle_call_entrust"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_list"
+            android:scrollbars="none"
+            app:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/item_list_entrust_call_broker" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <include
+        android:id="@+id/layout_bottom"
+        layout="@layout/item_entrust_list_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:visibility="gone" />
+</FrameLayout>

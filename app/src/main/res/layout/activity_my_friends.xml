@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <LinearLayout style="@style/line_style">
+
+        <RelativeLayout
+            android:id="@+id/rlayout_friends_broker"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                android:id="@+id/txt_friends_broker"
+                style="@style/function_txt_style"
+                android:text="@string/label_broker"
+                android:textColor="@color/my_orange_two"
+                android:textSize="@dimen/txt_four_size" />
+
+            <View
+                android:id="@+id/view_friends_broker"
+                style="@style/underline_my_friends"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlayout_friends_user"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                android:id="@+id/txt_friends_user"
+                style="@style/function_txt_style"
+                android:text="@string/label_user" />
+
+            <View
+                android:id="@+id/view_friends_user"
+                style="@style/underline_my_friends" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <TextView
+        android:id="@+id/txt_search_friends"
+        style="@style/search_edt_style"
+        android:layout_gravity="center"
+        android:paddingLeft="140dp"
+        android:text="搜索"
+        android:textColor="@color/underline_color" />
+
+    <ImageView style="@style/divider_thin" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/list_my_friends"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--显示在屏幕中央的字母-->
+        <TextView
+            android:id="@+id/txt_mask"
+            android:layout_width="66.7dp"
+            android:layout_height="66.7dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/mine_my_friends"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="33.3sp"
+            android:visibility="gone"
+            tools:text="A"
+            tools:visibility="visible" />
+
+        <!--字母导航栏-->
+        <com.zfb.house.component.SideBar
+            android:id="@+id/sidebar"
+            android:layout_width="33.3dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/my_margin"
+            android:layout_marginTop="@dimen/my_margin" />
+    </RelativeLayout>
+
+</LinearLayout>

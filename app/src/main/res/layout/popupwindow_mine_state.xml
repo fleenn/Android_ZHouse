@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_height">
+
+        <RelativeLayout
+            android:layout_width="@dimen/mine_popup_function_width"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/mine_popup_title"
+                android:text="@string/cancel"
+                android:textColor="@color/my_gray_one" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/mine_popup_function_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                style="@style/mine_popup_title"
+                android:layout_alignParentRight="true"
+                android:text="@string/complete"
+                android:textColor="@color/my_orange_two" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+
+</LinearLayout>

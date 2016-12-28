@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mine_person_height">
+
+        <ImageView
+            android:id="@+id/img_user_avatar"
+            style="@style/img_header_style_one"
+            android:layout_margin="@dimen/my_margin" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_user_personal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_user_name"
+                style="@style/mine_name_txt"
+                android:layout_centerVertical="true" />
+
+            <ImageView style="@style/img_more_style" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thick" />
+
+    <LinearLayout style="@style/line_style">
+
+        <RelativeLayout style="@style/line_left_style">
+
+            <TextView
+                style="@style/mine_line_txt"
+                android:layout_centerInParent="true"
+                android:text="@string/label_mine_user_state" />
+        </RelativeLayout>
+
+        <ImageView style="@style/divider_vertical" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_user_state"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_user_state"
+                style="@style/mine_line_txt"
+                android:layout_centerInParent="true" />
+
+            <ImageView style="@style/mine_state_icon" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <RelativeLayout
+        android:id="@+id/rlayout_user_sign"
+        style="@style/line_style">
+
+        <RelativeLayout
+            android:id="@+id/rlayout_user_coin"
+            style="@style/line_left_style">
+
+            <TextView
+                style="@style/mine_line_txt"
+                android:layout_centerInParent="true"
+                android:text="@string/label_mine_coin" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/txt_user_coin"
+            style="@style/mine_coin_txt"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/txt_user_sign"
+            android:layout_toStartOf="@+id/txt_user_sign" />
+
+        <TextView
+            android:id="@+id/txt_user_sign"
+            style="@style/mine_sign_txt" />
+    </RelativeLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <ImageView style="@style/divider_thick" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mine_llayout_height">
+
+        <RelativeLayout
+            android:id="@+id/rlayout_user_expert"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                style="@style/mine_function_txt"
+                android:drawableTop="@drawable/mine_user_expert"
+                android:text="@string/img_mine_expert" />
+        </RelativeLayout>
+
+        <ImageView style="@style/mine_function_divider" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_user_entrust"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                style="@style/mine_function_txt"
+                android:drawableTop="@drawable/mine_user_entrust"
+                android:text="@string/img_mine_entrust" />
+        </RelativeLayout>
+
+        <ImageView style="@style/mine_function_divider" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_user_friends"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                style="@style/mine_function_txt"
+                android:drawableTop="@drawable/mine_user_friends"
+                android:text="@string/img_mine_friends" />
+        </RelativeLayout>
+
+        <ImageView style="@style/mine_function_divider" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_user_my_moments"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                style="@style/mine_function_txt"
+                android:drawableTop="@drawable/mine_user_my_moments"
+                android:text="@string/img_mine_moments" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mine_llayout_height">
+
+        <RelativeLayout
+            android:id="@+id/rlayout_user_areas"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                style="@style/mine_function_txt"
+                android:drawableTop="@drawable/mine_user_areas"
+                android:text="@string/img_mine_concern_areas" />
+        </RelativeLayout>
+
+        <ImageView style="@style/mine_function_divider" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_user_collect_houses"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                style="@style/mine_function_txt"
+                android:drawableTop="@drawable/mine_user_collect_houses"
+                android:text="@string/img_mine_collect_houses" />
+        </RelativeLayout>
+
+        <ImageView style="@style/mine_function_divider" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_user_collect_moments"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                style="@style/mine_function_txt"
+                android:drawableTop="@drawable/mine_user_collect_moments"
+                android:text="@string/img_mine_collect_moments" />
+        </RelativeLayout>
+
+        <ImageView style="@style/mine_function_divider" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_user_setting"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                style="@style/mine_function_txt"
+                android:drawableTop="@drawable/mine_user_setting"
+                android:text="@string/img_mine_setting" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+
+</LinearLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:minHeight="87dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/img_avatar"
+                android:layout_margin="@dimen/magin_dp"
+                android:layout_width="@dimen/item_head_width"
+                android:layout_height="@dimen/item_head_height"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_avatar" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_avatar"
+                android:text="13:10"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/my_gray_one"
+                android:textSize="@dimen/txt_five_size" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/my_margin"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/llayout_name_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1111"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_four_size" />
+
+                <ImageView
+                    android:id="@+id/img_identity"
+                    android:layout_width="@dimen/item_identity_width"
+                    android:layout_height="@dimen/item_identity_height"
+                    android:layout_marginLeft="@dimen/my_margin"
+                    android:layout_marginStart="@dimen/my_margin"
+                    android:layout_toEndOf="@id/tv_name"
+                    android:layout_toRightOf="@id/tv_name"
+                    android:src="@drawable/selector_user_type" />
+            </LinearLayout>
+
+            <com.zfb.house.component.RatingBar
+                android:id="@+id/rating_bar"
+                android:layout_below="@id/llayout_name_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="3dp"
+                app:starEmpty="@drawable/start_all"
+                app:starFill="@drawable/start_all"
+                app:starHalf="@drawable/start_half"
+                app:starImageSize="@dimen/rating_bar_size"
+                app:startClickable="false"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_customer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rating_bar"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="@dimen/item_txt_line_space"
+                android:text="附近客户"
+                android:textColor="@color/underline_color"
+                android:textSize="@dimen/txt_relevant_user_type"
+                android:layout_alignParentEnd="false" />
+
+            <TextView
+                android:id="@+id/tv_reply_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_customer"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="5dp"
+                android:lineSpacingExtra="@dimen/item_txt_line_space"
+                android:textColor="@drawable/selector_reply_color"
+                android:textSize="@dimen/px_sp_14" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlayout_moments"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/my_margin">
+
+            <TextView
+                android:id="@+id/tv_replied_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="1111111111111"
+                android:textSize="@dimen/px_sp_14"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/img_replied_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_moments"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_height">
+
+        <TextView
+            style="@style/top_title_txt"
+            android:layout_centerInParent="false"
+            android:layout_centerVertical="true"
+            android:text="性别" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlayout_alert_male"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_height"
+        android:clickable="true"
+        android:paddingLeft="5dp">
+
+        <TextView
+            style="@style/mine_personal_txt_left"
+            android:text="男" />
+    </RelativeLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <RelativeLayout
+        android:id="@+id/rlayout_alert_female"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_height"
+        android:clickable="true"
+        android:paddingLeft="5dp">
+
+        <TextView
+            style="@style/mine_personal_txt_left"
+            android:text="女" />
+    </RelativeLayout>
+
+</LinearLayout>

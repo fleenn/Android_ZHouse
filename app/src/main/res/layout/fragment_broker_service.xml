@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/divider_color"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    style="@style/confirm_order_left_txt"
+                    android:text="专家类型：" />
+
+                <TextView
+                    android:id="@+id/txt_broker_type"
+                    style="@style/user_mine_txt_four" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    style="@style/confirm_order_left_txt"
+                    android:text="成  交  量：" />
+
+                <TextView
+                    android:id="@+id/txt_broker_volume"
+                    style="@style/user_mine_txt_four" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    style="@style/confirm_order_left_txt"
+                    android:text="好  评  率：" />
+
+                <TextView
+                    android:id="@+id/txt_broker_satisfy"
+                    style="@style/user_mine_txt_four" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/personal_rlayout_area">
+
+                <TextView
+                    style="@style/personal_txt_area_left"
+                    android:text="服务片区：" />
+
+                <TextView
+                    android:id="@+id/txt_broker_district_one"
+                    style="@style/personal_txt_area_right"
+                    android:layout_marginTop="@dimen/my_margin" />
+
+                <TextView
+                    android:id="@+id/txt_broker_district_two"
+                    style="@style/personal_txt_area_right"
+                    android:layout_below="@+id/txt_broker_district_one" />
+
+                <TextView
+                    android:id="@+id/txt_broker_district_three"
+                    style="@style/personal_txt_area_right"
+                    android:layout_below="@+id/txt_broker_district_two" />
+            </RelativeLayout>
+
+            <ImageView
+                style="@style/divider_thin"
+                android:layout_marginLeft="@dimen/my_margin" />
+
+            <RelativeLayout style="@style/personal_rlayout_area">
+
+                <TextView
+                    style="@style/personal_txt_area_left"
+                    android:text="服务小区：" />
+
+                <TextView
+                    android:id="@+id/txt_broker_village_one"
+                    style="@style/personal_txt_area_right"
+                    android:layout_marginTop="@dimen/my_margin" />
+
+                <TextView
+                    android:id="@+id/txt_broker_village_two"
+                    style="@style/personal_txt_area_right"
+                    android:layout_below="@+id/txt_broker_village_one" />
+
+                <TextView
+                    android:id="@+id/txt_broker_village_three"
+                    style="@style/personal_txt_area_right"
+                    android:layout_below="@+id/txt_broker_village_two" />
+            </RelativeLayout>
+
+            <ImageView
+                style="@style/divider_thin"
+                android:layout_marginLeft="@dimen/my_margin" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

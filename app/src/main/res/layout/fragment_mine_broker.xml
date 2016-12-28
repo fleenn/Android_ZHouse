@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <LinearLayout
+        android:id="@+id/rlayout_broker_personal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mine_person_height">
+
+        <ImageView
+            android:id="@+id/img_broker_avatar"
+            style="@style/img_header_style_one"
+            android:layout_margin="@dimen/my_margin" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_broker_person"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_broker_name"
+                style="@style/mine_name_txt"
+                android:layout_marginTop="28dp" />
+
+            <com.zfb.house.component.RatingBar
+                android:id="@+id/rating_broker_star"
+                style="@style/rating_star_style"
+                android:layout_marginBottom="28dp"
+                app:starEmpty="@drawable/start_all"
+                app:starFill="@drawable/start_all"
+                app:starHalf="@drawable/start_half"
+                app:starImageSize="@dimen/rating_bar_size" />
+
+            <ImageView style="@style/img_more_style" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thick" />
+
+    <LinearLayout style="@style/line_style">
+
+        <RelativeLayout style="@style/line_left_style">
+
+            <TextView
+                style="@style/mine_line_txt"
+                android:layout_centerInParent="true"
+                android:text="@string/label_mine_broker_expert" />
+        </RelativeLayout>
+
+        <ImageView style="@style/divider_vertical" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_broker_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_broker_type"
+                style="@style/mine_line_txt"
+                android:layout_centerInParent="true" />
+
+            <ImageView style="@style/mine_state_icon" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <RelativeLayout
+        android:id="@+id/rlayout_broker_sign"
+        style="@style/line_style">
+
+        <RelativeLayout
+            android:id="@+id/rlayout_broker_coin"
+            style="@style/line_left_style">
+
+            <TextView
+                style="@style/mine_line_txt"
+                android:layout_centerInParent="true"
+                android:text="@string/label_mine_coin" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_broker_coin"
+            style="@style/mine_coin_txt"
+            android:layout_toRightOf="@+id/rlayout_broker_coin"
+            android:layout_toLeftOf="@+id/txt_broker_sign"
+            android:layout_toStartOf="@+id/txt_broker_sign"/>
+
+        <TextView
+            android:id="@+id/txt_broker_sign"
+            style="@style/mine_sign_txt" />
+    </RelativeLayout>
+
+    <ImageView style="@style/divider_thick" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mine_llayout_height">
+
+        <RelativeLayout
+            android:id="@+id/rlayout_broker_entrust"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                style="@style/mine_function_txt"
+                android:drawableTop="@drawable/mine_broker_entrust"
+                android:text="@string/img_mine_accept_entrust" />
+        </RelativeLayout>
+
+        <ImageView style="@style/mine_function_divider" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_broker_upload"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                style="@style/mine_function_txt"
+                android:drawableTop="@drawable/mine_broker_upload"
+                android:text="@string/img_mine_upload" />
+        </RelativeLayout>
+
+        <ImageView style="@style/mine_function_divider" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_broker_friends"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                style="@style/mine_function_txt"
+                android:drawableTop="@drawable/mine_broker_friends"
+                android:text="@string/img_mine_friends" />
+        </RelativeLayout>
+
+        <ImageView style="@style/mine_function_divider" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_broker_my_moments"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                style="@style/mine_function_txt"
+                android:drawableTop="@drawable/mine_broker_my_moments"
+                android:text="@string/img_mine_moments" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mine_llayout_height">
+
+        <RelativeLayout
+            android:id="@+id/rlayout_broker_areas"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                style="@style/mine_function_txt"
+                android:drawableTop="@drawable/mine_user_areas"
+                android:text="@string/img_mine_service_areas" />
+        </RelativeLayout>
+
+        <ImageView style="@style/mine_function_divider" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_broker_collect_houses"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                style="@style/mine_function_txt"
+                android:drawableTop="@drawable/mine_broker_collect_houses"
+                android:text="@string/img_mine_collect_houses" />
+        </RelativeLayout>
+
+        <ImageView style="@style/mine_function_divider" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_broker_collect_moments"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                style="@style/mine_function_txt"
+                android:drawableTop="@drawable/mine_broker_collect_moments"
+                android:text="@string/img_mine_collect_moments" />
+        </RelativeLayout>
+
+        <ImageView style="@style/mine_function_divider" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_broker_setting"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                style="@style/mine_function_txt"
+                android:drawableTop="@drawable/mine_broker_setting"
+                android:text="@string/img_mine_setting" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+</LinearLayout>

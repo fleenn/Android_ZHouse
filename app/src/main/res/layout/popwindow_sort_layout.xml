@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/rlayout_star_level"
+        style="@style/search_sort_llayout">
+
+        <ImageView
+            style="@style/search_sort_icon"
+            android:src="@drawable/sort_star_level" />
+
+        <TextView
+            style="@style/search_sort_txt"
+            android:text="@string/label_sort_one" />
+
+        <ImageView
+            style="@style/search_sort_tick"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <LinearLayout
+        android:id="@+id/rlayout_trading_volume"
+        style="@style/search_sort_llayout">
+
+        <ImageView
+            style="@style/search_sort_icon"
+            android:src="@drawable/sort_trading_volume" />
+
+        <TextView
+            style="@style/search_sort_txt"
+            android:text="@string/label_sort_two" />
+
+        <ImageView
+            style="@style/search_sort_tick"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <LinearLayout
+        android:id="@+id/rlayout_favorable_rate"
+        style="@style/search_sort_llayout">
+
+        <ImageView
+            style="@style/search_sort_icon"
+            android:src="@drawable/sort_favorable_rate" />
+
+        <TextView
+            style="@style/search_sort_txt"
+            android:text="@string/label_sort_three" />
+
+        <ImageView
+            style="@style/search_sort_tick"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

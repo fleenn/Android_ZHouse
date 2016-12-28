@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <ImageView style="@style/divider_thin" />
+
+    <EditText
+        android:id="@+id/edt_search_content"
+        style="@style/search_edt_style"
+        android:hint="搜索" />
+
+    <ImageView style="@style/divider_thin" />
+
+    <RelativeLayout
+        android:id="@+id/rlayout_hint"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bg_list"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="无搜索结果…" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refresh_collect_moments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <com.zfb.house.component.LoadMoreRecyclerView
+                android:id="@+id/recycler_collect_moments"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_list"
+                android:scrollbars="none"
+                app:layoutManager="LinearLayoutManager"
+                tools:listitem="@layout/item_list_collect_moments" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_grab_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.zfb.house.component.LoadMoreRecyclerView
+            android:id="@+id/recycler_grab_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:scrollbars="none" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/img_status_convert"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="30dp"
+        android:background="@drawable/shape_circle_orige"
+        android:gravity="center"
+        android:text="@string/label_sell"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <include layout="@layout/include_no_data_hint"/>
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <ImageView style="@style/divider_thick" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="199.3dp"
+        android:padding="@dimen/my_margin">
+
+        <EditText
+            android:id="@+id/edt_feedback_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请输入您的宝贵意见"
+            android:maxLength="400"
+            android:textColor="@color/my_black_two"
+            android:textColorHint="@color/underline_color"
+            android:textSize="@dimen/txt_two_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="400"
+            android:textColor="@color/my_black_two"
+            android:textSize="@dimen/txt_two_size" />
+    </RelativeLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <View style="@style/space_fill_style" />
+
+</LinearLayout>

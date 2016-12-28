@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/friend_rlayout_style">
+
+        <ImageView
+            android:id="@+id/img_friend_avatar"
+            style="@style/friend_img_avatar" />
+
+        <TextView
+            android:id="@+id/txt_friend_name"
+            style="@style/friend_txt_name" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+</LinearLayout>

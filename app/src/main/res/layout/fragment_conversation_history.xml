@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/line_top_style">
+
+        <TextView
+            style="@style/top_title_txt"
+            android:text="@string/title_message" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_add_msg"
+            android:layout_width="@dimen/rightup_item_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                style="@style/message_add_img"
+                android:src="@drawable/message_add" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View style="@style/divider_thin" />
+
+    <LinearLayout
+        android:id="@+id/layout_msg_type"
+        style="@style/line_style">
+
+        <RelativeLayout
+            android:id="@+id/rlayout_message_center"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                android:id="@+id/msg_tv_broker"
+                style="@style/function_txt_style"
+                android:text="@string/label_message_choose_one"
+                android:textColor="@color/my_orange_two"
+                android:textSize="@dimen/txt_four_size" />
+
+            <View
+                android:id="@+id/underline_msg_left"
+                style="@style/underline_msg"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlayout_message_left"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                android:id="@+id/msg_tv_customer"
+                style="@style/function_txt_style"
+                android:text="@string/label_message_choose_two" />
+
+            <View
+                android:id="@+id/underline_msg_center"
+                style="@style/underline_msg" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlayout_message_right"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                android:id="@+id/msg_tv_sys"
+                style="@style/function_txt_style"
+                android:text="@string/label_message_choose_three" />
+
+            <View
+                android:id="@+id/underline_msg_right"
+                style="@style/underline_msg" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <include layout="@layout/chat_search_bar" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/rl_error_item"
+        layout="@layout/chat_neterror_item"
+        android:visibility="gone" />
+
+    <!-- 系统消息里面的好友申请消息 -->
+
+    <include
+        android:id="@+id/layout_addnotice"
+        layout="@layout/row_contact"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/listCus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:cacheColorHint="#00000000"
+            android:divider="@null" />
+
+        <ListView
+            android:id="@+id/listFri"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/listSys"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:visibility="gone" />
+    </FrameLayout>
+
+
+</LinearLayout>

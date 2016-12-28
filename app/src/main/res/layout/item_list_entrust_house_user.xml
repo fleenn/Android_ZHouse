@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlayout_entrust_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/my_margin">
+
+        <ImageView
+            android:id="@+id/img_entrust_header"
+            style="@style/entrust_house_img"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/iv_sign"
+            style="@style/entrust_house_icon" />
+
+        <RelativeLayout
+            style="@style/entrust_house_rlayout"
+            android:layout_toRightOf="@+id/img_entrust_header">
+
+            <TextView
+                android:id="@+id/tv_house_name"
+                style="@style/entrust_house_txt_title"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/tv_model"
+                style="@style/entrust_house_txt_one"
+                android:layout_centerVertical="true" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:id="@+id/tv_area"
+                    style="@style/entrust_house_txt_one"
+                    android:layout_marginRight="@dimen/my_margin" />
+
+                <TextView
+                    android:id="@+id/tv_money"
+                    style="@style/entrust_house_txt_one" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_delete"
+            style="@style/entrust_delete_txt"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/my_margin"
+            android:layout_marginTop="@dimen/my_margin"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gv_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginLeft="@dimen/my_margin"
+        android:layout_marginTop="10dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="5" />
+
+    <ImageView
+        style="@style/divider_thin_bottom"
+        android:layout_marginLeft="@dimen/my_margin" />
+</LinearLayout>

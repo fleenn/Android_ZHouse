@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tool="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+
+    <declare-styleable name="ViewPagerIndicator">
+        <!-- Style of the circle indicator. -->
+        <attr name="vpiCirclePageIndicatorStyle" format="reference" />
+        <!-- Style of the icon indicator's views. -->
+        <attr name="vpiIconPageIndicatorStyle" format="reference" />
+        <!-- Style of the line indicator. -->
+        <attr name="vpiLinePageIndicatorStyle" format="reference" />
+        <!-- Style of the title indicator. -->
+        <attr name="vpiTitlePageIndicatorStyle" format="reference" />
+        <!-- Style of the tab indicator's tabs. -->
+        <attr name="vpiTabPageIndicatorStyle" format="reference" />
+        <!-- Style of the underline indicator. -->
+        <attr name="vpiUnderlinePageIndicatorStyle" format="reference" />
+    </declare-styleable>
+
+    <attr name="centered" format="boolean" />
+    <attr name="selectedColor" format="color" />
+    <attr name="strokeWidth" format="dimension" />
+    <attr name="unselectedColor" format="color" />
+
+    <declare-styleable name="CirclePageIndicator">
+        <!-- Whether or not the indicators should be centered. -->
+        <attr name="centered" />
+        <!-- Color of the filled circle that represents the current page. -->
+        <attr name="fillColor" format="color" />
+        <!-- Color of the filled circles that represents pages. -->
+        <attr name="pageColor" format="color" />
+        <!-- Orientation of the indicator. -->
+        <attr name="android:orientation" />
+        <!-- Radius of the circles. This is also the spacing between circles. -->
+        <attr name="radius" format="dimension" />
+        <!-- Whether or not the selected indicator snaps to the circles. -->
+        <attr name="snap" format="boolean" />
+        <!-- Color of the open circles. -->
+        <attr name="strokeColor" format="color" />
+        <!-- Width of the stroke used to draw the circles. -->
+        <attr name="strokeWidth" />
+        <!-- View background -->
+        <attr name="android:background" />
+    </declare-styleable>
+
+    <!--定义自定义组件RatingBar的自定义属性-->
+    <declare-styleable name="RatingBar" tool:Ignore="ResourceName">
+        <!--星星数量（浮点型值）-->
+        <attr name="starCount" format="integer" />
+        <!--星星大小（尺寸值）-->
+        <attr name="starImageSize" format="dimension" />
+        <!--星星是否可以被点击（布尔值）-->
+        <attr name="startClickable" format="boolean" />
+        <!--整颗星星（资源文件值）-->
+        <attr name="starFill" format="reference" />
+        <!--半颗星星（资源文件值）-->
+        <attr name="starHalf" format="reference" />
+        <!--星星背景（资源文件值）-->
+        <attr name="starEmpty" format="reference" />
+    </declare-styleable>
+
+    <!--定义自定义组件CustomerProgress的自定义属性-->
+    <declare-styleable name="CustomerProgress">
+        <!--背景颜色-->
+        <attr name="backColor" format="color" />
+        <!--进度条颜色-->
+        <attr name="progressColor" format="color" />
+    </declare-styleable>
+
+    <!-- Emoji表情 -->
+    <declare-styleable name="Emojicon">
+        <attr name="emojiconSize" format="dimension" />
+        <attr name="emojiconTextStart" format="integer" />
+        <attr name="emojiconTextLength" format="integer" />
+        <attr name="emojiconUseSystemDefault" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="AbstractWheelPicker">
+        <attr name="wheel_data" format="reference" />
+        <attr name="wheel_style" format="enum">
+            <enum name="straight" value="0" />
+            <enum name="curved" value="1" />
+        </attr>
+        <attr name="wheel_direction" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="wheel_item_index" format="integer" />
+        <attr name="wheel_item_same_size" format="boolean" />
+        <attr name="wheel_item_count" format="integer" />
+        <attr name="wheel_item_space" format="dimension" />
+        <attr name="wheel_text_size" format="dimension" />
+        <attr name="wheel_text_color" format="color" />
+        <attr name="wheel_text_color_current" format="color" />
+    </declare-styleable>
+
+    //发布房源——自定义选择View
+    <declare-styleable name="ReleaseHousingSelectView">
+        <attr name="text" format="string" />
+    </declare-styleable>
+
+    //发布房源——自定义输入View
+    <declare-styleable name="ReleaseHousingEditView">
+        <attr name="title_text" format="string" />
+        <attr name="unit_text" format="string" />
+        <attr name="content_hint" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="AbstractWheelView">
+        <attr name="visibleItems" format="integer" />
+        <attr name="isAllVisible" format="boolean" />
+        <attr name="itemOffsetPercent" format="integer" />
+        <attr name="itemsPadding" format="dimension" />
+        <attr name="selectionDividerDimmedAlpha" format="integer" />
+        <attr name="selectionDividerActiveAlpha" format="integer" />
+        <attr name="selectionDivider" format="reference" />
+        <attr name="itemsDimmedAlpha" format="integer" />
+        <attr name="isCyclic" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="WheelVerticalView">
+        <attr name="selectionDividerHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="WheelHorizontalView">
+        <attr name="selectionDividerWidth" format="dimension" />
+    </declare-styleable>
+
+    <attr name="abstractWheelViewStyle" format="reference" />
+
+    <!--圆形头像-->
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:minHeight="@dimen/space_height">
+
+    <View
+        android:id="@+id/view_area_icon"
+        android:layout_width="@dimen/top_right"
+        android:layout_height="@dimen/space_height"
+        android:background="@color/my_orange_two"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rlayout_area_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_height"
+        android:layout_marginLeft="@dimen/my_margin">
+
+        <TextView
+            android:id="@+id/txt_area_right"
+            style="@style/line_txt_style"
+            android:text="111" />
+
+        <ImageView
+            android:id="@+id/img_areas_tick"
+            style="@style/user_area_tick"
+            android:visibility="gone" />
+
+        <ImageView
+            style="@style/divider_thin"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</RelativeLayout>

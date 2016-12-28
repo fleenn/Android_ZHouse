@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <ImageView style="@style/divider_thick" />
+
+    <RelativeLayout style="@style/rlayout_right_style">
+
+        <TextView
+            style="@style/mine_personal_txt_left"
+            android:text="真实姓名" />
+
+        <EditText
+            android:id="@+id/edt_broker_relname"
+            style="@style/user_mine_edt_right"
+            android:hint="请填写您的真实姓名" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/rlayout_right_style">
+
+        <TextView
+            style="@style/mine_personal_txt_left"
+            android:text="身份证号" />
+
+        <EditText
+            android:id="@+id/edt_broker_id"
+            style="@style/user_mine_edt_right"
+            android:digits="1234567890xX"
+            android:maxLength="18"
+            android:hint="请填写您的身份证号" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <ImageView style="@style/divider_thick" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/mine_personal_txt_left"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:layout_marginTop="@dimen/my_margin"
+            android:text="真实头像" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/my_margin">
+
+            <ImageView
+                android:id="@+id/img_portrait"
+                style="@style/portrait_img_style"
+                android:src="@drawable/portrait_img" />
+
+            <ImageView
+                style="@style/portrait_img_style"
+                android:layout_marginLeft="107.3dp"
+                android:src="@drawable/portrait_sample" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <ImageView style="@style/divider_thick" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/mine_personal_txt_left"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:layout_marginTop="@dimen/my_margin"
+            android:text="身份证照" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/my_margin">
+
+            <ImageView
+                android:id="@+id/img_id"
+                style="@style/id_img_style"
+                android:src="@drawable/id_img" />
+
+            <ImageView
+                style="@style/id_img_style"
+                android:layout_marginLeft="48dp"
+                android:src="@drawable/id_sample" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <View style="@style/space_fill_style" />
+</LinearLayout>

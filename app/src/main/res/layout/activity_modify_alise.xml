@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <ImageView style="@style/divider_thick" />
+
+    <ImageView style="@style/divider_thin" />
+
+    <LinearLayout
+        android:id="@+id/modify_alise_llayout"
+        style="@style/line_style">
+
+        <EditText
+            android:id="@+id/modify_name_edt"
+            style="@style/mine_personal_edt" />
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <View style="@style/space_fill_style" />
+
+</LinearLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/divider_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <View style="@style/divider_thick" />
+
+            <com.zfb.house.component.ReleaseHousingSelectView
+                android:id="@+id/rhs_year_select"
+                style="@style/release_housing_item"
+                app:text="建筑年代" />
+
+            <com.zfb.house.component.ReleaseHousingSelectView
+                android:id="@+id/rhs_propert_select"
+                style="@style/release_housing_item"
+                app:text="产权性质" />
+
+            <com.zfb.house.component.ReleaseHousingSelectView
+                android:id="@+id/rhs_rent_way_select"
+                style="@style/release_housing_item"
+                android:visibility="gone"
+                app:text="出租方式" />
+
+            <com.zfb.house.component.ReleaseHousingEditView
+                android:id="@+id/rhe_real"
+                style="@style/release_housing_item"
+                android:visibility="gone"
+                app:title_text="物业公司" />
+
+            <com.zfb.house.component.ReleaseHousingSelectView
+                android:id="@+id/rhs_elevator_select"
+                style="@style/release_housing_item"
+                app:text="有无电梯" />
+
+            <com.zfb.house.component.ReleaseHousingSelectView
+                android:id="@+id/rhs_households_select"
+                style="@style/release_housing_item"
+                app:text="几梯几户" />
+
+            <RelativeLayout
+                android:id="@+id/rl_release_sign"
+                style="@style/release_choose_rlayout_two">
+
+                <TextView
+                    android:id="@+id/tv_release_sign_title"
+                    style="@style/release_choose_txt"
+                    android:layout_centerVertical="false"
+                    android:layout_marginTop="5.7dp"
+                    android:text="售房标签" />
+
+                <TextView
+                    android:id="@+id/tv_release_sign_content"
+                    style="@style/release_choose_hint_txt"
+                    android:layout_below="@+id/tv_release_sign_title"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="18dp"
+                    android:text="(最多3个)" />
+
+                <com.zfb.house.component.ReleaseHousingMultiSelectView
+                    android:id="@+id/rhm_release_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/tv_release_sign_title" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/divider_release_one"
+                style="@style/divider_thin"
+                android:layout_marginLeft="@dimen/my_margin" />
+
+            <RelativeLayout
+                android:id="@+id/rl_release_facilities"
+                style="@style/release_choose_rlayout_two">
+
+                <TextView
+                    android:id="@+id/tv_release_facilities_title"
+                    style="@style/release_choose_txt"
+                    android:layout_centerVertical="false"
+                    android:layout_marginTop="5.7dp"
+                    android:text="配套设施" />
+
+                <TextView
+                    android:id="@+id/tv_release_facilities_content"
+                    style="@style/release_choose_hint_txt"
+                    android:layout_below="@+id/tv_release_facilities_title"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="18dp"
+                    android:text="(多选)" />
+
+                <com.zfb.house.component.ReleaseHousingMultiSelectView
+                    android:id="@+id/rhm_release_facilities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_release_facilities_title" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/divider_release_two"
+                style="@style/divider_thin"
+                android:layout_marginLeft="@dimen/my_margin" />
+
+            <com.zfb.house.component.ReleaseHousingEditView
+                android:id="@+id/rhm_release_address"
+                style="@style/release_housing_item"
+                app:title_text="地址" />
+
+            <com.zfb.house.component.ReleaseHousingEditView
+                android:id="@+id/rhm_release_desc"
+                style="@style/release_housing_item"
+                app:content_hint="补充说明描述房源其他相关信息，最多150个字。"
+                app:title_text="房源描述" />
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="120dp"-->
+            <!--android:paddingLeft="@dimen/my_margin">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="@dimen/my_margin"-->
+            <!--android:text="房源描述"-->
+            <!--android:textColor="@color/my_black_two"-->
+            <!--android:textSize="@dimen/txt_two_size" />-->
+
+            <!--<EditText-->
+            <!--android:id="@+id/edt_release_desc"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_margin="@dimen/my_margin"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@null"-->
+            <!--android:gravity="left"-->
+            <!--android:hint="补充说明描述房源其他相关信息，最多150个字。"-->
+            <!--android:textColor="@color/gray"-->
+            <!--android:textSize="@dimen/txt_five_size" />-->
+            <!--</LinearLayout>-->
+
+            <!--<ImageView-->
+            <!--style="@style/divider_thin"-->
+            <!--android:layout_marginLeft="@dimen/my_margin" />-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/divider_color">
+
+                <TextView style="@style/release_choose_hint_four" />
+
+                <Button
+                    android:id="@+id/btn_register"
+                    style="@style/release_btn" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

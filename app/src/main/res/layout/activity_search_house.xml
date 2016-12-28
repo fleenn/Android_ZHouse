@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_orange" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="提示：请描述您的购房需求，住房邦将根据您的要求给您精准推荐目标区域优秀、资深的房产中介经纪人。"
+                android:textColor="@color/hint_color" />
+
+            <!--片区选择-->
+            <LinearLayout
+                android:id="@+id/llayout_district"
+                style="@style/house_condition_layout">
+
+                <TextView
+                    style="@style/house_condition_title"
+                    android:text="您想购哪个片区的房子？" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp">
+
+                    <TextView
+                        android:id="@+id/tv_district"
+                        style="@style/house_condition_txt"/>
+
+                    <ImageView style="@style/house_condition_more" />
+
+                    <ImageView style="@style/divider_thin_bottom" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!--小区选择-->
+            <LinearLayout
+                android:id="@+id/llayout_community"
+                style="@style/house_condition_layout">
+
+                <TextView
+                    style="@style/house_condition_title"
+                    android:text="您想购买哪个小区的房子" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp">
+
+                    <TextView
+                        android:id="@+id/tv_community"
+                        style="@style/house_condition_txt"/>
+
+                    <ImageView style="@style/house_condition_more" />
+
+                    <ImageView style="@style/divider_thin_bottom" />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <!--户型选择-->
+            <LinearLayout
+                android:id="@+id/llayout_layout"
+                style="@style/house_condition_layout">
+
+                <TextView
+                    style="@style/house_condition_title"
+                    android:text="您想买户型是几间居室的？" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp">
+
+                    <TextView
+                        android:id="@+id/tv_layout"
+                        style="@style/house_condition_txt" />
+
+                    <ImageView style="@style/house_condition_more" />
+
+                    <ImageView style="@style/divider_thin_bottom" />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <!--面积选择-->
+            <LinearLayout
+                android:id="@+id/llayout_area"
+                style="@style/house_condition_layout">
+
+                <TextView
+                    style="@style/house_condition_title"
+                    android:text="您希望房子的面积大小？" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp">
+
+                    <TextView
+                        android:id="@+id/tv_area"
+                        style="@style/house_condition_txt"/>
+
+                    <ImageView style="@style/house_condition_more" />
+
+                    <ImageView style="@style/divider_thin_bottom" />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <!--金额选择-->
+            <LinearLayout
+                android:id="@+id/llayout_money"
+                style="@style/house_condition_layout">
+
+                <TextView
+                    style="@style/house_condition_title"
+                    android:text="您的购房资金预算？" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp">
+
+                    <TextView
+                        android:id="@+id/tv_money"
+                        style="@style/house_condition_txt" />
+
+                    <ImageView style="@style/house_condition_more" />
+
+                    <ImageView style="@style/divider_thin_bottom" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!--补充说明-->
+            <LinearLayout style="@style/house_condition_layout">
+
+                <TextView
+                    style="@style/house_condition_title"
+                    android:text="您还有其他补充说明？" />
+
+                <EditText
+                    android:id="@+id/et_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/shape_border"
+                    android:gravity="top"
+                    android:hint="请输入补充说明"
+                    android:padding="5dp"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/my_orange_one"
+                android:text="马上提交，住房邦帮你！"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginBottom="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

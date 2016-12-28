@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="96dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/broker_shop_bottom"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:layout_marginRight="@dimen/my_margin"
+            android:layout_marginTop="@dimen/my_margin">
+
+            <ImageView
+                android:id="@+id/broker_shop_img"
+                android:layout_width="@dimen/broker_shop_img_width"
+                android:layout_height="@dimen/broker_shop_img_height"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/iv_shop_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_shop_up" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/rl_image"
+            android:paddingTop="@dimen/my_margin">
+
+            //标题
+
+            <TextView
+                android:id="@+id/broker_shop_title"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxEms="12"
+                android:minHeight="96dp"
+                android:singleLine="true"
+                android:textColor="@color/my_black_two"
+                android:textSize="@dimen/txt_one_size" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="@dimen/broker_shop_bottom">
+
+                <LinearLayout
+                    android:id="@+id/llayout_one"
+                    android:layout_width="93dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    //小区
+
+                    <TextView
+                        android:id="@+id/broker_shop_district"
+                        style="@style/broker_shop_gray_txt" />
+
+                    //房源类型：1.住宅、2.别墅、3.写字楼、4.商铺
+
+                    <TextView
+                        android:id="@+id/broker_shop_style"
+                        style="@style/broker_shop_gray_txt"
+                        android:layout_marginRight="25.7dp" />
+
+                    //装修
+
+                    <TextView
+                        android:id="@+id/broker_shop_decorate"
+                        style="@style/broker_shop_gray_txt" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llayout_two"
+                    android:layout_width="93dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/llayout_one"
+                    android:orientation="vertical">
+
+                    //道路，比如莲前西路
+
+                    <TextView
+                        android:id="@+id/broker_shop_village"
+                        style="@style/broker_shop_gray_txt" />
+
+                    //面积
+
+                    <TextView
+                        android:id="@+id/broker_shop_acreage"
+                        style="@style/broker_shop_gray_txt" />
+
+                    //朝向
+
+                    <TextView
+                        android:id="@+id/broker_shop_orientation"
+                        style="@style/broker_shop_gray_txt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    //价格
+
+                    <TextView
+                        android:id="@+id/broker_shop_price"
+                        style="@style/broker_shop_orange_txt"
+                        android:layout_marginRight="@dimen/my_margin" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <com.zfb.house.component.SettingOperationView
+            android:id="@+id/sov_operation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingBottom="10dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        style="@style/divider_thin_bottom"
+        android:layout_marginLeft="@dimen/my_margin" />
+
+</RelativeLayout>

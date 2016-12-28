@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="93dp"
+    android:layout_height="93dp">
+
+    <ImageView
+        android:id="@+id/img_picked_photo"
+        android:layout_width="66.6dp"
+        android:layout_height="66.6dp"
+        android:layout_centerInParent="true"/>
+    <ImageView
+        android:id="@+id/img_delete_photo"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/bg_delete_photo"
+        android:layout_alignEnd="@id/img_picked_photo"
+        android:layout_marginEnd="-8dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/underline_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="122dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_nolimit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/v_vertical_line_nolimit"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/orange" />
+
+                <TextView
+                    android:id="@+id/tv_nolimit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="租售专家"
+                    android:textColor="@color/orange"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/underline_color" />
+
+            <LinearLayout
+                android:id="@+id/ll_sell"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/v_vertical_line"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/txt_sell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="卖房专家"
+                    android:textColor="@color/my_gray_one"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/underline_color" />
+
+            <LinearLayout
+                android:id="@+id/ll_rent"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/v_vertical_line_rent"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/txt_rent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="租房专家"
+                    android:textColor="@color/my_gray_one"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/underline_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/line_no_limit"
+                android:layout_width="0.5dp"
+                android:layout_height="41dp"
+                android:background="@color/white" />
+
+            <View
+                android:id="@+id/line_sell"
+                android:layout_width="0.5dp"
+                android:layout_height="40dp"
+                android:background="@color/underline_color" />
+
+            <View
+                android:id="@+id/line_rent"
+                android:layout_width="0.5dp"
+                android:layout_height="41dp"
+                android:background="@color/underline_color" />
+
+
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/underline_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llayout_brokerage_list"
+                android:layout_width="match_parent"
+                android:layout_height="302dp"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_money_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="佣金＝总价＊佣金点数"
+                    android:textColor="@color/my_gray_one"
+                    android:textSize="13sp" />
+
+                <ListView
+                    android:id="@+id/lv_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:choiceMode="singleChoice" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_mt"
+                android:layout_width="match_parent"
+                android:layout_height="122dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="面谈"
+                android:textColor="@color/my_orange_one"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

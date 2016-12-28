@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_item_one"
+            style="@style/entrust_call_llayout"
+            android:layout_width="match_parent">
+
+            <TextView
+                style="@style/entrust_call_txt_key"
+                android:text="需求类型：" />
+
+            <TextView
+                android:id="@+id/tv_way"
+                style="@style/entrust_call_txt_value"
+                android:layout_width="65dp"
+                android:text="租" />
+
+            <TextView
+                style="@style/entrust_call_txt_key"
+                android:text="支付佣金：" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                style="@style/entrust_call_txt_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/entrust_call_llayout"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/ll_item_one">
+
+            <TextView
+                style="@style/entrust_call_txt_key"
+                android:text="语音：" />
+
+            <ImageView
+                android:id="@+id/iv_voice"
+                style="@style/entrust_call_img" />
+
+            <TextView
+                style="@style/entrust_call_txt_key"
+                android:layout_marginLeft="70dp"
+                android:text="委托时间：" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                style="@style/entrust_call_txt_value" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlayout_delete"
+            style="@style/entrust_delete_rlayout">
+
+            <TextView style="@style/entrust_delete_txt" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/entrust_call_txt"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/my_margin"
+        android:ellipsize="end"
+        android:maxEms="24"
+        android:singleLine="true"
+        android:text="--" />
+
+    <GridView
+        android:id="@+id/gv_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/my_margin"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:horizontalSpacing="15dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="5" />
+
+    <ImageView
+        style="@style/divider_thin"
+        android:layout_marginLeft="@dimen/my_margin" />
+</LinearLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.zfb.house.adapter.InfiniteViewPager
+                android:id="@+id/infiniteViewPagerCoin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/coin_infinite_viewpager" />
+
+            <LinearLayout
+                android:id="@+id/llayout_sign"
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:layout_below="@+id/infiniteViewPagerCoin">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="@dimen/my_margin">
+
+                    <TextView
+                        android:id="@+id/txt_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/my_black_one"
+                        android:textSize="@dimen/txt_eight_size" />
+
+                    <TextView
+                        android:id="@+id/txt_sign_number"
+                        style="@style/goods_detail_value_txt"
+                        android:layout_centerVertical="true" />
+
+                    <TextView
+                        android:id="@+id/txt_coin_number"
+                        style="@style/gold_coin_number" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btn_sign"
+                        android:layout_width="@dimen/sign_btn_width"
+                        android:layout_height="@dimen/sign_btn_height"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/my_margin"
+                        android:layout_marginTop="@dimen/my_margin"
+                        android:background="@null"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_eight_size" />
+
+                    <TextView
+                        android:id="@+id/txt_coin_rule"
+                        style="@style/home_txt_more"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:paddingBottom="@dimen/my_margin"
+                        android:paddingTop="9dp"
+                        android:text="金币规则>" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ImageView
+                style="@style/divider_thin"
+                android:layout_above="@+id/llayout_function" />
+
+            <LinearLayout
+                android:id="@+id/llayout_function"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llayout_sign">
+
+                <TextView
+                    android:id="@+id/txt_cashing_center"
+                    style="@style/gold_coin_function"
+                    android:drawableTop="@drawable/coin_cashing_center"
+                    android:text="@string/title_cashing_center" />
+
+                <TextView
+                    android:id="@+id/txt_task_center"
+                    style="@style/gold_coin_function"
+                    android:drawableTop="@drawable/coin_task_center"
+                    android:text="@string/title_task_center" />
+
+                <TextView
+                    android:id="@+id/txt_game_center"
+                    style="@style/gold_coin_function"
+                    android:drawableTop="@drawable/coin_game_center"
+                    android:text="@string/title_game_center" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_divider_one"
+                style="@style/divider_thin"
+                android:layout_below="@+id/llayout_function" />
+
+            <ImageView
+                android:id="@+id/img_divider_two"
+                style="@style/divider_thick"
+                android:layout_below="@+id/img_divider_one" />
+
+            <RelativeLayout
+                android:id="@+id/rlayout_commend"
+                style="@style/line_style"
+                android:layout_below="@+id/img_divider_two">
+
+                <TextView
+                    style="@style/home_txt_header"
+                    android:layout_marginLeft="@dimen/my_margin"
+                    android:text="@string/title_special_commend" />
+            </RelativeLayout>
+
+            <GridView
+                android:id="@+id/gv_recommend"
+                style="@style/gold_coin_goods_item"
+                android:layout_below="@+id/rlayout_commend"
+                android:numColumns="2"
+                tools:listitem="@layout/item_grid_goods" />
+
+            <!--更多特权暂时先隐藏起来-->
+            <!--<ImageView style="@style/divider_thick" />-->
+
+            <!--<RelativeLayout style="@style/line_style">-->
+
+            <!--<TextView-->
+            <!--style="@style/home_txt_header"-->
+            <!--android:layout_marginLeft="@dimen/my_margin"-->
+            <!--android:text="@string/label_privilege_cashing" />-->
+
+            <!--<ImageView style="@style/divider_thin" />-->
+
+            <!--<GridView-->
+            <!--android:id="@+id/gv_privilege"-->
+            <!--style="@style/gold_coin_goods_item"-->
+            <!--android:numColumns="2"-->
+            <!--tools:listitem="@layout/item_grid_goods" />-->
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

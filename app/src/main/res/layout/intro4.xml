@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/fouthslide_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@drawable/fourth_intro" />
+    <Button
+        android:id="@+id/btn_intro_open"
+        android:layout_width="100dp"
+        android:layout_height="33.3dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:textSize="13.3sp"
+        android:textColor="@color/white"
+        android:text="立即开启"
+        android:background="@drawable/shape_intro_btn"/>
+
+</RelativeLayout>

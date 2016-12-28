@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        configdebug {
+            storeFile file('zfb.jks')
+            keyAlias 'zfb'
+            keyPassword 'zfb123456'
+            storePassword 'zfb123456'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+    defaultConfig {
+        applicationId "com.zfb.house"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 21
+        versionName "2.2.1"
+    }
+    defaultConfig {
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    productFlavors {
+    }
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile(name:'library-bga',ext:'aar')
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile 'de.greenrobot:eventbus:2.4.0'
+    compile 'com.android.support:multidex:'
+    compile project(':emchat')
+    compile 'com.qiniu:happy-dns:0.2.4'
+    compile 'com.qiniu:qiniu-android-sdk:7.0.9'
+    compile 'com.nineoldandroids:library:2.4.0'
+}

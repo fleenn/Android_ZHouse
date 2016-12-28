@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llayout_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_my_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:layout_marginRight="@dimen/my_margin"
+            android:layout_marginTop="@dimen/my_margin"
+            android:lineSpacingExtra="@dimen/item_txt_line_space"
+            android:text="content"
+            android:textColor="@color/show_color"
+            android:textSize="@dimen/px_sp_14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_houses_left"
+            android:layout_marginRight="@dimen/item_txt_line_space"
+            android:layout_marginTop="@dimen/item_house_top">
+
+            <com.zfb.house.component.HomeGalleryImagesLayout
+                android:id="@+id/myMomentsGalleryImagesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/txt_my_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/my_margin"
+                android:text="time"
+                android:gravity="center"
+                android:textColor="@color/show_color"
+                android:textSize="@dimen/txt_seven_size" />
+
+            <TextView
+                android:id="@+id/txt_my_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:paddingEnd="@dimen/my_margin"
+                android:paddingStart="@dimen/my_margin"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="@color/my_orange_two"
+                android:textSize="@dimen/txt_seven_size"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llayout_my_location"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:layout_marginRight="@dimen/my_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/near_position" />
+
+            <TextView
+                android:id="@+id/txt_my_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="1111"
+                android:textColor="@color/my_orange_two"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/my_margin"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:layout_marginRight="@dimen/my_margin">
+
+            <LinearLayout
+                android:id="@+id/txt_my_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <LinearLayout style="@style/line_style">
+
+        <RelativeLayout
+            android:id="@+id/rlayout_my_praise"
+            style="@style/item_rlayout_function">
+
+            <ImageView
+                android:id="@+id/img_my_praise"
+                style="@style/item_img_function"
+                android:src="@drawable/selector_good_img" />
+
+            <TextView
+                android:id="@+id/txt_my_praise"
+                style="@style/item_txt_function"
+                android:layout_toRightOf="@+id/img_my_praise"
+                android:text="78" />
+        </RelativeLayout>
+
+        <ImageView style="@style/divider_vertical" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_my_share"
+            style="@style/item_rlayout_function">
+
+            <ImageView
+                android:id="@+id/img_my_share"
+                style="@style/item_img_function"
+                android:src="@drawable/selector_share_img" />
+
+            <TextView
+                android:id="@+id/txt_my_share"
+                style="@style/item_txt_function"
+                android:layout_toRightOf="@+id/img_my_share"
+                android:text="56" />
+        </RelativeLayout>
+
+        <ImageView style="@style/divider_vertical" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_my_collection"
+            style="@style/item_rlayout_function">
+
+            <ImageView
+                android:id="@+id/img_my_collection"
+                style="@style/item_img_function"
+                android:src="@drawable/selector_collect_img" />
+
+            <TextView
+                android:id="@+id/txt_my_collection"
+                style="@style/item_txt_function"
+                android:layout_toRightOf="@+id/img_my_collection"
+                android:text="34" />
+        </RelativeLayout>
+
+        <ImageView style="@style/divider_vertical" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_my_chat"
+            style="@style/item_rlayout_function">
+
+            <ImageView
+                android:id="@+id/img_my_chat"
+                style="@style/item_img_function"
+                android:src="@drawable/selector_item_chat" />
+
+            <TextView
+                android:id="@+id/txt_my_chat"
+                style="@style/item_txt_function"
+                android:layout_toRightOf="@+id/img_my_chat"
+                android:text="12" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+</LinearLayout>

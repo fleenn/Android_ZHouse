@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zfb.house.component.InputMethodRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/inputMethodRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/frame_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <RelativeLayout
+        android:id="@+id/rlayout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_middle_height"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/main_bottom_height"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white">
+
+                <!--首页-->
+                <RelativeLayout
+                    android:id="@+id/rlayout_home"
+                    style="@style/main_item_flayout"
+                    android:layout_weight="182">
+
+                    <ImageView
+                        style="@style/main_item_img"
+                        android:src="@drawable/selector_main_home" />
+
+                    <TextView
+                        style="@style/main_item_txt"
+                        android:text="@string/label_home" />
+                </RelativeLayout>
+
+                <!--房友圈-->
+                <RelativeLayout
+                    android:id="@+id/rlayout_moments"
+                    style="@style/main_item_flayout"
+                    android:layout_weight="189">
+
+                    <ImageView
+                        style="@style/main_item_img"
+                        android:src="@drawable/selector_main_friends" />
+
+                    <TextView
+                        style="@style/main_item_txt"
+                        android:text="@string/label_friends" />
+                    <cn.bingoogolapple.badgeview.BGABadgeTextView
+                        android:id="@+id/bga_moments"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="27dp"/>
+                </RelativeLayout>
+
+                <!--留白-->
+                <RelativeLayout
+                    style="@style/main_item_flayout"
+                    android:layout_weight="258"
+                    android:clipChildren="false" />
+
+                <!--消息-->
+                <RelativeLayout
+                    android:id="@+id/rlayout_message"
+                    style="@style/main_item_flayout"
+                    android:layout_weight="189">
+
+                    <ImageView
+                        style="@style/main_item_img"
+                        android:src="@drawable/selector_main_message" />
+
+                    <TextView
+                        style="@style/main_item_txt"
+                        android:text="@string/label_message" />
+
+                    <cn.bingoogolapple.badgeview.BGABadgeTextView
+                        android:id="@+id/bga_tab_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="27dp"/>
+                </RelativeLayout>
+
+                <!--我的-->
+                <RelativeLayout
+                    android:id="@+id/rlayout_mine"
+                    style="@style/main_item_flayout"
+                    android:layout_weight="182">
+
+                    <ImageView
+                        style="@style/main_item_img"
+                        android:src="@drawable/selector_main_mine" />
+
+                    <TextView
+                        style="@style/main_item_txt"
+                        android:text="@string/label_mine" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!--一键呼叫-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/main_middle_height"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@+id/frame"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/main_bulge_height"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true">
+
+                <!--中间曲线-->
+                <View
+                    android:layout_width="@dimen/main_bulge_width"
+                    android:layout_height="@dimen/main_bulge_height"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/main_curve" />
+
+                <!--两边直线-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/main_view_height"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/underline_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlayout_center"
+                android:layout_width="@dimen/main_middle_width"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/img_center"
+                    android:layout_width="@dimen/main_center_width"
+                    android:layout_height="@dimen/main_center_height"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/main_middle_top"
+                    android:src="@drawable/main_call" />
+
+                <TextView
+                    android:id="@+id/txt_center"
+                    style="@style/main_item_txt"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="36dp"
+                    android:text="@string/label_call" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</com.zfb.house.component.InputMethodRelativeLayout>

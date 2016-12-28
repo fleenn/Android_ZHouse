@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <ImageView style="@style/login_zfb_icon" />
+
+    <TextView
+        style="@style/setting_about_txt"
+        android:text="        住房邦是一个提供客户与经纪人精准高效匹配对接房产信息及服务的移动互联网平台。 打破传统找房模式，采用“以人找房”新模式。客户采用“一键发布”和“区域筛选”两种高效便捷的方式找到社区专家，并可自主定义佣金；经纪人采用“一键抢单”的方式高效轻松获取客源房源；住房邦独有的基于房产属性的“房友圈”，拉近客户与经纪人之间的距离。住房邦致力于为客户与经纪人搭建更快捷，更精准，更高效的房产服务平台！" />
+
+    <TextView
+        style="@style/setting_about_txt"
+        android:layout_marginTop="@dimen/my_margin"
+        android:text="联系我们" />
+
+    <TextView
+        style="@style/setting_about_txt"
+        android:text="电话：05925880150" />
+
+    <TextView
+        style="@style/setting_about_txt"
+        android:text="地址：厦门市思明区湖滨南路鸿翔大厦23层" />
+</LinearLayout>

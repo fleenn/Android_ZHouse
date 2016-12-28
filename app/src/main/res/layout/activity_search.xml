@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_search_height">
+
+        <LinearLayout
+            android:id="@+id/llayout_search"
+            android:layout_width="@dimen/home_spinner_width"
+            android:layout_height="@dimen/home_spinner_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:layout_marginRight="@dimen/my_margin"
+            android:background="@drawable/shape_search_rlayout">
+
+            <Spinner
+                android:id="@+id/spin_home_search"
+                android:layout_width="88dp"
+                android:layout_height="match_parent"
+                android:entries="@array/home_search"
+                android:spinnerMode="dropdown"
+                android:background="@drawable/bg_spinner"/>
+
+            <ImageView style="@style/divider_vertical" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/hint_home_search"
+                android:textSize="13sp"
+                android:drawablePadding="5dp"
+                android:paddingLeft="10dp"
+                android:drawableLeft="@drawable/home_search_icon"
+                android:background="@null"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_search_cancel"
+            android:text="@string/cancel"
+            style="@style/txt_style"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <LinearLayout
+        android:id="@+id/llayout_search_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/rlayout_history_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView style="@style/divider_thick" />
+
+            <RelativeLayout style="@style/line_style">
+
+                <TextView
+                    style="@style/home_search_subtitle"
+                    android:text="@string/label_home_history" />
+
+                <TextView
+                    android:id="@+id/txt_search_clear"
+                    style="@style/txt_style"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    android:text="@string/label_home_clear"
+                    android:textColor="@color/my_orange_two" />
+            </RelativeLayout>
+
+            <ImageView style="@style/divider_thin" />
+
+            <GridView
+                android:id="@+id/grid_history_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numColumns="2" />
+        </LinearLayout>
+
+        <ImageView style="@style/divider_thick" />
+
+        <RelativeLayout style="@style/line_style">
+
+            <TextView
+                style="@style/home_search_subtitle"
+                android:text="@string/label_home_hot" />
+
+            <TextView
+                android:id="@+id/txt_search_area"
+                style="@style/txt_style"
+                android:layout_width="@dimen/home_subtitle_width"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:text="@string/label_home_area"
+                android:textColor="@color/my_orange_two" />
+        </RelativeLayout>
+
+        <ImageView style="@style/divider_thin" />
+
+        <GridView
+            android:id="@+id/list_hot_search"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:numColumns="2" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_search_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

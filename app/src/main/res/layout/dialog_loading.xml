@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_main"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_release_write"
+    android:orientation="horizontal"
+    android:layout_gravity="center"
+    android:padding="20dp" >
+
+    <ProgressBar
+        android:id="@+id/bar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center_vertical"
+        android:indeterminateDuration="600"
+        />
+
+    <TextView
+        android:id="@+id/loading_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="发送中，请稍后.."
+        android:textColor="@color/my_gray_one" />
+
+</LinearLayout>

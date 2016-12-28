@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/bg_list"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_house_entrust"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zfb.house.component.LoadMoreRecyclerView
+            android:id="@+id/recycle_house_entrust"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            app:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/item_list_entrust_house_user" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/tv_switch"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="30dp"
+        android:background="@drawable/shape_circle_orige"
+        android:gravity="center"
+        android:text="@string/label_rent"
+        android:textColor="@color/white" />
+
+    <include
+        android:id="@+id/layout_bottom"
+        layout="@layout/item_entrust_list_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+</FrameLayout>

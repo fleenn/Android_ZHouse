@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    <TextView 
+        android:id="@+id/score_number"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#1a1a1a"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="@dimen/my_margin"/>
+    <ImageView 
+        android:id="@+id/score_one"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/cos_star_unselected"/>
+    <ImageView 
+        android:id="@+id/score_two"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/cos_star_unselected"/>
+    <ImageView 
+        android:id="@+id/score_three"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/cos_star_unselected"/>
+    <ImageView 
+        android:id="@+id/score_four"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/cos_star_unselected"/>
+    <ImageView 
+        android:id="@+id/score_five"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="@dimen/my_margin"
+        android:background="@drawable/cos_star_unselected"/>
+
+</LinearLayout>

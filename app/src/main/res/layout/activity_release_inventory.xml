@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <ImageView style="@style/divider_thick" />
+
+    <RelativeLayout style="@style/release_choose_rlayout_one">
+
+        <TextView
+            style="@style/release_choose_txt"
+            android:text="小区名称" />
+
+        <ImageView style="@style/img_more_style" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/release_choose_rlayout_one">
+
+        <TextView
+            style="@style/release_choose_txt"
+            android:text="户型" />
+
+        <ImageView style="@style/img_more_style" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/release_choose_rlayout_one">
+
+        <TextView
+            style="@style/release_choose_txt"
+            android:text="面积" />
+
+        <TextView
+            style="@style/release_choose_hint_one"
+            android:layout_marginRight="43dp"
+            android:text="123" />
+
+        <TextView
+            style="@style/release_choose_hint_one"
+            android:text="平米" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/release_choose_rlayout_one">
+
+        <TextView
+            style="@style/release_choose_txt"
+            android:text="售价" />
+
+        <TextView
+            style="@style/release_choose_hint_one"
+            android:layout_marginRight="43dp"
+            android:text="123" />
+
+        <TextView
+            style="@style/release_choose_hint_one"
+            android:text="万元" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/release_choose_rlayout_one">
+
+        <TextView
+            style="@style/release_choose_txt"
+            android:text="朝向" />
+
+        <ImageView style="@style/img_more_style" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/release_choose_rlayout_one">
+
+        <TextView
+            style="@style/release_choose_txt"
+            android:text="装修程度" />
+
+        <ImageView style="@style/img_more_style" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/release_choose_rlayout_one">
+
+        <TextView
+            style="@style/release_choose_txt"
+            android:text="房源标题" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+    <ImageView style="@style/divider_thick" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/release_photo_height">
+
+    </RelativeLayout>
+
+    <ImageView style="@style/divider_thin" />
+
+    <View style="@style/space_fill_style" />
+</LinearLayout>

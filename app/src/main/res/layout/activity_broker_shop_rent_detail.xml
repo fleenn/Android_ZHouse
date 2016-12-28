@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1547"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <!--<com.zfb.house.component.CirclePageIndicator-->
+                    <!--android:id="@+id/indicator"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:padding="10dip" />-->
+            </LinearLayout>
+
+            <ImageView style="@style/divider_thin" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_shop_title"
+                    style="@style/shop_detail_title_txt" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3.3dp"
+                    android:layout_marginLeft="@dimen/my_margin"
+                    android:layout_marginRight="@dimen/my_margin">
+
+                    <TextView
+                        android:id="@+id/tv_shop_time"
+                        style="@style/shop_detail_time_txt" />
+
+                    <TextView
+                        android:id="@+id/tv_shop_house"
+                        style="@style/shop_detail_time_txt"
+                        android:layout_alignParentRight="true" />
+                </RelativeLayout>
+
+                <ImageView style="@style/divider_thin_center" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="66.7dp">
+
+                    <RelativeLayout
+                        style="@style/shop_detail_rlayout_one"
+                        android:layout_weight="318">
+
+                        <TextView
+                            android:id="@+id/tv_main_info1"
+                            style="@style/shop_detail_key_one" />
+
+                        <TextView
+                            android:id="@+id/tv_main_info_value"
+                            style="@style/shop_detail_value_one" />
+                    </RelativeLayout>
+
+                    <ImageView style="@style/divider_vertical" />
+
+                    <RelativeLayout
+                        style="@style/shop_detail_rlayout_one"
+                        android:layout_weight="437">
+
+                        <TextView
+                            android:id="@+id/tv_main_info2"
+                            style="@style/shop_detail_key_one"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true" />
+
+                        <TextView
+                            android:id="@+id/tv_main_info2_value"
+                            style="@style/shop_detail_value_one" />
+                    </RelativeLayout>
+
+                    <ImageView style="@style/divider_vertical" />
+
+                    <RelativeLayout
+                        style="@style/shop_detail_rlayout_one"
+                        android:layout_weight="318">
+
+                        <TextView
+                            android:id="@+id/tv_main_info3"
+                            style="@style/shop_detail_key_one" />
+
+                        <TextView
+                            android:id="@+id/tv_main_info3_value"
+                            style="@style/shop_detail_value_one" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ImageView style="@style/divider_thin_center" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    //级别
+
+                    <LinearLayout
+                        android:id="@+id/ll_shop_level"
+                        style="@style/shop_detail_llayout_three"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/shop_detail_key_two"
+                            android:text="级别：" />
+
+                        <TextView
+                            android:id="@+id/tv_shop_level"
+                            style="@style/shop_detail_value_two" />
+                    </LinearLayout>
+
+                    //状态 类别
+
+                    <LinearLayout
+                        android:id="@+id/ll_shop_statue"
+                        style="@style/shop_detail_llayout_one"
+                        android:layout_marginTop="3.3dp"
+                        android:visibility="gone">
+
+                        <LinearLayout style="@style/shop_detail_llayout_two">
+
+                            <TextView
+                                style="@style/shop_detail_key_two"
+                                android:text="状态：" />
+
+                            <TextView
+                                android:id="@+id/tv_shop_statue"
+                                style="@style/shop_detail_value_two" />
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/shop_detail_llayout_two">
+
+                            <TextView
+                                style="@style/shop_detail_key_two"
+                                android:text="类别：" />
+
+                            <TextView
+                                android:id="@+id/tv_shop_type"
+                                style="@style/shop_detail_value_two" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    //单价/出租方式 朝向/级别/状态
+
+                    <LinearLayout
+                        android:id="@+id/ll_shop_price_orientation"
+                        style="@style/shop_detail_llayout_one"
+                        android:layout_marginTop="3.3dp">
+
+                        <LinearLayout style="@style/shop_detail_llayout_two">
+
+                            <TextView
+                                android:id="@+id/tv_shop_price_key"
+                                style="@style/shop_detail_key_two" />
+
+                            <TextView
+                                android:id="@+id/tv_shop_price_value"
+                                style="@style/shop_detail_value_two" />
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/shop_detail_llayout_two">
+
+                            <TextView
+                                android:id="@+id/tv_shop_orientation_key"
+                                style="@style/shop_detail_key_two" />
+
+                            <TextView
+                                android:id="@+id/tv_shop_orientation_value"
+                                style="@style/shop_detail_value_two" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    //装修 楼层
+
+                    <LinearLayout style="@style/shop_detail_llayout_one">
+
+                        <LinearLayout style="@style/shop_detail_llayout_two">
+
+                            <TextView
+                                style="@style/shop_detail_key_two"
+                                android:text="装修：" />
+
+                            <TextView
+                                android:id="@+id/tv_shop_unit_renovate"
+                                style="@style/shop_detail_value_two" />
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/shop_detail_llayout_two">
+
+                            <TextView
+                                style="@style/shop_detail_key_two"
+                                android:text="楼层：" />
+
+                            <TextView
+                                android:id="@+id/tv_shop_unit_floor"
+                                style="@style/shop_detail_value_two" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    //建筑年代 支付方式/产权性质
+
+                    <LinearLayout style="@style/shop_detail_llayout_one">
+
+                        <LinearLayout style="@style/shop_detail_llayout_two">
+
+                            <TextView
+                                style="@style/shop_detail_key_two"
+                                android:text="建筑年代：" />
+
+                            <TextView
+                                android:id="@+id/tv_shop_unit_year"
+                                style="@style/shop_detail_value_two" />
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/shop_detail_llayout_two">
+
+                            <TextView
+                                android:id="@+id/tv_shop_property_key"
+                                style="@style/shop_detail_key_two"
+                                android:text="产权性质：" />
+
+                            <TextView
+                                android:id="@+id/tv_shop_property_value"
+                                style="@style/shop_detail_value_two" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    //有无电梯 几梯几户
+
+                    <LinearLayout
+                        android:id="@+id/ll_shop_automatic"
+                        style="@style/shop_detail_llayout_one">
+
+                        <LinearLayout style="@style/shop_detail_llayout_two">
+
+                            <TextView
+                                style="@style/shop_detail_key_two"
+                                android:text="有无电梯：" />
+
+                            <TextView
+                                android:id="@+id/tv_shop_automatic"
+                                style="@style/shop_detail_value_two" />
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/shop_detail_llayout_two">
+
+                            <TextView
+                                style="@style/shop_detail_key_two"
+                                android:text="几梯几户：" />
+
+                            <TextView
+                                android:id="@+id/tv_shop_unit_home"
+                                style="@style/shop_detail_value_two" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    //是否分割 （是否包含物业费）
+
+                    <LinearLayout
+                        android:id="@+id/ll_shop_rent_info1"
+                        style="@style/shop_detail_llayout_one">
+
+                        <LinearLayout style="@style/shop_detail_llayout_two">
+
+                            <TextView
+                                style="@style/shop_detail_key_two"
+                                android:text="是否分割：" />
+
+                            <TextView
+                                android:id="@+id/tv_shop_division"
+                                style="@style/shop_detail_value_two" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_shop_contain_pay"
+                            style="@style/shop_detail_llayout_two">
+
+                            <TextView
+                                style="@style/shop_detail_key_two"
+                                android:text="是否包含物业费：" />
+
+                            <TextView
+                                android:id="@+id/tv_shop_contain_pay"
+                                style="@style/shop_detail_value_two" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    //物业公司
+
+                    <LinearLayout
+                        android:id="@+id/ll_shop_manager_company"
+                        style="@style/shop_detail_llayout_three"
+                        android:visibility="visible">
+
+                        <TextView
+                            style="@style/shop_detail_key_two"
+                            android:text="物业公司：" />
+
+                        <TextView
+                            android:id="@+id/tv_shop_manager_company"
+                            style="@style/shop_detail_value_two" />
+                    </LinearLayout>
+
+                    //售房标签
+
+                    <LinearLayout
+                        android:id="@+id/ll_shop_sell_flag"
+                        style="@style/shop_detail_llayout_three"
+                        android:visibility="visible">
+
+                        <TextView
+                            style="@style/shop_detail_key_two"
+                            android:text="售房标签：" />
+
+                        <TextView
+                            android:id="@+id/tv_shop_sell_flag"
+                            style="@style/shop_detail_value_two"
+                            android:textColor="#14b5ea" />
+                    </LinearLayout>
+
+                    //商铺配套
+
+                    <LinearLayout
+                        android:id="@+id/ll_shop_devices"
+                        style="@style/shop_detail_llayout_three">
+
+                        <TextView
+                            style="@style/shop_detail_key_two"
+                            android:text="商铺配套：" />
+
+                        <TextView
+                            android:id="@+id/tv_shop_ancillary_facility"
+                            style="@style/shop_detail_value_two" />
+                    </LinearLayout>
+
+                    //配套设施
+
+                    <LinearLayout
+                        android:id="@+id/ll_shop_home_devices"
+                        style="@style/shop_detail_llayout_three"
+                        android:visibility="visible">
+
+                        <TextView
+                            style="@style/shop_detail_key_two"
+                            android:text="配套设施：" />
+
+                        <TextView
+                            android:id="@+id/tv_shop_unit_fac"
+                            style="@style/shop_detail_value_two" />
+                    </LinearLayout>
+
+                    //经营类别
+
+                    <LinearLayout
+                        android:id="@+id/ll_shop_operate_category"
+                        style="@style/shop_detail_llayout_three">
+
+                        <TextView
+                            style="@style/shop_detail_key_two"
+                            android:text="经营类别：" />
+
+                        <TextView
+                            android:id="@+id/tv_shop_operate_category"
+                            style="@style/shop_detail_value_two" />
+                    </LinearLayout>
+
+                    //房源地址
+
+                    <LinearLayout style="@style/shop_detail_llayout_three">
+
+                        <TextView
+                            style="@style/shop_detail_key_two"
+                            android:text="房源地址：" />
+
+                        <TextView
+                            android:id="@+id/tv_shop_address"
+                            style="@style/shop_detail_value_two" />
+                    </LinearLayout>
+
+                    //房源描述
+
+                    <LinearLayout
+                        style="@style/shop_detail_llayout_three"
+                        android:layout_marginBottom="80dp">
+
+                        <TextView
+                            style="@style/shop_detail_key_two"
+                            android:text="房源描述：" />
+
+                        <TextView
+                            android:id="@+id/tv_content"
+                            style="@style/shop_detail_value_two" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView style="@style/divider_thin" />
+
+    <LinearLayout
+        android:id="@+id/ll_person"
+        style="@style/line_style"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="144"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/im_avatar"
+            android:layout_width="@dimen/shop_broker_img_width"
+            android:layout_height="@dimen/shop_broker_img_height"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_avatar" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/shop_name_txt" />
+
+            <com.zfb.house.component.RatingBar
+                android:id="@+id/rating_star"
+                style="@style/rating_star_style"
+                android:layout_marginTop="3.3dp"
+                app:starEmpty="@drawable/start_all"
+                app:starFill="@drawable/start_all"
+                app:starHalf="@drawable/start_half"
+                app:starImageSize="@dimen/rating_bar_size"
+                app:startClickable="false" />
+        </LinearLayout>
+
+        <ImageView style="@style/divider_vertical" />
+
+        <LinearLayout
+            android:id="@+id/ll_phone"
+            style="@style/shop_detail_bottom_llayout">
+
+            <TextView
+                android:id="@+id/tv_phone"
+                style="@style/shop_bottom_txt"
+                android:drawableLeft="@drawable/shop_phone"
+                android:text="电话咨询" />
+        </LinearLayout>
+
+        <ImageView style="@style/divider_vertical" />
+
+        <LinearLayout
+            android:id="@+id/ll_wechat"
+            style="@style/shop_detail_bottom_llayout">
+
+            <TextView
+                style="@style/shop_bottom_txt"
+                android:drawableLeft="@drawable/shop_chat"
+                android:text="微聊" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

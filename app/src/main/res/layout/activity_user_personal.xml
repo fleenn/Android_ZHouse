@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/divider_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/bg_personal"
+                    style="@style/personal_top_img"
+                    android:layout_width="match_parent"
+                    android:src="@drawable/bg_personal" />
+
+                <ImageView
+                    android:id="@+id/img_user_back"
+                    style="@style/personal_top_img"
+                    android:padding="18dp"
+                    android:src="@drawable/back_transparent" />
+
+                <ImageView
+                    android:id="@+id/img_user_more"
+                    style="@style/personal_top_more"
+                    android:src="@drawable/personal_more"
+                    android:visibility="gone" />
+
+                <com.zfb.house.component.CircleImageView
+                    android:id="@+id/img_user_avatar"
+                    style="@style/personal_img_avatar"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="3.3dp" />
+
+                <TextView
+                    android:id="@+id/txt_user_remark"
+                    style="@style/personal_txt_name"
+                    android:layout_below="@+id/bg_personal"
+                    android:layout_toRightOf="@+id/img_user_avatar" />
+
+                <ImageView
+                    android:id="@+id/img_user_type"
+                    style="@style/personal_top_img"
+                    android:layout_below="@+id/bg_personal"
+                    android:layout_marginRight="@dimen/my_margin_two"
+                    android:layout_marginTop="@dimen/my_margin_two"
+                    android:layout_toRightOf="@+id/txt_user_remark" />
+
+                <ImageView
+                    android:id="@+id/img_user_sex"
+                    style="@style/personal_top_img"
+                    android:layout_below="@+id/bg_personal"
+                    android:layout_marginTop="@dimen/my_margin_two"
+                    android:layout_toRightOf="@+id/img_user_type" />
+            </RelativeLayout>
+
+            <LinearLayout
+                style="@style/personal_llayout_function"
+                android:layout_marginLeft="44dp"
+                android:layout_marginRight="44dp">
+
+                <TextView
+                    android:id="@+id/txt_user_moment"
+                    style="@style/personal_txt_function"
+                    android:drawableTop="@drawable/personal_moment"
+                    android:textColor="@color/my_orange_two" />
+
+                <TextView
+                    android:id="@+id/txt_user_chat"
+                    style="@style/personal_txt_function" />
+            </LinearLayout>
+
+            <ImageView style="@style/divider_thick" />
+
+            <RelativeLayout
+                android:id="@+id/rlayout_user_name"
+                style="@style/rlayout_right_style"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/confirm_order_left_txt"
+                    android:text="昵        称：" />
+
+                <TextView
+                    android:id="@+id/txt_user_name"
+                    style="@style/user_mine_txt_four" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    style="@style/confirm_order_left_txt"
+                    android:text="近期状态：" />
+
+                <TextView
+                    android:id="@+id/txt_user_statue"
+                    style="@style/user_mine_txt_four" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/rlayout_right_style">
+
+                <TextView
+                    style="@style/confirm_order_left_txt"
+                    android:text="联系电话：" />
+
+                <TextView
+                    android:id="@+id/txt_user_phonel"
+                    style="@style/user_mine_txt_four" />
+
+                <ImageView style="@style/divider_thin_bottom" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/personal_rlayout_area">
+
+                <TextView
+                    style="@style/personal_txt_area_left"
+                    android:text="关注片区：" />
+
+                <TextView
+                    android:id="@+id/txt_user_district_one"
+                    style="@style/personal_txt_area_right"
+                    android:layout_marginTop="@dimen/my_margin" />
+
+                <TextView
+                    android:id="@+id/txt_user_district_two"
+                    style="@style/personal_txt_area_right"
+                    android:layout_below="@+id/txt_user_district_one" />
+
+                <TextView
+                    android:id="@+id/txt_user_district_three"
+                    style="@style/personal_txt_area_right"
+                    android:layout_below="@+id/txt_user_district_two" />
+            </RelativeLayout>
+
+            <ImageView
+                style="@style/divider_thin"
+                android:layout_marginLeft="@dimen/my_margin" />
+
+            <RelativeLayout style="@style/personal_rlayout_area">
+
+                <TextView
+                    style="@style/personal_txt_area_left"
+                    android:text="关注小区：" />
+
+                <TextView
+                    android:id="@+id/txt_user_village_one"
+                    style="@style/personal_txt_area_right"
+                    android:layout_marginTop="@dimen/my_margin" />
+
+                <TextView
+                    android:id="@+id/txt_user_village_two"
+                    style="@style/personal_txt_area_right"
+                    android:layout_below="@+id/txt_user_village_one" />
+
+                <TextView
+                    android:id="@+id/txt_user_village_three"
+                    style="@style/personal_txt_area_right"
+                    android:layout_below="@+id/txt_user_village_two" />
+            </RelativeLayout>
+
+            <ImageView
+                style="@style/divider_thin"
+                android:layout_marginLeft="@dimen/my_margin" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

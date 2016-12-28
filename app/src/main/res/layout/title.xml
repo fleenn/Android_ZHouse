@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/line_top_style">
+
+    <TextView
+        android:id="@+id/tv_title_lt"
+        style="@style/txt_style"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rlayout_tittle_lt_img"
+        android:layout_width="@dimen/rightup_item_width"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/img_title_lt"
+            style="@style/back_img"
+            android:clickable="false" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_title_center"
+        style="@style/login_top_title"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_title_rt"
+        style="@style/txt_style"
+        android:layout_width="@dimen/rightup_item_width"
+        android:layout_alignParentRight="true"
+        android:text="@string/title_register"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rlayout_title_rt_img"
+        style="@style/rightup_rlayout_style"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_title_rt"
+            style="@style/rightup_img_style" />
+    </RelativeLayout>
+
+    <ImageView style="@style/divider_thin_bottom" />
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/mine_img_width"
+            android:layout_height="@dimen/mine_img_height"
+            android:layout_marginTop="@dimen/mine_img_top"
+            android:src="@drawable/mine_unlogin_icon" />
+
+        <TextView
+            style="@style/mine_unlogin_txt"
+            android:text="@string/label_mine_txt_one"
+            android:textColor="@color/black" />
+
+        <TextView
+            style="@style/mine_unlogin_txt"
+            android:text="@string/label_mine_txt_two"
+            android:textColor="@color/my_gray_one" />
+
+        <Button
+            android:id="@+id/btn_mine_register"
+            style="@style/mine_unlogin_btn"
+            android:background="@drawable/mine_btn_register"
+            android:text="@string/label_mine_register"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_mine_login"
+            style="@style/mine_unlogin_btn"
+            android:background="@drawable/mine_btn_login"
+            android:text="@string/label_mine_login"
+            android:textColor="@color/my_gray_one" />
+
+    </LinearLayout>
+
+</LinearLayout>

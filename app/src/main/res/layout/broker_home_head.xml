@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="166.7dp">
+
+        <com.zfb.house.adapter.InfiniteViewPager
+            android:id="@+id/infiniteViewPagerBroker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            style="@style/home_search_llayout"
+            android:alpha="0.8">
+
+            <Spinner style="@style/home_search_spinner" />
+
+            <ImageView style="@style/divider_vertical" />
+
+            <TextView
+                android:id="@+id/sv_broker_home"
+                style="@style/home_search_layout" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout style="@style/home_llayout_btn">
+
+        <RelativeLayout
+            android:id="@+id/llyout_broker_release"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                style="@style/home_img_txt"
+                android:drawableTop="@drawable/release_house"
+                android:text="@string/img_release_house" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/llyout_broker_store"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                style="@style/home_img_txt"
+                android:drawableTop="@drawable/shop_manager"
+                android:text="@string/img_shop_manager" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/llyout_broker_selling"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                style="@style/home_img_txt"
+                android:drawableTop="@drawable/selling_house"
+                android:text="@string/img_selling_house" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/llyout_broker_renting"
+            style="@style/select_rlayout_function">
+
+            <TextView
+                style="@style/home_img_txt"
+                android:drawableTop="@drawable/renting_house"
+                android:text="@string/img_renting_house" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thick" />
+
+    <RelativeLayout style="@style/line_style">
+
+        <ImageView style="@style/home_img_header" />
+
+        <TextView
+            style="@style/home_txt_header"
+            android:text="新房推荐" />
+
+        <TextView
+            android:id="@+id/txt_more_moments"
+            style="@style/home_txt_more" />
+
+        <ImageView style="@style/divider_thin_bottom" />
+    </RelativeLayout>
+
+</LinearLayout>

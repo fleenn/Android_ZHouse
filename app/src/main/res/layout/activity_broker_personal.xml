@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/divider_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/bg_personal"
+                    style="@style/personal_top_img"
+                    android:layout_width="match_parent"
+                    android:src="@drawable/bg_personal" />
+
+                <ImageView
+                    android:id="@+id/img_broker_back"
+                    style="@style/personal_top_img"
+                    android:padding="18dp"
+                    android:src="@drawable/back_transparent" />
+
+                <ImageView
+                    android:id="@+id/img_broker_more"
+                    style="@style/personal_top_more"
+                    android:src="@drawable/personal_more"
+                    android:visibility="gone" />
+
+                <com.zfb.house.component.CircleImageView
+                    android:id="@+id/img_broker_avatar"
+                    style="@style/personal_img_avatar"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="3.3dp" />
+
+                <TextView
+                    android:id="@+id/txt_broker_remark"
+                    style="@style/personal_txt_name"
+                    android:layout_below="@+id/bg_personal"
+                    android:layout_toRightOf="@+id/img_broker_avatar" />
+
+                <ImageView
+                    android:id="@+id/img_broker_type"
+                    style="@style/personal_top_img"
+                    android:layout_below="@+id/bg_personal"
+                    android:layout_marginRight="@dimen/my_margin_two"
+                    android:layout_marginTop="@dimen/my_margin_two"
+                    android:layout_toRightOf="@+id/txt_broker_remark"
+                    android:src="@drawable/broker" />
+
+                <ImageView
+                    android:id="@+id/img_broker_sex"
+                    style="@style/personal_top_img"
+                    android:layout_below="@+id/bg_personal"
+                    android:layout_marginTop="@dimen/my_margin_two"
+                    android:layout_toRightOf="@+id/img_broker_type"
+                    android:src="@drawable/man" />
+
+                <com.zfb.house.component.RatingBar
+                    android:id="@+id/rating_bar_broker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_broker_remark"
+                    android:layout_marginLeft="@dimen/my_margin_two"
+                    android:layout_toRightOf="@+id/img_broker_avatar"
+                    app:starEmpty="@drawable/start_all"
+                    app:starFill="@drawable/start_all"
+                    app:starHalf="@drawable/start_half"
+                    app:starImageSize="@dimen/rating_bar_size"
+                    app:startClickable="false" />
+            </RelativeLayout>
+
+            <LinearLayout
+                style="@style/personal_llayout_function"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp">
+
+                <TextView
+                    android:id="@+id/txt_broker_moment"
+                    style="@style/personal_txt_function"
+                    android:drawableTop="@drawable/personal_moment"
+                    android:text="Ta的房友圈"
+                    android:textColor="@color/my_orange_two" />
+
+                <TextView
+                    android:id="@+id/txt_broker_shop"
+                    style="@style/personal_txt_function"
+                    android:drawableTop="@drawable/personal_shop"
+                    android:text="Ta的店铺"
+                    android:textColor="@color/blue_one" />
+
+                <TextView
+                    android:id="@+id/txt_broker_chat"
+                    style="@style/personal_txt_function"
+                    android:drawableTop="@drawable/personal_chat"
+                    android:text="发消息"
+                    android:textColor="@color/green_one" />
+            </LinearLayout>
+
+            <ImageView style="@style/divider_thick" />
+
+            <LinearLayout style="@style/line_style">
+
+                <TextView
+                    android:id="@+id/txt_broker_service"
+                    style="@style/pager_function_txt"
+                    android:text="服务信息"
+                    android:textColor="@color/my_orange_two"
+                    android:textSize="@dimen/txt_four_size" />
+
+                <TextView
+                    android:id="@+id/txt_broker_basic"
+                    style="@style/pager_function_txt"
+                    android:text="基本信息" />
+            </LinearLayout>
+
+            <ImageView style="@style/divider_thin" />
+
+            <ImageView
+                android:id="@+id/img_broker_cursor"
+                style="@style/indicated_long_style" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_broker_personal"
+                android:layout_width="match_parent"
+                android:layout_height="350dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

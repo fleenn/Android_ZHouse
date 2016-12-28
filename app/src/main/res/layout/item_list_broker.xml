@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlayout_item_detail"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_marginRight="@dimen/mine_item_right_marge">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:layout_marginTop="@dimen/my_margin">
+
+            <ImageView
+                android:id="@+id/img_avatar"
+                style="@style/img_header_style_two" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/my_margin"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/txt_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/my_margin"
+                        android:textColor="@color/sort_txt_color"
+                        android:textSize="@dimen/sort_header_txt_size" />
+
+                    <TextView
+                        android:id="@+id/txt_type"
+                        style="@style/search_little_txt" />
+
+                    <ImageView
+                        android:id="@+id/img_real_name"
+                        style="@style/search_result_icon"
+                        android:src="@drawable/broker_iden"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_qualification"
+                        style="@style/search_result_icon"
+                        android:src="@drawable/broker_qual"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_card"
+                        style="@style/search_result_icon"
+                        android:src="@drawable/broker_card"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/search_llayout_style"
+                    android:layout_marginTop="2dp">
+
+                    <TextView
+                        style="@style/search_little_txt"
+                        android:text="@string/label_mine_company" />
+
+                    <TextView
+                        android:id="@+id/txt_company"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="@color/show_color"
+                        android:textSize="@dimen/sort_little_txt_size" />
+
+                    <TextView
+                        android:id="@+id/tv_distance_label"
+                        style="@style/search_little_txt"
+                        android:layout_marginLeft="@dimen/my_margin"
+                        android:text="相距" />
+
+                    <TextView
+                        android:id="@+id/txt_range"
+                        style="@style/search_little_txt" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/search_llayout_style">
+
+                    <TextView
+                        style="@style/search_little_txt"
+                        android:text="@string/label_mine_district" />
+
+                    <TextView
+                        android:id="@+id/txt_district"
+                        style="@style/search_little_txt" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/search_llayout_style">
+
+                    <TextView
+                        style="@style/search_little_txt"
+                        android:text="@string/label_mine_village" />
+
+                    <TextView
+                        android:id="@+id/txt_village"
+                        style="@style/search_little_txt" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/my_margin"
+            android:layout_marginLeft="@dimen/my_margin"
+            android:gravity="center_vertical">
+
+            <com.zfb.house.component.RatingBar
+                android:id="@+id/rb_star"
+                android:layout_width="@dimen/sort_header_width"
+                android:layout_height="@dimen/rating_bar_height"
+                android:gravity="center"
+                app:starEmpty="@drawable/start_all"
+                app:starFill="@drawable/start_all"
+                app:starHalf="@drawable/start_half"
+                app:starImageSize="@dimen/rating_bar_size" />
+
+            <ImageView
+                android:layout_width="@dimen/sort_icon_width"
+                android:layout_height="@dimen/sort_icon_height"
+                android:layout_marginLeft="@dimen/my_margin"
+                android:layout_marginRight="@dimen/my_margin"
+                android:src="@drawable/sort_trading_volume" />
+
+            <TextView
+                style="@style/search_little_txt"
+                android:text="@string/label_mine_turnover"
+                android:textColor="@color/my_orange_two" />
+
+            <TextView
+                android:id="@+id/txt_trading"
+                style="@style/search_little_txt"
+                android:textColor="@color/my_orange_two" />
+
+            <ImageView
+                android:layout_width="@dimen/sort_icon_width"
+                android:layout_height="@dimen/sort_icon_height"
+                android:layout_marginLeft="@dimen/my_margin"
+                android:layout_marginRight="@dimen/my_margin"
+                android:src="@drawable/sort_favorable_rate" />
+
+            <TextView
+                style="@style/search_little_txt"
+                android:text="@string/label_favorable_rate"
+                android:textColor="@color/my_orange_two" />
+
+            <TextView
+                android:id="@+id/txt_satisfy_degree"
+                style="@style/search_little_txt"
+                android:textColor="@color/my_orange_two" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/mine_item_right_marge"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlayout_chat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_item_right_marge">
+
+            <ImageView
+                style="@style/search_result_icon"
+                android:layout_marginBottom="@dimen/my_margin"
+                android:layout_marginTop="@dimen/my_margin"
+                android:src="@drawable/message" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlayout_operate"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_item_right_marge"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="39dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txt_operate"
+                style="@style/search_little_txt"
+                android:layout_marginBottom="@dimen/my_margin"
+                android:layout_marginTop="@dimen/my_margin"
+                android:textColor="@color/my_orange_two" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView style="@style/divider_thin_bottom" />
+</RelativeLayout>
